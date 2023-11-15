@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+
+
+.hero__title {
+  @apply  text-[36px] sm:text-[42px] lg:text-[48px] xl:text-[64px]  font-extrabold;
+}
+
+.hero__subtitle {
+  @apply text-[18px] text-black-100 font-light mt-5 dark:text-gray-500  lg:text-[20px] xl:text-[27px];
+}
+
+.hero__image {
+  @apply relative w-[90%] h-[590px] xl:w-full  xl:h-full  z-0;
+}
+
+.hero__image-container {
+  @apply xl:flex-auto  xl:justify-center flex justify-center  w-full xl:h-full;
+}
+
+.paragraph__title {
+  @apply mb-6 text-2xl font-semibold;
+}
+
+.paragraph__subtitle {
+  @apply m-0 max-w-[30ch] xs:max-w-[60ch] text-sm xs:text-lg opacity-50;
+}
+
+.custom-btn {
+  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+}
+
+.button__color {
+  @apply bg-cyan-500 dark:bg-white dark:text-black text-white rounded-full my-10 transition-colors hover:border-gray-300 hover:bg-fuchsia-400 hover:dark:border-neutral-700 hover:dark:bg-blue-200
+}
+
+.boxoptions__border {
+  @apply rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-zinc-200 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30
+}
+
+.footer__links {
+  @apply flex-1 w-full flex md:justify-end flex-wrap max-md:mt-10 gap-20;
+}
+
+.footer__link {
+  @apply flex flex-col gap-6 text-base min-w-[170px];
+}
+
+.footer__copyrights-link {
+  @apply flex-1 flex lg:justify-end justify-center max-sm:mt-16  border-2;
+}
+
+.menu__button {
+  @apply fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30
+}
+
+.menu__top {
+  @apply  flex h-min w-full items-center justify-start rounded-2xl bg-gradient-to-b from-gray-300 via-gray-300 dark:from-black dark:via-black 
+}
+
+.menu__list {
+  @apply text-xl py-2 md:px-6 md:py-2 text-left border-b-2 border-gray-200 md:border-b-0
+}
+
+.map__container {
+  width: 100%;
+  height: 100%;
+}
+
+.address__title {
+  @apply  text-[36px] sm:text-[42px] lg:text-[48px] xl:text-[50px]  font-extrabold;
+}
+
+.address__subtitle {
+  @apply text-[18px] text-black-100 font-light dark:text-gray-500  lg:text-[20px] xl:text-[27px];
+}
+
+.address__button {
+  @apply bg-cyan-500 dark:bg-white dark:text-black text-white rounded-full my-6 xs:my-10 transition-colors hover:border-gray-300 hover:bg-fuchsia-400 hover:dark:border-neutral-700 hover:dark:bg-blue-200
+}
+
+
+

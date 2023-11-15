@@ -1,0 +1,41 @@
+'use client'
+
+import Image from "next/image"
+import CustomButton from "./CustomButton"
+import { useRouter } from "next/navigation"
+
+const FirstParagraph = () => {
+
+    const router = useRouter();
+
+    const handleScroll = () => {
+        router.push('/gallery');
+    }
+
+    return (
+        <div className='my-4 lg:my-0 grid text-left lg:grid-cols-2'>
+            <div className='flex flex-col justify-center'>
+                <h1 className='hero__title'>Custom Framing Shop — you name it, we frame it!</h1>
+                <p className='mb-6 hero__subtitle'>"Your Vision, Our Craftsmanship: Transform Your Art with Custom Framing!"</p>
+                
+                <div>
+                    <CustomButton 
+                        title="Visit Gallery"
+                        containerStyles="button__color"
+                        handleClick={handleScroll}
+                    />
+                </div>
+            </div>
+            <div className='hero__image-container sm:mx-10'>
+                <Image 
+                    src='/room-design-2.svg'
+                    alt='room design'
+                    width={750}
+                    height={300}
+                />
+            </div>
+        </div>
+    )
+}
+
+export default FirstParagraph;
