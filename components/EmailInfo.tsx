@@ -24,8 +24,6 @@ const EmailInfo: FC = () => {
     const onSubmit = async (data: FormsData) => {
 
         if(captcha) {
-
-            console.log("Captcha verified frontend: ", captcha)
             
             const verifyCaptcha = await fetch('/api/subscribe', {
                 method: 'POST',
@@ -36,10 +34,10 @@ const EmailInfo: FC = () => {
             })
 
             const {response} = await verifyCaptcha.json();
-            console.log("Received the response from the Backend: ", response)
+            
             if(response) {
                 sendEmail(data);
-                console.log("Email should be sent successfully! ", data)
+                
                 if(response) {
                     reset();
                 }
