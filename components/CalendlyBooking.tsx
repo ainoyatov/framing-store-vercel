@@ -6,7 +6,7 @@ import { InlineWidget } from 'react-calendly'
 const CalendlyBooking = () => {
 
   return(
-    <div className='pt-20 px-4 g:justify-center w-screen h-screen'>
+    <div className=' px-4 g:justify-center w-screen h-screen'>
       <InlineWidget 
         url="https://calendly.com/guzal/installation"
         styles={{

@@ -1,5 +1,5 @@
-import type { ImagesResults } from "../models/Images";
-import { ImagesSchemaWithPhotos } from "../models/Images";
+import type { ImagesResults } from "../../models/Images";
+import { ImagesSchemaWithPhotos } from "../../models/Images";
 
 export default async function fetchImages(url:string): Promise<ImagesResults | undefined> {
     try{

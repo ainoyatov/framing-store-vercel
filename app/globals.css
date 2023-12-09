@@ -85,7 +85,7 @@ body {
 }
 
 .menu__list {
-  @apply text-xl py-2 md:px-6 md:py-2 text-left border-b-2 border-gray-200 md:border-b-0
+  @apply text-xl  py-2 md:px-6 md:py-2 text-left border-b-2 border-gray-200 md:border-b-0
 }
 
 .map__container {

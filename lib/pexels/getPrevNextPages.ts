@@ -1,4 +1,4 @@
-import type { ImagesResults } from "../models/Images";
+import type { ImagesResults } from "../../models/Images";
 
 function getPageNumber(url: string) {
     const {searchParams} = new URL(url)

@@ -16,13 +16,13 @@ export default function GallerySearch() {
 
     return (
 
-        <form className="flex justify-center md:justify-between" onSubmit={handleSubmit}>
+        <form className=" flex px-4 justify-center" onSubmit={handleSubmit}>
             <input
                 type='text'
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder='Search'
-                className="bg-white p-2 w-[260px] sm:w-80 text-xl rounded-xl border-2 shadow-xl text-black"
+                className="w-2/3 bg-white p-2 text-xl rounded-xl border-2 shadow-xl text-black"
             />
         </form>
     )

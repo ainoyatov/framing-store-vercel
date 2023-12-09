@@ -6,10 +6,10 @@ import CustomButton from '@/components/CustomButton'
 
 const StoreHours = () => {
   return (
-    <div className='xs:mt-6'>
+    <div className=''>
       <section>
-        <div className='flex flex-col md:flex-row md:items-center drop-shadow-xl '>
-          <div className='w-auto mx-4 max-lg:mt-16 shadow-xl '>
+        <div className='flex flex-col md:flex-row md:items-center  '>
+          <div className='w-auto mx-4 max-lg:mt-6 shadow-xl '>
             <ContactInfo />
           </div>
           <div className='w-auto mt-12 mb-24'>

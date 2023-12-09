@@ -154,6 +154,10 @@ export const SIDENAV_ITEMS = [
       title: 'Shop',
       path: '/shop',
       icon: <Icon icon="lucide:shopping-cart" width="24" height="24" />,
+      // submenu: true,
+      // subMenuItems: [
+      //   {title: 'Cart', path: '/cart', icon: <Icon icon="tabler:point" width="24" height="24" />}
+      // ],
     },
     {
       title: 'Contact',
@@ -250,7 +254,7 @@ const MenuToggle = ({ isOpen, toggleOpen }: { isOpen: any, toggleOpen: any }) =>
   
   <button
     onClick={() => toggleOpen()}
-    className="p-2 border border-rose-200 rounded-full bg-white pointer-events-auto absolute right-6 top-[18px] z-30"
+    className="p-2 border  rounded-md  pointer-events-auto absolute right-6 top-[18px] z-30"
   >
     {isOpen ? (
       <Image 
@@ -265,8 +269,8 @@ const MenuToggle = ({ isOpen, toggleOpen }: { isOpen: any, toggleOpen: any }) =>
       <Image 
         src='/hamburger-menu.svg'
         alt='mobile menu'
-        width={25}
-        height={25}
+        width={24}
+        height={24}
       />
     )}
 

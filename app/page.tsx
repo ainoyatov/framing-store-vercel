@@ -2,15 +2,17 @@ import BoxOptions from '@/components/BoxOptions';
 import FirstParagraph from '@/components/FirstParagraph';
 import Footer from '@/components/Footer';
 import SecondParagraph from '@/components/SecondParagraph';
+import {ThreeItemGrid} from '@/components/shopify/grid/three-items';
 import Image from 'next/image';
 
 
 export default async function Home(){
 
+
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-6 mt-16 xs:px-16 xs:py-6'>
+    <main className='flex min-h-screen flex-col items-center justify-between p-6  xs:px-16 xs:py-6'>
       
-      <section className='xs:my-12 lg:my-16'>
+      <section className='lg:my-16'>
         <FirstParagraph />
       </section>
 
@@ -18,9 +20,10 @@ export default async function Home(){
         <BoxOptions />
       </section>
       
-      <section className='xs:my-12 lg:my-16'>
+      <section className='lg:my-16'>
         <SecondParagraph />
       </section>
+
       
     </main>
   );

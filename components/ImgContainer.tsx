@@ -1,4 +1,4 @@
-import type { Photo } from "@/app/models/Images";
+import type { Photo } from "@/models/Images";
 import Image from "next/image";
 // import Link from "next/link";
 
