@@ -22,7 +22,7 @@ const ContactInfo = () => {
     ]
 
     return (
-        <div className='h-full p-4 lg:pt-10  lg:px-22 lg:py-32 xl:px-28 xl:py-32'>
+        <div className='h-full m-2  md:m-8 2xl:px-16 2xl:py-16'>
             <h1 className='text-[#212B36] font-bold text-[40px] leading-10 mb-7'>
                 Get In Touch With Us
             </h1>

@@ -13,8 +13,8 @@ const FirstParagraph = () => {
     }
 
     return (
-        <div className='my-4 lg:my-0 grid text-left lg:grid-cols-2'>
-            <div className='flex flex-col justify-center'>
+        <div className='my-4 sm:my-12 grid text-left lg:grid-cols-2'>
+            <div className='flex flex-col justify-center max-w-4xl'>
                 <h1 className='hero__title'>Custom Framing Shop — you name it, we frame it!</h1>
                 <p className='mb-6 hero__subtitle'>"Your Vision, Our Craftsmanship: Transform Your Art with Custom Framing!"</p>
                 

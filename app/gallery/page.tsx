@@ -1,7 +1,11 @@
 import Gallery from "@/components/GalleryImages";
 
 export default function GalleryHome() {
-  return <Gallery />
+  return (
+    <div className="px-4 2xl:px-32">
+      <Gallery />
+    </div>
+  )
 }
 
 

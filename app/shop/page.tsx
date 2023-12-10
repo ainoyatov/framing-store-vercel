@@ -15,9 +15,9 @@ export const metadata = {
 
 export default async function ShopifyPage() {
     return (
-        <div>  
+        <div className="px-4 2xl:px-32 md:py-16">  
             {/* <ShopifyNavbar /> */}
-            <ThreeItemGrid />
+            <ThreeItemGrid /> 
             <Suspense>
                 <Carousel />
             </Suspense>

@@ -16,7 +16,7 @@ const SecondParagraph = () => {
 
     return (
         <div className='my-12 sm:my-12 grid text-left lg:grid-cols-2'>
-            <div className='flex flex-col justify-center'>
+            <div className='flex flex-col justify-center max-w-4xl'>
                 <h1 className='hero__title'>Preserve and Display Your Memories</h1>
                 <p className='mb-6 hero__subtitle'>"Frame a valuable art collection, treasured family photographs, or sentimental objects"</p>
                 
