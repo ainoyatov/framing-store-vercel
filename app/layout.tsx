@@ -13,38 +13,38 @@ export const revalidate = 3600
 
 const inter = Inter({ subsets: ['latin'] })
 
-// export const metadata: Metadata = {
-//   title: 'Art & Custom Frames',
-//   description: 'Picture frames, custom frames, canvas stretch, shadow boxes, wood frames, art frames, gallery frames, custom glasses',
-// }
+export const metadata: Metadata = {
+  title: 'Art & Custom Frames',
+  description: 'Picture frames, custom frames, canvas stretch, shadow boxes, wood frames, art frames, gallery frames, custom glasses',
+}
 
 
-const { TWITTER_CREATOR, TWITTER_SITE, SITE_NAME } = process.env;
-const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
-  ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-  : 'http://localhost:3000';
-const twitterCreator = TWITTER_CREATOR ? ensureStartsWith(TWITTER_CREATOR, '@') : undefined;
-const twitterSite = TWITTER_SITE ? ensureStartsWith(TWITTER_SITE, 'https://') : undefined;
+// const { TWITTER_CREATOR, TWITTER_SITE, SITE_NAME } = process.env;
+// const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
+//   ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+//   : 'http://localhost:3000';
+// const twitterCreator = TWITTER_CREATOR ? ensureStartsWith(TWITTER_CREATOR, '@') : undefined;
+// const twitterSite = TWITTER_SITE ? ensureStartsWith(TWITTER_SITE, 'https://') : undefined;
 
-export const metadata = {
-  metadataBase: new URL(baseUrl),
-  title: {
-    default: SITE_NAME!,
-    template: `%s | ${SITE_NAME}`
-  },
-  robots: {
-    follow: true,
-    index: true
-  },
-  ...(twitterCreator &&
-    twitterSite && {
-      twitter: {
-        card: 'summary_large_image',
-        creator: twitterCreator,
-        site: twitterSite
-      }
-    })
-};
+// export const metadata = {
+//   metadataBase: new URL(baseUrl),
+//   title: {
+//     default: SITE_NAME!,
+//     template: `%s | ${SITE_NAME}`
+//   },
+//   robots: {
+//     follow: true,
+//     index: true
+//   },
+//   ...(twitterCreator &&
+//     twitterSite && {
+//       twitter: {
+//         card: 'summary_large_image',
+//         creator: twitterCreator,
+//         site: twitterSite
+//       }
+//     })
+// };
 
 export default async function RootLayout({
   children,
@@ -53,12 +53,13 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className= {inter.className}>
-        <div className='flex justify-start w-full md:mt-10 md:justify-center'>
+      <body className={inter.className}>
+        <div className='flex w-full md:mt-10 md:justify-center'>
+          <HeaderMobile />
           <HeaderDesktop />
           <ShopifyNavbar />
         </div>
-          <HeaderMobile />
+          
         <Suspense>
           <main>{children}</main>
         </Suspense>

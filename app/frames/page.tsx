@@ -1,9 +1,10 @@
+
 import React from 'react'
 
-const Frames = () => {
+const page = () => {
   return (
-    <div>Frames</div>
+    <div>page</div>
   )
 }
 
-export default Frames
+export default page

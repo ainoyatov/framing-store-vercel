@@ -20,11 +20,11 @@ export async function generateMetadata({
   return {
     title: page.seo?.title || page.title,
     description: page.seo?.description || page.bodySummary,
-    openGraph: {
-      publishedTime: page.createdAt,
-      modifiedTime: page.updatedAt,
-      type: 'article'
-    }
+    // openGraph: {
+    //   publishedTime: page.createdAt,
+    //   modifiedTime: page.updatedAt,
+    //   type: 'article'
+    // }
   };
 }
 

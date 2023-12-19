@@ -1,46 +1,48 @@
 import React from 'react'
-import CollectionInfo from './CollectionInfo'
+import Image from 'next/image'
+import Link from 'next/link'
 
-const ContactInfo = () => {
+const ContactInfo = ({icon,paragraph, href}:(any)) => {
 
-    const data = [
-        {
-            title: "Our Location",
-            paragraph: "8241 E. Evans Rd. Ste#102 Scottsdale, AZ 85260",
-            icon: "store-location-icon.svg"
-        },
-        {
-            title: "Phone Number",
-            paragraph: "(480) 268-7182 ",
-            icon: "phone-icon.svg"
-        },
-        {
-            title: "Email Address",
-            paragraph: "info@customframing.store",
-            icon: "email-icon.svg"
-        },
-    ]
+
+    const handleClick = () => {
+        if(icon === "/map_pin_white.svg") {
+            window.open(href)
+        } else if (icon === "/phone_white.svg") {
+            window.open(href)
+        } else if (icon === "/email_white.svg"){
+            window.open(href)
+        }
+    }
+
 
     return (
-        <div className='h-full m-2  md:m-8 2xl:px-16 2xl:py-16'>
-            <h1 className='text-[#212B36] font-bold text-[40px] leading-10 mb-7'>
-                Get In Touch With Us
-            </h1>
-            <p className='text-[#637381] text-[16px] leading-7'>
-            We're delighted to hear from you! At our picture framing store, your satisfaction is our top priority. 
-            Whether you have questions about our framing services, need assistance with your framing project, or 
-            just want to chat about your creative ideas, don't hesitate to reach out. Our team is ready to assist you 
-            with a friendly and professional touch. Your inquiries and feedback are invaluable to us, and we look forward 
-            to connecting with you. Thank you for considering us for your framing needs
-            </p>
-            {data.map((item, index) => (
-                <CollectionInfo 
-                    key={index}
-                    title={item.title}
-                    paragraph={item.paragraph}
-                    icon={item.icon}
+        <div className='flex flex-row m-4 items-center'>
+            
+            <div className='w-14 h-14 mr-2 flex  items-center shadow-xl '>
+                <Image 
+                    width={24}
+                    height={24}
+                    src={icon}
+                    alt='contact form contact-by icons'
+                    onClick={handleClick}
+                    className='cursor-pointer'
                 />
-            ))}
+            </div>
+
+            <div className='w-full'>
+                <p className='text-white text-[16px] leading-7 w-56 items-center'>
+                    <Link
+                        href={href}
+                        target='_blank'
+                        rel='noreferrer'
+                        className='cursor-pointer'
+                    >
+                        {paragraph}
+                    </Link>
+                </p>
+            </div>
+
         </div>
     )
 }

@@ -109,22 +109,3 @@ const Footer = () => {
 }
 
 export default Footer;
-
-// {
-//     tosLinks.map((link) => (
-//         <div key={link.title}>
-//             {
-//                 link.links.map((item) => (
-//                     <Link
-//                         key={item.title}
-//                         href={item.url}
-//                         className="text-gray-500"
-//                     >
-//                         {item.title}
-//                     </Link>
-
-//                 ))
-//             }
-//         </div>
-//     ))
-// }
