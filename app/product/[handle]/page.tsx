@@ -38,19 +38,19 @@ export async function generateMetadata({
         index: indexable,
         follow: indexable
       }
-    }
-    // openGraph: url
-    //   ? {
-    //       images: [
-    //         {
-    //           url,
-    //           width,
-    //           height,
-    //           alt
-    //         }
-    //       ]
-    //     }
-    //   : null
+    },
+    openGraph: url
+      ? {
+          images: [
+            {
+              url,
+              width,
+              height,
+              alt
+            }
+          ]
+        }
+      : null
   };
 }
 
@@ -59,31 +59,31 @@ export default async function ProductPage({ params }: { params: { handle: string
 
   if (!product) return notFound();
 
-  // const productJsonLd = {
-  //   '@context': 'https://schema.org',
-  //   '@type': 'Product',
-  //   name: product.title,
-  //   description: product.description,
-  //   image: product.featuredImage.url,
-  //   offers: {
-  //     '@type': 'AggregateOffer',
-  //     availability: product.availableForSale
-  //       ? 'https://schema.org/InStock'
-  //       : 'https://schema.org/OutOfStock',
-  //     priceCurrency: product.priceRange.minVariantPrice.currencyCode,
-  //     highPrice: product.priceRange.maxVariantPrice.amount,
-  //     lowPrice: product.priceRange.minVariantPrice.amount
-  //   }
-  // };
+  const productJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.title,
+    description: product.description,
+    image: product.featuredImage.url,
+    offers: {
+      '@type': 'AggregateOffer',
+      availability: product.availableForSale
+        ? 'https://schema.org/InStock'
+        : 'https://schema.org/OutOfStock',
+      priceCurrency: product.priceRange.minVariantPrice.currencyCode,
+      highPrice: product.priceRange.maxVariantPrice.amount,
+      lowPrice: product.priceRange.minVariantPrice.amount
+    }
+  };
 
   return (
     <>
-      {/* <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(productJsonLd)
         }}
-      /> */}
+      />
       {/* <ShopifyNavbar /> */}
       <div className="mx-auto px-4 max-w-screen-2xl ">
         <div className="flex flex-col rounded-lg border border-neutral-200 bg-white p-8 dark:border-neutral-800 dark:bg-black md:p-12 lg:flex-row lg:gap-8">

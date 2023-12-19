@@ -7,9 +7,9 @@ export const runtime = 'edge';
 
 export const metadata = {
     description: 'Custom framed pictures, art, jerseys, memorabilia, canvas, uniforms and more.',
-    // openGraph: {
-    //     type: 'website'
-    // }
+    openGraph: {
+        type: 'website'
+    }
 }
 
 export default async function ShopifyPage() {

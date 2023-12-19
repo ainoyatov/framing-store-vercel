@@ -1,7 +1,7 @@
-// import OpengraphImage from '@/components/shopify/utilities/opengraph-image';
+import OpengraphImage from '@/components/shopify/utilities/opengraph-image';
 
-// export const runtime = 'edge';
+export const runtime = 'edge';
 
-// export default async function Image() {
-//   return await OpengraphImage();
-// }
+export default async function Image() {
+  return await OpengraphImage();
+}
