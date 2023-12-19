@@ -1,6 +1,12 @@
+export type FormDataPoints = {
+  name: string;
+  email: string;
+  phone: string;
+  purpose: string;
+  message: string;
+}
 
-
-export async function sendEmail({name, email, phone, message}:FormsData) {
+export async function sendEmail({name, email, phone, purpose, message}:FormDataPoints) {
   const apiEndpoint = 'api/email'
 
   // console.log(data);
@@ -10,7 +16,7 @@ export async function sendEmail({name, email, phone, message}:FormsData) {
     headers: {
       "Content-type": "application/json,"
     },
-    body: JSON.stringify({name, email, phone, message})
+    body: JSON.stringify({name, email, phone, purpose, message})
   })
   
 }
