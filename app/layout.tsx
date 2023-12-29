@@ -7,6 +7,7 @@ import HeaderDesktop from '@/components/HeaderDesktop'
 import { Suspense } from 'react'
 import { ensureStartsWith } from '@/lib/shopify/utils'
 import ShopifyNavbar from '@/components/shopify/layout/navbar'
+import NavigationBar from '@/components/NavigationBar'
 
 
 export const revalidate = 3600
@@ -54,10 +55,20 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className='flex w-full md:mt-10 md:justify-center'>
+        {/* <div className='flex w-full md:mt-10 md:justify-center'>
           <HeaderMobile />
           <HeaderDesktop />
-          <ShopifyNavbar />
+          <div className='p-4'>
+            <ShopifyNavbar />
+          </div>
+        </div> */}
+
+        <div className='lg:pt-12 flex flex-row justify-center md:ml-0 '>
+          <NavigationBar />
+        </div>
+        
+        <div className=''>
+          <HeaderMobile />
         </div>
           
         <Suspense>

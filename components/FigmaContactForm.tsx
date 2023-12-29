@@ -144,6 +144,7 @@ const FigmaContactForm: FC = () => {
                                         icon={item.icon}
                                         href={item.href}
                                         key={index}
+                                        
                                     />
                                 ))}
                                 </div>

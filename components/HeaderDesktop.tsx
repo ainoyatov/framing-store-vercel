@@ -22,13 +22,14 @@ const HeaderDesktop = () => {
                         <li key={links.label} className="menu__list">
                             <Link 
                                 href={links.href}
-                                className="text-2xl xl:text-3xl rounded-2xl border border-transparent  py-2 "
+                                className="text-2xl xl:text-3xl rounded-2xl border border-transparent py-2 "
                             >
                                 {links.label}
                             </Link>
                         </li>
                     ))}
                 </ul>
+                <Image src="/menu-hyphen.svg" alt="menu hyphen" width={1} height={1} className='mr-2'/>
             </motion.div>
 
         </motion.nav>
@@ -45,7 +46,8 @@ const HeaderDesktop = () => {
                         height={250}
                         priority
                     />
-                </a>               
+                </a>
+                           
         </motion.div>
         
         </>

@@ -5,29 +5,37 @@ import Link from 'next/link'
 const ContactInfo = ({icon,paragraph, href}:(any)) => {
 
 
-    const handleClick = () => {
-        if(icon === "/map_pin_white.svg") {
-            window.open(href)
-        } else if (icon === "/phone_white.svg") {
-            window.open(href)
-        } else if (icon === "/email_white.svg"){
-            window.open(href)
-        }
-    }
+    // const handleClick = () => {
+    //     if(icon === "/map_pin_white.svg") {
+    //         window.open(href, '_blank')
+    //     } else if (icon === "/phone_white.svg") {
+    //         window.open(href, 'noreferrer')
+    //     } else if (icon === "/email_white.svg"){
+    //         window.open(href, '_blank', 'noreferrer')
+    //     }
+    // }
 
 
     return (
         <div className='flex flex-row m-4 items-center'>
             
             <div className='w-14 h-14 mr-2 flex  items-center shadow-xl '>
-                <Image 
-                    width={24}
-                    height={24}
-                    src={icon}
-                    alt='contact form contact-by icons'
-                    onClick={handleClick}
-                    className='cursor-pointer'
-                />
+                <Link
+                    href={href}
+                    target='_blank'
+                    rel='noreferrer'
+                    className=''
+                >
+                    <Image 
+                        width={24}
+                        height={24}
+                        src={icon}
+                        alt='contact form "contact-by" icons'
+                        // onClick={handleClick}
+                        className='cursor-pointer'
+                        
+                    />
+                </Link>
             </div>
 
             <div className='w-full'>

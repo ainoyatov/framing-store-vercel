@@ -13,8 +13,8 @@ export default async function ShopifyNavbar() {
   const menu = await getMenu('next-js-frontend-header-menu');
 
   return (
-    <nav className="relative flex items-center justify-between p-4 lg:px-6">
-      <div className="flex w-full items-center">
+    <nav className="flex items-center">
+      <div className="flex w-full items-center mr-8">
         <div className="flex justify-start md:w-1/3 ">
           <Suspense fallback={<OpenCart />}>
             <Cart />
