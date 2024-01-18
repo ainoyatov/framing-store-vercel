@@ -64,6 +64,11 @@ body {
   @apply rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-zinc-200 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30
 }
 
+.reviews__border {
+  @apply rounded-lg border border-transparent transition-colors hover:border-gray-300 hover:bg-zinc-200 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30
+
+}
+
 .footer__links {
   @apply flex-1 w-full flex md:justify-end flex-wrap max-md:mt-10 gap-20;
 }
@@ -103,6 +108,9 @@ body {
 
 .address__button {
   @apply bg-cyan-500 dark:bg-white dark:text-black text-white rounded-full my-6 xs:my-10 transition-colors hover:border-gray-300 hover:bg-fuchsia-400 hover:dark:border-neutral-700 hover:dark:bg-blue-200
+}
+.reviews__readmore_button {
+  @apply bg-cyan-500 dark:bg-white dark:text-black text-white rounded-lg transition-colors hover:border-gray-300 hover:bg-fuchsia-400 hover:dark:border-neutral-700 hover:dark:bg-blue-200
 }
 
 

@@ -55,13 +55,6 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <div className='flex w-full md:mt-10 md:justify-center'>
-          <HeaderMobile />
-          <HeaderDesktop />
-          <div className='p-4'>
-            <ShopifyNavbar />
-          </div>
-        </div> */}
 
         <div className='lg:pt-12 flex flex-row justify-center md:ml-0 '>
           <NavigationBar />

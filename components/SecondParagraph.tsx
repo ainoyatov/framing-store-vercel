@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import CustomButton from "./CustomButton";
-import CalendlyBooking from "./CalendlyBooking";
 import { useRouter } from "next/navigation";
 
 const SecondParagraph = () => {

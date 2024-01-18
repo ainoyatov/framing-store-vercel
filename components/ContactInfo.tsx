@@ -4,18 +4,6 @@ import Link from 'next/link'
 
 const ContactInfo = ({icon,paragraph, href}:(any)) => {
 
-
-    // const handleClick = () => {
-    //     if(icon === "/map_pin_white.svg") {
-    //         window.open(href, '_blank')
-    //     } else if (icon === "/phone_white.svg") {
-    //         window.open(href, 'noreferrer')
-    //     } else if (icon === "/email_white.svg"){
-    //         window.open(href, '_blank', 'noreferrer')
-    //     }
-    // }
-
-
     return (
         <div className='flex flex-row m-4 items-center'>
             
