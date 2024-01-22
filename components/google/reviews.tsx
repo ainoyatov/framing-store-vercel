@@ -1,8 +1,9 @@
 'use client';
+import Image from "next/image";
 import { useState } from "react";
 
 
-const GoogleReviews = ({reviews, authors, reviewTime, index}:any) => {
+const GoogleReviews = ({reviews, authors, reviewTime, pictures, index}:any) => {
     const [isOpen, setIsOpen] = useState(false)
 
     const toggle = () => {
@@ -23,8 +24,18 @@ const GoogleReviews = ({reviews, authors, reviewTime, index}:any) => {
             {isOpen 
                 ? (
                     <div key={index} className="reviews__border flex flex-col items-center ">
-                        <div className="flex w-full">
-                            <h2 className={`mb-3 text-lg font-semibold text-left`}>{authors}</h2>
+                        <div className="flex w-full gap-2 items-center">
+                            
+                            <div>
+                                <Image 
+                                    src={pictures}
+                                    alt="avatars"
+                                    height={24}
+                                    width={24}
+                                />
+                            </div>
+                            <div><h2 className={`text-lg font-semibold text-left`}>{authors}</h2></div>
+                            
                         </div>
                         <div className="flex w-full text-left">
                             <p className="max-w-[35ch]">{reviews}</p>
@@ -39,9 +50,19 @@ const GoogleReviews = ({reviews, authors, reviewTime, index}:any) => {
                     </div>
                     )
                 : (
-                    <div key={index} className="reviews__border flex flex-col items-center max-w-[350px]">
-                        <div className="flex w-full">
-                            <h2 className={`mb-3 text-lg font-semibold text-left`}>{authors}</h2>
+                    <div key={index} className="reviews__border flex flex-col items-center max-w-[350px] min-w-[185px]">
+                        <div className="flex w-full gap-2 items-center mb-3">
+                            
+                            <div>
+                                <Image 
+                                    src={pictures}
+                                    alt="avatars"
+                                    height={24}
+                                    width={24}
+                                />
+                            </div>
+                            <div><h2 className={`text-lg font-semibold text-left`}>{authors}</h2></div>
+                            
                         </div>
                         <div className="flex w-full text-left">
                             <p className="line-clamp-3 max-w-[35ch]">{reviews}</p>

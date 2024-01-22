@@ -52,6 +52,14 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+  const placeID = process.env.PLACE_ID
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+  const response = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeID}&fields=current_opening_hours&reviews_sort=newest&key=${apiKey}`)
+  const data = await response.json()
+  const storeOpen = data.result.current_opening_hours.open_now
+  const storeHours = data.result.current_opening_hours.weekday_text
+
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -67,7 +75,7 @@ export default async function RootLayout({
         <Suspense>
           <main>{children}</main>
         </Suspense>
-        <Footer />
+        <Footer storeOpen={storeOpen} storeHours={storeHours}/>
       </body>
     </html>
   )

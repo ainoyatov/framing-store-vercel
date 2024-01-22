@@ -6,12 +6,17 @@ import { footerLinks, socialLinks, tosLinks } from "@/constants";
 import { useRouter } from "next/navigation";
 
 
-const Footer = () => {
+const Footer = ({storeOpen, storeHours}:any) => {
 
     const router = useRouter();
+    
     const handleClick = () => {
         router.push('/');
     }
+
+    const tosYear = new Date().getFullYear()
+
+    
 
     return (
         <footer className="flex flex-col text-black-100 mt-5 border-t border-gray-100">
@@ -28,9 +33,18 @@ const Footer = () => {
                     />
 
                     <p className="text-base text-gray-500">
-                        Art & Custom Frames 2023 <br />
+                        Art & Custom Frames {tosYear} <br />
                         All rights reserved &copy;
                     </p>
+
+                    <div>
+                        {storeOpen ? (
+                            <p className="text-xl">Store is <span className="text-green-500">OPEN</span></p>
+                        ) : (
+                            <p className="text-xl">Store is <span className="text-red-500">CLOSED</span></p>
+                        )}
+                    </div>
+
                 </div>
 
                 <div className="footer__links">

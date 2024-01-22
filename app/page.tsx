@@ -23,13 +23,21 @@ export default async function Home(){
         <FirstParagraph />
       </section>
 
-      <section className='m-2 my-12 grid grid-cols-1 text-center gap-4 max-w-[1600px] xs:m-4 xs:grid-cols-2 sm:grid-cols-3 lg:gap-8 xl:m-8 lg:grid-cols-5 lg:text-left 2xl:gap-12'>
-        {reviews.map((review:any, index:number) => (
-          <div key={index}>
-            <GoogleReviews reviews={review.text} authors={review.author_name} reviewTime={review.time} index={index}/>
-          </div>
-        ))}
-        
+      <section>
+        <div className='hero__title flex w-full justify-center my-16'> Recent Reviews</div>
+        <div className='m-2 my-12 grid grid-cols-1 text-center gap-4 max-w-[1600px] xs:grid-cols-2 xs:gap-14 md:grid-cols-3 lg:gap-4 xl:m-8 lg:grid-cols-4 lg:text-left 2xl:gap-12 2xl:grid-cols-5'>
+          {reviews.map((review:any, index:number) => (
+            <div key={index}>
+              <GoogleReviews
+                reviews={review.text}
+                authors={review.author_name}
+                reviewTime={review.time}
+                pictures={review.profile_photo_url}
+                index={index}
+              />
+            </div>
+          ))} 
+        </div>
       </section>
       
       <section className='lg:my-16'>

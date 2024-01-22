@@ -12,9 +12,15 @@ module.exports = {
             },
             {
                 protocol: 'https',
-                pathname: '/s/files/**',
                 hostname: 'cdn.shopify.com',
-                port: ''
+                port: '',
+                pathname: '/s/files/**'
+            },
+            {
+                protocol: 'https',
+                hostname: 'lh3.googleusercontent.com',
+                port: '',
+                pathname: '/a*/**'
             }
         ]
     }
