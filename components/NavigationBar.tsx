@@ -12,10 +12,9 @@ export default function NavigationBar() {
     return (
 
         <div className='flex min-h-auto flex-row justify-between px-4 sm:px-12 sm:mt-8 w-[1900px]'>
-            <div className='flex h-[75px] max-lg:hidden'>
-                <Image src="/acm-logo.svg" alt="main logo" width={250} height={1} />
-            </div>
-            
+            <a className='flex h-[75px] max-lg:hidden' href='/'>
+               <Image src="/acm-logo.svg" alt="main logo" width={250} height={1} className='dark:invert'/> 
+            </a>
             <div className='flex flex-row'>
                 <div className='flex h-[75px] max-sm:hidden '>
                     <ul className="flex h-[75px] justify-center">

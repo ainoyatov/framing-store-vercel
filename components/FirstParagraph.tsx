@@ -9,7 +9,7 @@ const FirstParagraph = () => {
     const router = useRouter();
 
     const handleScroll = () => {
-        router.push('/gallery');
+        router.push('/appointment');
     }
 
     return (
@@ -20,7 +20,7 @@ const FirstParagraph = () => {
                 
                 <div>
                     <CustomButton 
-                        title="Visit Gallery"
+                        title="Schedule Visit"
                         containerStyles="button__color"
                         handleClick={handleScroll}
                     />

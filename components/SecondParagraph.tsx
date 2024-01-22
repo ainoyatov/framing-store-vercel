@@ -9,7 +9,7 @@ const SecondParagraph = () => {
     const router = useRouter();
 
     const handleScroll = () => {
-        router.push('/appointment');         
+        router.push('/gallery');         
         // window.open('https://calendly.com/guzal/installation', '_blank')
     }
 
@@ -21,7 +21,7 @@ const SecondParagraph = () => {
                 
                 <div>
                     <CustomButton 
-                        title="Schedule Visit"
+                        title="Visit Gallery"
                         containerStyles="button__color"
                         handleClick={handleScroll}
                         

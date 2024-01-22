@@ -18,7 +18,7 @@ const CalendlyBooking = () => {
 
       <div className='p-2 sm:p-4 flex lg:justify-center w-screen h-screen'>
         <InlineWidget 
-          url="https://calendly.com/guzal/installation"
+          url="https://calendly.com/custom-framing/30min"
           styles={{
             height: '100%', 
             width: '100%',

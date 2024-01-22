@@ -70,7 +70,7 @@ const HeaderMobile = () => {
         />
         <motion.ul
             variants={variants}
-            className="absolute grid w-full gap-3 px-10 py-16"
+            className="absolute grid w-full gap-3 px-10 py-16 dark:invert"
         >
           {SIDENAV_ITEMS.map((item, idx) => {
             const isLastItem = idx === SIDENAV_ITEMS.length - 1; // Check if it's the last item
@@ -262,7 +262,7 @@ const MenuToggle = ({ isOpen, toggleOpen }: { isOpen: any, toggleOpen: any }) =>
         width={30}
         height={30}
         alt="close menu"
-        className="dark:invert h-[20px] w-[20px]"
+        className="h-[20px] w-[20px]"
       />        
 
     ) : (
@@ -271,6 +271,7 @@ const MenuToggle = ({ isOpen, toggleOpen }: { isOpen: any, toggleOpen: any }) =>
         alt='mobile menu'
         width={24}
         height={24}
+        className='dark:invert'
       />
     )}
 
