@@ -2,15 +2,13 @@
 import { Suspense } from "react"
 import {ThreeItemGrid} from '@/components/shopify/grid/three-items'
 import { Carousel } from "@/components/shopify/utilities/carousel";
+import { Metadata } from "next";
 
 export const runtime = 'edge';
 
-export const metadata = {
-    description: 'Custom framed pictures, art, jerseys, memorabilia, canvas, uniforms and more.',
-    openGraph: {
-        type: 'website'
-    }
-}
+export const metadata: Metadata = {
+    title: 'Shop'
+  }
 
 export default async function ShopifyPage() {
     return (

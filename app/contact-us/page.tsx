@@ -1,6 +1,11 @@
 import FigmaContactForm from '@/components/FigmaContactForm'
 import React from 'react'
 import Maps from '@/components/Map'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Contact Us'
+}
 
 const ContactPage = () => {
   return (

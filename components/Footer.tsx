@@ -15,7 +15,6 @@ const Footer = ({storeOpen, storeHours}:any) => {
     }
 
     const tosYear = new Date().getFullYear()
-
     
 
     return (
@@ -93,7 +92,7 @@ const Footer = ({storeOpen, storeHours}:any) => {
 
             <div className="flex max-md:flex-col justify-between items-start flex-wrap border-t border-gray-200 md:px-16 px-6 py-10 gap-5">
                 <div className="flex justified-start items-start">
-                    <p className=" text-gray-500">@2023 Gravity Elements LLC. All Rights Reserved.</p>
+                    <p className=" text-gray-500">@{tosYear} Gravity Elements LLC. All Rights Reserved.</p>
                 </div>
                 <div>
                     <ul>

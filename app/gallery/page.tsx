@@ -1,10 +1,18 @@
 import Gallery from "@/components/GalleryImages";
+import { Suspense } from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Gallery'
+}
 
 export default function GalleryHome() {
   return (
-    <div className="px-4 2xl:px-32">
-      <Gallery />
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="px-4 2xl:px-32">
+        <Gallery />
+      </div>
+    </Suspense>
   )
 }
 
