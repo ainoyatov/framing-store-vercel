@@ -1,9 +1,12 @@
+import Services from '@/components/ServicesWeOffer'
 import React from 'react'
 
 const page = () => {
 
   return (
-    <div>page</div>
+    <div>
+      In progress...
+    </div>
   )
 }
 

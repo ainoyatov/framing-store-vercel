@@ -20,7 +20,7 @@ export const footerLinks = [
         title: "Company",
         links: [
             {title: "Directions", url: "/directions"},
-            {title: "Schedule Appointment", url: "/appointment" },
+            {title: "Appointment", url: "/appointment" },
             {title: "Store Hours", url: "/store-hours"},            
             {title: "Contact us", url:"/contact-us"}
         ],
@@ -44,8 +44,21 @@ export const tosLinks = [
     {
         title: "Legal",
         links: [
-            {title: "Terms of Service ", url:"/terms-of-service"},
+            {title: "Terms of Service", url:"/terms-of-service"},
             {title: "Privacy Policy", url: "/privacy-policy"}
         ],
     }
+];
+
+export const servicesOffered = [
+    {title:"Custom Picture Framing", description:"Tailoring frames to fit any artwork or photograph, with a wide variety of styles and materials."},
+    {title:"Canvas Stretching & Framing", description:"Professionally stretching canvas artwork over frames for a clean, gallery-like appearance."},
+    {title:"Shadow Box Framing", description:"Creating deep frames to display three-dimensional items like memorabilia, medals, or keepsakes."},
+    {title:"Conservation Framing", description:"Using acid-free materials and UV-protective glass to preserve artwork and prevent deterioration."},
+    {title:"Frame Restoration & Repair", description:"Restoring damaged frames to their original condition, or making adjustments to fit new artwork."},
+    {title:"Commercial & Corporate Framing", description:"Providing framing services tailored for business environments, including offices, hotels, and restaurants."},
+    {title:"Mirror Framing", description:"Custom framing for mirrors, suitable for both decorative and practical uses in homes and businesses."},
+    {title:"Jersey & Memorabilia Framing", description:"Specializing in framing sports jerseys, collectibles, and other memorabilia with custom designs."},
+    {title:"Mat Cutting & Design", description:"Offering custom mat cutting and design services to enhance the visual impact of framed pieces."},
+    {title:"Art Installation Services", description:"Providing professional installation services for framed artwork in homes, offices, or public spaces."}  
 ];

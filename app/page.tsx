@@ -1,9 +1,8 @@
-import BoxOptions from '@/components/BoxOptions';
 import FirstParagraph from '@/components/FirstParagraph';
 import SecondParagraph from '@/components/SecondParagraph';
 import ThirdParagraph from '@/components/ThirdParagraph'
-import { SmallBoxOptions } from '@/components/BoxOptions';
 import GoogleReviews from '@/components/google/reviews'
+import  Services from '@/components/ServicesWeOffer';
 
 
 
@@ -44,8 +43,8 @@ export default async function Home(){
         <SecondParagraph />
       </section>
 
-      <section className='xs:my-12 lg:my-16'>
-        <SmallBoxOptions />
+      <section className='flex w-full'>
+        <Services />
       </section>
 
       <section className=''>
