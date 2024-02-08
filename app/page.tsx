@@ -3,6 +3,7 @@ import SecondParagraph from '@/components/SecondParagraph';
 import ThirdParagraph from '@/components/ThirdParagraph'
 import GoogleReviews from '@/components/google/reviews'
 import  Services from '@/components/ServicesWeOffer';
+import { servicesOffered } from '@/constants';
 
 
 
@@ -13,6 +14,8 @@ export default async function Home(){
   const response = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeID}&fields=reviews&reviews_sort=newest&key=${apiKey}`)
   const data = await response.json()
   const reviews = data.result.reviews.map((review:any) => review)
+
+
 
 
   return (
@@ -43,8 +46,19 @@ export default async function Home(){
         <SecondParagraph />
       </section>
 
-      <section className='flex w-full'>
-        <Services />
+      <section className=''>
+      <div className='hero__title flex w-full justify-center my-16'>Services Offered</div>
+      <div className='m-2 my-12 grid grid-cols-1 gap-4 max-w-[1600px] xs:grid-cols-2 md:grid-cols-3 lg:gap-4 xl:m-8 lg:grid-cols-4 lg:text-left  2xl:grid-cols-5'>
+        {servicesOffered.map((row, rowIndex) => (
+          <div key={rowIndex}>
+            <Services
+              title={row.title}
+              description={row.description}
+              index={rowIndex}
+            />
+          </div>
+        ))}
+      </div>
       </section>
 
       <section className=''>
