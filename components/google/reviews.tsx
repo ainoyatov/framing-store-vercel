@@ -25,8 +25,7 @@ const GoogleReviews = ({reviews, authors, reviewTime, pictures, index}:any) => {
             {isOpen 
                 ? (
                     <div key={index} className="reviews__border flex flex-col items-center ">
-                        <div className="flex w-full gap-2 items-center">
-                            
+                        <div className="flex w-full gap-2 items-center">  
                             <div className="p-1">
                                 <Image 
                                     src={pictures}
@@ -35,11 +34,10 @@ const GoogleReviews = ({reviews, authors, reviewTime, pictures, index}:any) => {
                                     width={24}
                                 />
                             </div>
-                            <div><h2 className={`text-lg font-semibold text-left`}>{authors}</h2></div>
-                            
+                            <div><h2 className={`text-lg font-semibold text-left`}>{authors}</h2></div> 
                         </div>
-                        <div className="flex w-full text-left">
-                            <p className="max-w-[35ch] m-1 my-4">{reviews}</p>
+                        <div className="flex text-left">
+                            <p className="m-1 my-4">{reviews}</p>
                         </div>
                         <div className="flex w-full justify-end">
                             <button onClick={toggle}>
@@ -51,9 +49,8 @@ const GoogleReviews = ({reviews, authors, reviewTime, pictures, index}:any) => {
                     </div>
                     )
                 : (
-                    <div key={index} className="reviews__border flex flex-col items-center max-w-[350px] min-w-[185px]">
+                    <div key={index} className="reviews__border flex flex-col items-center">
                         <div className="flex w-full gap-2 items-center mb-3">
-                            
                             <div className="p-1">
                                 <Image 
                                     src={pictures}
@@ -62,16 +59,14 @@ const GoogleReviews = ({reviews, authors, reviewTime, pictures, index}:any) => {
                                     width={24}
                                 />
                             </div>
-                            <div><h2 className={`text-lg font-semibold text-left`}>{authors}</h2></div>
-                            
+                            <div><h2 className={`text-lg font-semibold text-left line-clamp-1`}>{authors}</h2></div>
                         </div>
-                        <div className="flex w-full text-left">
-                            <p className="line-clamp-3 max-w-[35ch] p-1">{reviews}</p>
+                        <div className="flex text-left">
+                            <p className="line-clamp-3 p-1">{reviews}</p>
                         </div>
                         <div className="flex w-full justify-start my-2">
                             <p className="p-1">{convertToDate(reviewTime)}</p>
-                        </div>
-                        
+                        </div>     
                         <div className="flex w-full justify-end">
                             <button onClick={toggle}>
                                 <div className={`p-1 ${isOpen && 'rotate-180'} `}>
@@ -79,7 +74,6 @@ const GoogleReviews = ({reviews, authors, reviewTime, pictures, index}:any) => {
                                 </div>
                             </button>
                         </div>
-                        
                     </div>
                 )
             }

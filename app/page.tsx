@@ -19,7 +19,7 @@ export default async function Home(){
 
 
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-6  xs:px-16 xs:py-6'>
+    <main className='flex min-h-screen flex-col items-center justify-between p-6 xs:px-16 xs:py-6'>
       
       <section className='lg:my-16'>
         <FirstParagraph />
@@ -27,7 +27,7 @@ export default async function Home(){
 
       <section>
         <div className='hero__title flex w-full justify-center my-16'>Recent Reviews</div>
-        <div className='m-2 my-12 grid grid-cols-1 text-center gap-4 max-w-[1600px] xs:grid-cols-2 xs:gap-14 md:grid-cols-3 lg:gap-4 xl:m-8 lg:grid-cols-4 lg:text-left 2xl:gap-12 2xl:grid-cols-5'>
+        <div className='m-2 my-12 grid grid-cols-1 text-center gap-4 max-w-[1600px] xs:grid-cols-2  md:grid-cols-3 md:gap-6 xl:m-8 lg:grid-cols-4 lg:text-left 2xl:gap-12 2xl:grid-cols-5'>
           {reviews.map((review:any, index:number) => (
             <div key={index}>
               <GoogleReviews
