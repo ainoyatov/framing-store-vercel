@@ -62,3 +62,4 @@ export const servicesOffered = [
     {title:"Mat Cutting & Design", description:"Offering custom mat cutting and design services to enhance the visual impact of framed pieces."},
     {title:"Art Installation Services", description:"Providing professional installation services for framed artwork in homes, offices, or public spaces."}  
 ];
+
