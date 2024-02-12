@@ -13,7 +13,6 @@ type SideNavItem = {
     title: string;
     path: string;
     icon?: JSX.Element;
-    description?: string;
     submenu?: boolean;
     subMenuItems?: SideNavItem[];
   };
@@ -85,8 +84,8 @@ const HeaderMobile = () => {
                                 <Link
                                   href={item.path}
                                   onClick={() => toggleOpen()}
-                                  className={`flex gap-2 w-full items-center text-2xl underline underline-offset-8 ${
-                                      item.path === pathname ? 'font-semibold decoration-cyan-500' : 'decoration-stone-300'
+                                  className={`flex gap-2 w-full items-center text-2xl ${
+                                      item.path === pathname ? 'font-semibold decoration-cyan-500 underline underline-offset-8' : ''
                                   }`}
                                 >
                                 {item.icon}{item.title}
@@ -156,10 +155,27 @@ export const SIDENAV_ITEMS = [
       icon: <Icon icon="lucide:mail" width="24" height="24" />,
     },
     {
-        title: 'Appointment',
-        path: '/appointment',
-        icon: <Icon icon="lucide:calendar-clock" width="24" height="24" />,
-      },       
+      title: 'Appointment',
+      path: '/appointment',
+      icon: <Icon icon="lucide:calendar-clock" width="24" height="24" />,
+    },
+    {
+      title: 'Services',
+      path: '/services',
+      icon: <Icon icon="eos-icons:service-outlined" width="24" height="24" />,
+      submenu: true,
+      subMenuItems: [
+        {title:"Custom Picture Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
+        {title:"Canvas Stretching & Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
+        {title:"Shadow Box Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
+        {title:"Frame Restoration & Repair", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
+        {title:"Commercial & Corporate Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
+        {title:"Mirror Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
+        {title:"Jersey & Memorabilia Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
+        {title:"Art Installation Services", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>}
+      ]
+    },
+    
     {
       title: 'Legal',
       path: '/legal',
@@ -170,24 +186,7 @@ export const SIDENAV_ITEMS = [
         { title: 'Privacy Policy', path: '/privacy-policy', icon: <Icon icon="tabler:point" width="24" height="24"/> },
       ],
     },
-    {
-      title: 'Services',
-      path: '',
-      icon: <Icon icon="eos-icons:service-outlined" width="24" height="24" />,
-      submenu: true,
-      subMenuItems: [
-        {title:"Custom Picture Framing", path:'', description:"Tailoring frames to fit any artwork or photograph, with a wide variety of styles and materials.", icon: <Icon icon="tabler:point" width="24" height="24"/>},
-        {title:"Canvas Stretching & Framing", path:'', description:"Professionally stretching canvas artwork over frames for a clean, gallery-like appearance.", icon: <Icon icon="tabler:point" width="24" height="24"/>},
-        {title:"Shadow Box Framing", path:'', description:"Creating deep frames to display three-dimensional items like memorabilia, medals, or keepsakes.", icon: <Icon icon="tabler:point" width="24" height="24"/>},
-        {title:"Conservation Framing", path:'', description:"Using acid-free materials and UV-protective glass to preserve artwork and prevent deterioration.", icon: <Icon icon="tabler:point" width="24" height="24"/>},
-        {title:"Frame Restoration & Repair", path:'', description:"Restoring damaged frames to their original condition, or making adjustments to fit new artwork.", icon: <Icon icon="tabler:point" width="24" height="24"/>},
-        {title:"Commercial & Corporate Framing", path:'', description:"Providing framing services tailored for business environments, including offices, hotels, and restaurants.", icon: <Icon icon="tabler:point" width="24" height="24"/>},
-        {title:"Mirror Framing", path:'', description:"Custom framing for mirrors, suitable for both decorative and practical uses in homes and businesses.", icon: <Icon icon="tabler:point" width="24" height="24"/>},
-        {title:"Jersey & Memorabilia Framing", path:'', description:"Specializing in framing sports jerseys, collectibles, and other memorabilia with custom designs.", icon: <Icon icon="tabler:point" width="24" height="24"/>},
-        {title:"Mat Cutting & Design", path:'', description:"Offering custom mat cutting and design services to enhance the visual impact of framed pieces.", icon: <Icon icon="tabler:point" width="24" height="24"/>},
-        {title:"Art Installation Services", path:'', description:"Providing professional installation services for framed artwork in homes, offices, or public spaces.", icon: <Icon icon="tabler:point" width="24" height="24"/>}
-      ]
-    }
+    
 
 ];
 
@@ -226,8 +225,8 @@ const MenuItemWithSubMenu: React.FC<MenuItemWithSubMenuProps> = ({
                   <Link
                     href={subItem.path}
                     onClick={() => toggleOpen()}
-                    className={`flex flex-row gap-2 items-center underline underline-offset-8 ${
-                      subItem.path === pathname ? 'font-bold decoration-cyan-500' : 'decoration-stone-300'
+                    className={`flex flex-row gap-2 items-center  ${
+                      subItem.path === pathname ? 'font-bold decoration-cyan-500 underline underline-offset-8' : ''
                     }`}
                   >
                     {subItem.icon}{subItem.title}
