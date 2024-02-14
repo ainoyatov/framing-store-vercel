@@ -19,6 +19,17 @@ export default async function Home(){
         <FirstParagraph />
       </section>
 
+      <section className=''>
+        <div className='hero__title flex w-auto justify-center my-16'>Services Offered</div>
+          <div className='flex justify-center '>
+            <Services />
+          </div>
+      </section>
+      
+      <section className='lg:my-16'>
+        <SecondParagraph />
+      </section>
+
       <section>
         <div className='hero__title flex w-full justify-center my-16'>Recent Reviews</div>
         <div className='m-2 my-12 grid grid-cols-1 text-center gap-4 max-w-[1600px] xs:grid-cols-2  md:grid-cols-3 md:gap-6 xl:m-8 lg:grid-cols-4 lg:text-left 2xl:gap-12 2xl:grid-cols-5'>
@@ -35,17 +46,6 @@ export default async function Home(){
           ))} 
         </div>
       </section>
-      
-      <section className='lg:my-16'>
-        <SecondParagraph />
-      </section>
-
-      <section className=''>
-        <div className='hero__title flex w-auto justify-center my-16'>Services Offered</div>
-          <div className='flex justify-center '>
-            <Services />
-          </div>
-        </section>
 
       <section className=''>
         <ThirdParagraph />
