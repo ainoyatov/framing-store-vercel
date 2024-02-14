@@ -108,8 +108,17 @@ const Services: React.FC = () => {
                         </div>
                     )
                     : (
-                        <div onClick={openFullServiceList}>
-                            <Icon icon="lucide:chevron-down" width="48" height="48" />
+                        <div>
+                            {isMobile 
+                                ? (
+                                    <div onClick={openFullServiceList}>
+                                        <Icon icon="lucide:chevron-down" width="48" height="48" />
+                                    </div>
+                                )
+                                : (
+                                    ''
+                                )
+                            }
                         </div>
                     )
                 }
