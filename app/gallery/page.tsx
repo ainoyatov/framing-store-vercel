@@ -1,6 +1,7 @@
 import Gallery from "@/components/GalleryImages";
 import { Suspense } from "react";
 import { Metadata } from "next";
+import LoadingDots from "@/components/shopify/utilities/loading-dots";
 
 export const metadata: Metadata = {
   title: 'Gallery'
@@ -8,7 +9,10 @@ export const metadata: Metadata = {
 
 export default function GalleryHome() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={
+    <div className="flex justify-center text-2xl">
+      <LoadingDots className="bg-cyan-500"/>
+    </div>}>
       <div className="px-4 2xl:px-32">
         <Gallery />
       </div>

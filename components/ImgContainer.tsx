@@ -1,6 +1,6 @@
 import type { Photo } from "@/models/Images";
 import Image from "next/image";
-// import Link from "next/link";
+import Link from "next/link";
 
 type Props = {
     photo: Photo
@@ -16,7 +16,7 @@ export default function ImgContainer({photo}: Props){
 
     return(
         <div className="w-[250px] justify-self-center" style={{gridRow: `span ${photoSpans}`}}>
-            {/* <Link href={photo.url} target='_blank' className="grid place-content-center">  */}
+            <Link href={photo.url} target='_blank' className="grid place-content-center"> 
                 <div className="rounded-xl overflow-hidden group">
                         <Image 
                             src={photo.src.large}
@@ -29,7 +29,7 @@ export default function ImgContainer({photo}: Props){
                             className="group-hover:opacity-75"
                         />
                 </div>
-            {/* </Link> */}
+            </Link>
         </div>
     )
 }

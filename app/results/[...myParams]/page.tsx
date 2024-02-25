@@ -21,5 +21,7 @@ export default function SearchResults({params: {myParams} }: Props) {
     const topic = myParams?.[0] ?? "curated"
     const page = myParams?.[1] ?? "1"
 
-    return <GalleryImages topic={topic} page={page} />
+    return (
+        <GalleryImages topic={topic} page={page} />
+    )
 }

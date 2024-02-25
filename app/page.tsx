@@ -3,7 +3,8 @@ import SecondParagraph from '@/components/SecondParagraph';
 import ThirdParagraph from '@/components/ThirdParagraph'
 import GoogleReviews from '@/components/google/reviews'
 import  Services from '@/components/ServicesWeOffer';
-
+import { Suspense } from 'react';
+import LoadingDots from '@/components/shopify/utilities/loading-dots';
 
 export default async function Home(){
   const placeID = process.env.PLACE_ID
@@ -13,6 +14,12 @@ export default async function Home(){
   const reviews = data.result.reviews.map((review:any) => review)
 
   return (
+
+    <Suspense fallback={
+      <div className="flex justify-center text-2xl">
+        <LoadingDots className="bg-cyan-500"/>
+      </div>
+    }>
     <main className='flex min-h-screen flex-col items-center justify-between p-6 xs:px-16 xs:py-6'>
       
       <section className='lg:my-16'>
@@ -51,8 +58,8 @@ export default async function Home(){
         <ThirdParagraph />
       </section>
 
-      
     </main>
+    </Suspense>
   );
 
 }

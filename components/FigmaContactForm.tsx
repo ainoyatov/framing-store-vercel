@@ -5,7 +5,6 @@ import ReCAPTCHA from 'react-google-recaptcha'
 import { sendEmail } from '@/utils/send-email'
 import { useForm } from 'react-hook-form'
 import ContactInfo from './ContactInfo'
-import { NavLinks } from '@/constants'
 import Image from 'next/image'
 import SocialMediaIcons from './SocialMediaIcons'
 

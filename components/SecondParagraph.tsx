@@ -9,8 +9,7 @@ const SecondParagraph = () => {
     const router = useRouter();
 
     const handleScroll = () => {
-        router.push('/gallery');         
-        // window.open('https://calendly.com/guzal/installation', '_blank')
+        router.push('/gallery');
     }
 
     return (

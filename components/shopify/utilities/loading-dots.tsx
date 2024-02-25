@@ -1,8 +1,8 @@
 import clsx from 'clsx'
 
-const dots = 'mx-[1px] inline-block h-1 w-1 animate-blink rounded-md'
+const dots = 'mx-[2px] inline-block h-6 w-6 animate-blink rounded-xl'
 
-const LoadingDots = ({className}: {className: string}) => {
+const LoadingDots = ({className = ''}: {className?: string}) => {
     return (
         <span className='mx-2 inline-flex items-center'>
             <span className={clsx(dots, className)} />

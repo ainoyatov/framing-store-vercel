@@ -2,6 +2,8 @@ import FigmaContactForm from '@/components/FigmaContactForm'
 import React from 'react'
 import Maps from '@/components/Map'
 import { Metadata } from 'next'
+import { Suspense } from 'react'
+import LoadingDots from '@/components/shopify/utilities/loading-dots'
 
 export const metadata: Metadata = {
   title: 'Contact Us'
@@ -9,7 +11,12 @@ export const metadata: Metadata = {
 
 const ContactPage = () => {
   return (
-    <>
+    <Suspense fallback={
+      <div className="flex justify-center text-2xl">
+        <LoadingDots className="bg-cyan-500"/>
+      </div>
+    }>
+    <div>
       <section>
         <div className='mb-16'>
           <FigmaContactForm />
@@ -22,7 +29,8 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
+    </Suspense>
   )
 }
 

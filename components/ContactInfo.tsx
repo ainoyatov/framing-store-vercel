@@ -19,7 +19,6 @@ const ContactInfo = ({icon,paragraph, href}:(any)) => {
                         height={24}
                         src={icon}
                         alt='contact form "contact-by" icons'
-                        // onClick={handleClick}
                         className='cursor-pointer'
                         
                     />
