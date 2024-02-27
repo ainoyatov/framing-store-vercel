@@ -10,9 +10,10 @@ export const metadata: Metadata = {
 export default function GalleryHome() {
   return (
     <Suspense fallback={
-    <div className="flex justify-center text-2xl">
-      <LoadingDots className="bg-cyan-500"/>
-    </div>}>
+      <div className="flex justify-center text-2xl">
+        <LoadingDots className="bg-cyan-500"/>
+      </div>
+    }>
       <div className="px-4 2xl:px-32">
         <Gallery />
       </div>
