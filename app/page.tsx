@@ -41,7 +41,7 @@ export default async function Home(){
         <SecondParagraph />
       </section>
 
-      <section className='w-[400px] xs:w-auto overflow-x-auto'>
+      <section className='w-[400px] xs:w-auto 2xl:max-w-[1600px] overflow-x-auto'>
         <div className='hero__title flex w-full justify-center my-16'>Recent Reviews</div>
         <div className='flex flex-row gap-4'>
           {reviews.map((review:any, index:number) => (
