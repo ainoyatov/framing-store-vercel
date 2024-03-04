@@ -5,7 +5,6 @@ import GoogleReviews from '@/components/google/reviews'
 import  Services from '@/components/ServicesWeOffer';
 import { Suspense } from 'react';
 import LoadingDots from '@/components/shopify/utilities/loading-dots';
-import { Reviews } from '@/components/google/carousel-reviews';
 
 export default async function Home(){
   const placeID = process.env.PLACE_ID
@@ -13,9 +12,7 @@ export default async function Home(){
   const response = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeID}&fields=reviews&reviews_sort=newest&key=${apiKey}`)
   const data = await response.json()
   const reviews = data.result.reviews.map((review:any) => review)
-  // const message = reviews.map((review:any) => review.text)
 
-  // const recentReviews = [...reviews, ...reviews]
 
   return (
 

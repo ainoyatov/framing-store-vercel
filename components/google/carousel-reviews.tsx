@@ -12,10 +12,10 @@ export async function Reviews () {
     const carouselReviews = [...reviews, ...reviews, ...reviews];
 
     return (
-        <div className="w-auto overflow-x-auto pb-6 pt-1 border border-green-500">
+        <div className="w-auto overflow-x-auto pb-6 pt-1">
             <ul className="flex animate-carousel gap-4">
                 {reviews.map((review, i) => (
-                    <li key={i} className="relative aspect-square h-[30vh] max-h-[275px] w-2/3 max-w-[475px] flex-none md:w-1/3 border-2 border-blue-600 ">
+                    <li key={i} className="relative aspect-square h-[30vh] max-h-[275px] w-2/3 max-w-[475px] flex-none md:w-1/3 border-2 border-blue-600">
                         {review}
                     </li>
                 ))}
