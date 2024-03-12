@@ -27,7 +27,7 @@ const SecondParagraph = () => {
                     />
                 </div>
             </div>
-            <div className='hero__image-container sm:mx-10'>
+            <div className='hero__image-container my-8 sm:mx-10'>
                 <Image 
                     src='/room-design-1.svg'
                     alt='room design'

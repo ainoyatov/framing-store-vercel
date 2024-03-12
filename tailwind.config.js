@@ -18,8 +18,14 @@ module.exports = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'container-background-image': "url('/spectrum-background.svg')",
+        'translucent-background-image-sm': "url('/translucent-background-sm.svg')",
+        'translucent-background-image-md': "url('/translucent-background-md.svg')",
+        'translucent-background-image-lg': "url('/translucent-background-lg.svg')",
+        'translucent-background-image-xl': "url('/translucent-background-xl.svg')",
+        'translucent-background-image-2xl': "url('/translucent-background-2xl.svg')",
+        
       },
 
       gridTemplateColumns: {
