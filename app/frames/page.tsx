@@ -1,15 +1,10 @@
-import Services from '@/components/ServicesWeOffer'
-import { Reviews } from '@/components/google/carousel-reviews'
-import React from 'react'
+import SearchComponent from "@/components/mouldings/frames";
 
-const page = () => {
+export default async function MainFrame (searchParams:any) {
 
   return (
     <div>
-      <Reviews />
+      <SearchComponent search={searchParams}/>
     </div>
   )
 }
-
-export default page
-

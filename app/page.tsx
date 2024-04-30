@@ -59,7 +59,7 @@ export default async function Home(){
         
       </section>
       
-      <section className='flex justify-center mt-24 w-auto bg-gradient-to-r from-blue-50 to-cyan-50  rounded-3xl'>
+      <section className='flex justify-center mt-24 w-auto   rounded-3xl'>
         <div>
           <div>
             <ThirdParagraph />

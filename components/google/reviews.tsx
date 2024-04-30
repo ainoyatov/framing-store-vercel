@@ -38,10 +38,10 @@ const GoogleReviews = ({reviews, authors, reviewTime, pictures, index}:any) => {
                                         width={24}
                                     />
                                 </div>
-                                <div><h2 className={`text-lg font-semibold text-left`}>{authors}</h2></div> 
+                                <div><h2 className={`text-lg font-semibold text-left dark:text-gray-300`}>{authors}</h2></div> 
                             </div>
                             <div className="flex text-left">
-                                <p className="m-1 my-4">{reviews}</p>
+                                <p className="m-1 my-4 dark:text-gray-500">{reviews}</p>
                             </div>
                             <div className="flex w-full justify-end">
                                 <div className={`p-1 ${isOpen && 'rotate-180'} `}>
@@ -63,10 +63,10 @@ const GoogleReviews = ({reviews, authors, reviewTime, pictures, index}:any) => {
                                         width={24}
                                     />
                                 </div>
-                                <div><h2 className={`text-lg font-semibold text-left line-clamp-1`}>{authors}</h2></div>
+                                <div><h2 className={`text-lg font-semibold text-left line-clamp-1 dark:text-gray-300`}>{authors}</h2></div>
                             </div>
                             <div className="flex text-left">
-                                <p className="line-clamp-3 p-1">{reviews}</p>
+                                <p className="line-clamp-3 p-1 dark:text-gray-500">{reviews}</p>
                             </div>
                             <div className="flex w-full justify-start my-2">
                                 <p className="p-1">{convertToDate(reviewTime)}</p>

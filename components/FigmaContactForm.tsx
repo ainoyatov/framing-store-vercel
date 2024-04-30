@@ -1,6 +1,6 @@
 'use client'
 
-import { FC, useState, useEffect } from 'react'
+import { FC, useState } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
 import { sendEmail } from '@/utils/send-email'
 import { useForm } from 'react-hook-form'
@@ -227,7 +227,7 @@ const FigmaContactForm: FC = () => {
                                     <div className='flex justify-end'>
                                         <button
                                             disabled={!captcha}
-                                            className='className="text-white text-center text-base font-medium whitespace-nowrap items-stretch shadow-sm bg-slate-900 justify-center mt-11 px-12 py-4 rounded-md self-end max-md:mt-10 max-md:px-5'
+                                            className='text-white text-center text-base font-medium whitespace-nowrap items-stretch shadow-sm bg-slate-900 justify-center mt-11 px-12 py-4 rounded-md self-end max-md:mt-10 max-md:px-5'
                                         >
                                             <p className='text-white text-center'>Send Message</p>
 
