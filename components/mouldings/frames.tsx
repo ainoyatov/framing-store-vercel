@@ -3,13 +3,24 @@
 import { useState } from 'react';
 import searchFrames from "@/lib/mouldings/searchFrames";
 import NextImage from 'next/image';
+import { useEffect } from 'react';
+
+
+interface MouldingItemProps {
+  id: string;
+  itemnum: string;
+  description: string;
+}
 
 function SearchComponent({search}:any) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
+  // const [searchResults, setSearchResults] = useState([]);
+  const [data, setData] = useState<MouldingItemProps[]>([]);
+  const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
 
   const handleInputChange = (event:any) => {
     setSearchTerm(event.target.value);
+    
   };
 
   const handleSearch = async (event:any) => {
@@ -18,12 +29,33 @@ function SearchComponent({search}:any) {
     try {
 
         const response = await searchFrames(searchTerm)
-        setSearchResults(response);
+        // setSearchResults(response);
+        setData(response as unknown as MouldingItemProps[])
 
     } catch (error) {
       console.error('Error fetching search results:', error);
     }
+
+    setSearchTerm('')
+    
   };
+
+  const checkImage = (src: string, itemNum: string) => {
+    const img = new Image();
+    img.src = src;
+    img.onload = () => console.log(`${src} loaded successfully`);
+    img.onerror = () => {
+      setFailedImages(prev => new Set(prev.add(itemNum)));
+    }
+  }
+
+  useEffect(() => {
+    data.forEach(item => {
+      const imageUrl = `https://s3.amazonaws.com/im-dropbox-sync/${item.itemnum}.jpg`;
+      checkImage(imageUrl, item.itemnum);
+    });
+  }, [data]);
+
 
   return (
   <>
@@ -32,7 +64,7 @@ function SearchComponent({search}:any) {
         <div className=''>
           <form onSubmit={handleSearch}>
             <input
-                className="flex border border-[#F0F0F0]  h-[50px] rounded-lg p-5 mb-5 placeholder:text-gray-500"
+                className="flex border border-[#F0F0F0]  h-[50px] rounded-lg p-5 mb-5 placeholder:text-gray-500 dark:placeholder:text-black dark:text-black"
                 type="text"
                 placeholder="Search"
                 value={searchTerm}
@@ -56,27 +88,52 @@ function SearchComponent({search}:any) {
 
     <div>
       <ul>
-        {searchResults.map((item:any) => (
-            
-            <div key={item.id}>
-              <div className='text-xl'>{item.itemnum}</div>
-              <div className='text-gray-600'>{item.description}</div>
-              <div>{item.inventoryItemWarehouseDetails.map((price:any) => (
-                <div key={price.id}>Chop Price: ${price.chopPrice}</div>
-              ))}</div>
-              <a 
-                href={`https://www.internationalmoulding.com/item/${item.id}`}
-                target='_blank'
-              >
-              
-              <NextImage 
-                    alt="product image"
-                    src={`https://s3.amazonaws.com/im-dropbox-sync/${item.itemnum}.jpg`}
-                    width={250}
-                    height={250}
-              />
-              </a>
-            </div>
+        {data.map((item:any) => (
+            !failedImages.has(item.itemnum) ? 
+            (
+              <div key={item.id}>
+                <div className='text-xl'>{item.itemnum}</div>
+                <div className='text-gray-600'>{item.description}</div>
+                <div>{item.inventoryItemWarehouseDetails.map((price:any) => (
+                  <div key={price.id}>Chop Price: ${price.chopPrice}</div>
+                ))}</div>
+                <a 
+                  href={`https://www.internationalmoulding.com/item/${item.id}`}
+                  target='_blank'
+                >
+                
+                <NextImage 
+                      alt="product image"
+                      src={`https://s3.amazonaws.com/im-dropbox-sync/${item.itemnum}.jpg`}
+                      width={250}
+                      height={250}
+                />
+                </a>
+              </div>
+            )
+            :
+            (
+              <div key={item.id}>
+                <div className='text-xl'>{item.itemnum}</div>
+                <div className='text-gray-600'>{item.description}</div>
+                <div>{item.inventoryItemWarehouseDetails.map((price:any) => (
+                  <div key={price.id}>Chop Price: ${price.chopPrice}</div>
+                ))}</div>
+                <a 
+                  href={`https://www.internationalmoulding.com/item/${item.id}`}
+                  target='_blank'
+                >
+                
+                <NextImage 
+                      alt="product image"
+                      src={`/ImageNotFound.svg`}
+                      width={250}
+                      height={250}
+                      className='dark:border-white'
+                />
+                </a>
+              </div>
+            )
         ))}
       </ul>
     </div>

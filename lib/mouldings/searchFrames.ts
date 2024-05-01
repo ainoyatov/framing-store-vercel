@@ -33,7 +33,7 @@ export default async function searchFrames(searchedTerm:any) {
   }
 
   const data = await getFrames();
-  console.log(data)
+  
   return data
 
 }
