@@ -59,7 +59,7 @@ const ServiceItem: React.FC<{ service: Service }> = ({ service }) => {
                     <div className='flex-1 gap-4 m-1'>
                         <div className='reviews__border p-1'>
                             <div className='flex justify-between'>
-                                <h3 className='text-md font-semibold text-slate-700 line-clamp-1'>{service.title}</h3>
+                                <h3 className='text-md font-semibold text-slate-700 dark:text-gray-300 line-clamp-1'>{service.title}</h3>
                                 <div className={`${expanded && 'rotate-180 flex items-center'}`}>
                                     <Icon icon="lucide:chevron-down" width="24" height="24" />
                                 </div>

@@ -23,12 +23,12 @@ const GoogleReviews = ({reviews, authors, reviewTime, pictures, index}:any) => {
     }
     
     return(
-        <div className=" pb-6 pt-1" onClick={toggle}>
+        <div className="pb-6 pt-1 reviews__border" onClick={toggle}>
             
             {isOpen 
                 ? (
-                    <ul className="flex animate-carousel gap-4">
-                        <div key={index} className="reviews__border flex flex-col items-center ">
+                    <ul className="flex gap-4">
+                        <div key={index} className="flex flex-col items-center ">
                             <div className="flex w-full gap-2 items-center">  
                                 <div className="p-1">
                                     <Image 
@@ -52,8 +52,8 @@ const GoogleReviews = ({reviews, authors, reviewTime, pictures, index}:any) => {
                     </ul>
                 )
                 : (
-                    <ul className="flex animate-carousel gap-4">
-                        <div key={index} className="reviews__border flex flex-col items-center">
+                    <ul className="flex gap-4">
+                        <div key={index} className="flex flex-col items-center">
                             <div className="flex w-full gap-2 items-center mb-3">
                                 <div className="p-1">
                                     <Image 
