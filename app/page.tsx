@@ -43,7 +43,7 @@ export default async function Home(){
 
       <section className='w-[400px] xs:w-auto 2xl:max-w-[1600px] overflow-x-auto'>
         <div className='hero__title flex w-full justify-center mt-24 mb-32'>Recent Reviews</div>
-        <div className='flex flex-row gap-4 h-[40vh] xs:h-[24vh]'>
+        <div className='flex flex-row gap-4 h-[40vh] xs:h-[24vh] animate-carousel'>
           {reviews.map((review:any, index:number) => (
             <div key={index} className="relative aspect-square h-[20vh] max-h-[275px] w-2/3 max-w-[475px] flex-none md:w-1/3">
               <GoogleReviews 
