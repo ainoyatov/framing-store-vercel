@@ -34,6 +34,6 @@ export default async function searchFrames(searchedTerm:any) {
 
   const data = await getFrames();
   
-  return data
+  return data;
 
 }

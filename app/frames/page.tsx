@@ -1,10 +1,12 @@
-import SearchComponent from "@/components/mouldings/frames";
 
-export default async function MainFrame (searchParams:any) {
+import AllFrames from "@/components/mouldings/AllFrames";
+
+
+export default async function MainFrame () {
 
   return (
-    <div>
-      <SearchComponent search={searchParams}/>
+    <div className="py-8">
+      <AllFrames />
     </div>
   )
 }

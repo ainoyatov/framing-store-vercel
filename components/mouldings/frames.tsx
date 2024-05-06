@@ -64,7 +64,7 @@ function SearchComponent({search}:any) {
         <div className=''>
           <form onSubmit={handleSearch}>
             <input
-                className="flex border border-[#F0F0F0]  h-[50px] rounded-lg p-5 mb-5 placeholder:text-gray-500 dark:placeholder:text-black dark:text-black"
+                className="w-2/3 bg-white p-2 text-xl rounded-xl border-2 shadow-xl text-black"
                 type="text"
                 placeholder="Search"
                 value={searchTerm}
@@ -72,7 +72,7 @@ function SearchComponent({search}:any) {
             />
           </form>
         </div>
-        <div className='flex items-center'>
+        {/* <div className='flex items-center'>
           <button 
             type="submit"
             onClick={handleSearch}
@@ -80,7 +80,7 @@ function SearchComponent({search}:any) {
           >
             Search
           </button>
-        </div>
+        </div> */}
       </div>
         
       
@@ -107,6 +107,7 @@ function SearchComponent({search}:any) {
                       src={`https://s3.amazonaws.com/im-dropbox-sync/${item.itemnum}.jpg`}
                       width={250}
                       height={250}
+                      className='dark:border-white'
                 />
                 </a>
               </div>
@@ -126,7 +127,7 @@ function SearchComponent({search}:any) {
                 
                 <NextImage 
                       alt="product image"
-                      src={`/ImageNotFound.svg`}
+                      src={`/image-not-found.svg`}
                       width={250}
                       height={250}
                       className='dark:border-white'
