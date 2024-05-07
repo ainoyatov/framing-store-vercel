@@ -15,7 +15,7 @@ export default async function searchMoldings() {
         },
         {
           FieldName: "itemnum",
-          Value: "",
+          Value: "25",
           Op: "CONTAINS"
         }
       ]
