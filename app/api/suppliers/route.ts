@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
 
-import searchMoldings from "@/lib/mouldings/defaultView";
+import searchMoldings from "@/lib/mouldings/searchedView";
 
 export async function POST(request: NextRequest) {
 

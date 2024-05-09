@@ -1,11 +1,12 @@
 
-import searchFrames from "@/lib/mouldings/searchFrames"
 import SearchMouldingForm from "@/components/mouldings/valleyMoulding"
+import defaultViews from "@/lib/mouldings/defaultView"
+import DisplayMouldings from "@/components/mouldings/defaultMouldings";
 
 
 export default async function FramesPage() {
   
-  // const res = await searchFrames()
+  const res = await defaultViews();
 
 
   return (
@@ -17,7 +18,7 @@ export default async function FramesPage() {
       {/* <div className="py-16 p-4 grid grid-cols-1 gap-4 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:gap-6 2xl:grid-cols-5" >
         {res.map((item:any) => (
           <div key={item.id}>
-            <DefaultMouldings 
+            <DisplayMouldings 
               itemNum={item.itemnum}
             />
           </div>

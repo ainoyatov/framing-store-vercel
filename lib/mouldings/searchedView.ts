@@ -1,5 +1,5 @@
 
-export default async function defaultViews() {
+export default async function searchMoldings(inputText:any) {
     
     const url = 'https://newapi.internationalmoulding.com/api/inventoryitem/getpagedinventoryitems2';
   
@@ -27,7 +27,7 @@ export default async function defaultViews() {
         },
         {
           FieldName: "itemnum",
-          Value: "",
+          Value: inputText,
           Op: "CONTAINS"
         }
       ]
