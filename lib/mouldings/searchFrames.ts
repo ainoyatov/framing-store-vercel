@@ -1,5 +1,5 @@
 
-export default async function searchFrames(searchedTerm:any) {
+export default async function searchFrames() {
     
   const url = 'https://newapi.internationalmoulding.com/api/inventoryitem/getpagedinventoryitems2';
 
@@ -9,13 +9,25 @@ export default async function searchFrames(searchedTerm:any) {
     OrderBy: "itemnum",
     Filter: [
       {
+        FieldName: "WarehouseId",
+        Op: "EQUAL",
+        Value: "26",
+        And: "false"
+      },
+      {
         FieldName: "catalogId",
         Value: "741",
         Op: "EQUAL"
       },
       {
+        FieldName: "substrateId",
+        Value: "3", // It means material is a Wood; [Aluminum, MDF, Polystyrene, Wood]
+        And: "false",
+        Op: "EQUAL"
+      },
+      {
         FieldName: "itemnum",
-        Value: `${searchedTerm}`,
+        Value: "",
         Op: "CONTAINS"
       }
     ]
