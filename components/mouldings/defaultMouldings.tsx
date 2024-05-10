@@ -5,8 +5,8 @@ export default function DisplayMouldings ({itemNum}:any) {
 
 
     return (
-        <div>
-            <div className="relative h-[300px] max-w-md">
+        
+            <div className="relative h-[300px] ">
                 <NextImage 
                     src={`https://s3.amazonaws.com/im-dropbox-sync/${itemNum}.jpg`}
                     alt="Images of frame moulding"
@@ -17,6 +17,6 @@ export default function DisplayMouldings ({itemNum}:any) {
                     }}
                 />
             </div>
-        </div>
+        
     )
 }
