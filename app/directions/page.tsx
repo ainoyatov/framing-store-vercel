@@ -16,7 +16,7 @@ const Directions = () => {
       
       <div className='flex flex-col justify-center xs:justify-start'>
         <h3 className='address__title my-4'>Store address</h3>
-        <p className='address__subtitle'>8241 E. Evans Rd, Suite#102 </p> 
+        <p className='address__subtitle'>8221 E. Evans Rd, Suite C </p> 
         <p className='address__subtitle'>Scottsdale, AZ 85260</p>
 
         <div>

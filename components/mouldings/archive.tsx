@@ -1,7 +1,7 @@
 // 'use client'
 
 // import { useEffect, useState } from "react"
-// import searchAllFrames from "@/lib/mouldings/searchAllFrames"
+// // import searchAllFrames from "@/lib/mouldings/searchAllFrames"
 // import NextImage from "next/image"
 
 

@@ -72,7 +72,7 @@ const FigmaContactForm: FC = () => {
         },
         {
             
-            paragraph: "8241 E. Evans Rd. Ste#102 Scottsdale, AZ 85260",
+            paragraph: "8221 E. Evans Rd. Suite C Scottsdale, AZ 85260",
             icon: "/map_pin_white.svg",
             href: "https://maps.app.goo.gl/zSCtCoUzRrvL4QA28?g_st=ic"
         },

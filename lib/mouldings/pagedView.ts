@@ -1,10 +1,10 @@
 
-export default async function searchMoldings(inputText:any, inputNumber:any) {
+export default async function pageMoldings(pages:number) {
     
     const url = 'https://newapi.internationalmoulding.com/api/inventoryitem/getpagedinventoryitems2';
   
     const payload = {
-      PageNumber: inputNumber,
+      PageNumber: pages,
       PageSize: 24,
       OrderBy: "itemnum",
       Filter: [
@@ -27,7 +27,7 @@ export default async function searchMoldings(inputText:any, inputNumber:any) {
         },
         {
           FieldName: "itemnum",
-          Value: inputText,
+          Value: "",
           Op: "CONTAINS"
         }
       ]

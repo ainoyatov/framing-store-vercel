@@ -1,10 +1,10 @@
 
-export default async function defaultViews() {
+export default async function defaultViews(pageNumber:number) {
     
     const url = 'https://newapi.internationalmoulding.com/api/inventoryitem/getpagedinventoryitems2';
   
     const payload = {
-      PageNumber: 1,
+      PageNumber: pageNumber,
       PageSize: 24,
       OrderBy: "itemnum",
       Filter: [
