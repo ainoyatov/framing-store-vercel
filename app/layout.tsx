@@ -8,6 +8,7 @@ import { Suspense } from 'react'
 import { ensureStartsWith } from '@/lib/shopify/utils'
 import ShopifyNavbar from '@/components/shopify/layout/navbar'
 import NavigationBar from '@/components/NavigationBar'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 
 export const revalidate = 3600
@@ -64,6 +65,8 @@ export default async function RootLayout({
         </Suspense>
         <Footer storeOpen={storeOpen} storeHours={storeHours}/>
       </body>
+
+      <GoogleAnalytics gaId='G-1K5QJXKPCD' />
     </html>
   )
 }
