@@ -3,6 +3,11 @@
 import React from 'react'
 import Maps from '@/components/Map'
 import CustomButton from '@/components/CustomButton'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Directions'
+}
 
 const Directions = () => {
 
