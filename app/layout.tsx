@@ -69,7 +69,7 @@ export default async function RootLayout({
         <Footer storeOpen={storeOpen} storeHours={storeHours}/>
       </body>
 
-      <GoogleAnalytics gaId={`${gaId_id}`} />
+      <GoogleAnalytics gaId='G-1K5QJXKPCD' />
     </html>
   )
 }
