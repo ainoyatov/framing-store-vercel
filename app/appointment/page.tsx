@@ -5,7 +5,12 @@ import { Suspense } from 'react'
 import LoadingDots from '@/components/shopify/utilities/loading-dots'
 
 export const metadata: Metadata = {
-  title: 'Appointment'
+  title: 'Appointment',
+  description: 'Simple step to get a price quote, Schedule a quick appointment, Easy framing near Scottsdale, Book your time with an expert',
+  robots: {
+    follow: true,
+    index: true
+  }
 }
 
 

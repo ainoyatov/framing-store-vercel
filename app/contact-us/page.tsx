@@ -6,7 +6,12 @@ import { Suspense } from 'react'
 import LoadingDots from '@/components/shopify/utilities/loading-dots'
 
 export const metadata: Metadata = {
-  title: 'Contact Us'
+  title: 'Contact Us',
+  description: 'Got framing?, Got questions about custom framing?, Questions about picture framing costs in Scottsdale?',
+  robots: {
+    follow: true,
+    index: true
+  }
 }
 
 const ContactPage = () => {

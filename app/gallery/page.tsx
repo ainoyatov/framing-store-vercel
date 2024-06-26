@@ -4,7 +4,12 @@ import { Metadata } from "next";
 import LoadingDots from "@/components/shopify/utilities/loading-dots";
 
 export const metadata: Metadata = {
-  title: 'Gallery'
+  title: 'Gallery',
+  description: 'Wedding picture frames, Custom frames, Modern frames, Art frame gallery in Scottsdale',
+  robots: {
+    follow: true,
+    index: true
+  }
 }
 
 export default function GalleryHome() {
