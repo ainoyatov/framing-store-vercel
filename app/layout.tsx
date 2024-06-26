@@ -48,6 +48,9 @@ export default async function RootLayout({
   const storeOpen = data.result.current_opening_hours.open_now
   const storeHours = data.result.current_opening_hours.weekday_text
 
+  //Google Analystics 4 gaId
+  const gaId_id = process.env.NEXT_PUBLIC_GAID
+
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -66,7 +69,7 @@ export default async function RootLayout({
         <Footer storeOpen={storeOpen} storeHours={storeHours}/>
       </body>
 
-      <GoogleAnalytics gaId='G-1K5QJXKPCD' />
+      <GoogleAnalytics gaId={`${gaId_id}`} />
     </html>
   )
 }
