@@ -8,6 +8,11 @@ import LoadingDots from '@/components/shopify/utilities/loading-dots';
 import CustomButton from '@/components/CustomButton';
 import LeaveAReview from '@/components/google/leave-review';
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Home'
+}
 
 export default async function Home(){
   const placeID = process.env.PLACE_ID
