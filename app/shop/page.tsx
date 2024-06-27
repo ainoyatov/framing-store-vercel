@@ -8,7 +8,12 @@ import LoadingDots from "@/components/shopify/utilities/loading-dots";
 export const runtime = 'edge';
 
 export const metadata: Metadata = {
-    title: 'Shop'
+    title: 'Shop',
+    description: 'Art framing shop in Scottsdale, Framed posters on sale, Framed canvas, Stretch canvas, frame diplomas',
+    robots: {
+      follow: true,
+      index: true
+    }
   }
 
 export default async function ShopifyPage() {

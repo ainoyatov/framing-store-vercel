@@ -4,8 +4,7 @@ https://artframing.studio/shop
 https://artframing.studio/contact-us
 https://artframing.studio/appointment
 https://artframing.studio/directions
-https://artframing.studio/store-hors
+https://artframing.studio/store-hours
 https://artframing.studio/terms-of-service
 https://artframing.studio/privacy-policy
 https://artframing.studio/frames
-https://artframing.studio/product/*
