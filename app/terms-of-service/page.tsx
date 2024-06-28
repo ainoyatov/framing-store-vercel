@@ -1,5 +1,6 @@
 import React from 'react'
 import { Metadata } from "next";
+import TOS from '@/components/TOS';
 
 export const metadata: Metadata = {
   title: 'TOS',
@@ -12,7 +13,9 @@ export const metadata: Metadata = {
 
 const TermsOfService = () => {
   return (
-    <div>TermsOfService</div>
+    <div>
+      <TOS />
+    </div>
   )
 }
 
