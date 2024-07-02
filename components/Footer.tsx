@@ -99,7 +99,7 @@ const Footer = ({storeOpen, storeHours}:any) => {
                         { tosLinks.map((link) => (
                             <div key={link.title}>
                                 {link.links.map((item) => (
-                                    <li key={item.title} className="my-2">
+                                    <li key={item.title} className="my-2 text-gray-500">
                                         <Link
                                             href={item.url}
                                         >

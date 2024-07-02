@@ -2,7 +2,7 @@
 export default function TOS() {
 
     return (
-        <div className="m-2 md:m-16">
+        <div className="m-2 md:m-16 dark:text-gray-400">
             <div className="text-xl font-bold m-8">Terms of Service</div>
             <div className="m-8">
                 <div className="mb-4">
