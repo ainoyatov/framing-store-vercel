@@ -1,9 +1,10 @@
 import React from 'react'
 import { Metadata } from "next";
+import Privacypolicy from '@/components/PrivacyPolicy';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'Data NOT shared, No info stored, All city and state restrictions apply',
+  description: 'Data NOT stored, Data NOT shared.',
   robots: {
     follow: true,
     index: true
@@ -12,7 +13,9 @@ export const metadata: Metadata = {
 
 const PrivacyPolicy = () => {
   return (
-    <div>PrivacyPolicy</div>
+    <div>
+      <Privacypolicy />
+    </div>
   )
 }
 
