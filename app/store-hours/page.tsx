@@ -1,5 +1,6 @@
 import React from 'react'
 import { Metadata } from "next";
+import AnalogClock from '@/components/clock/AnalogClock';
 
 export const metadata: Metadata = {
   title: 'Store Hours'
@@ -7,7 +8,9 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <div>page</div>
+    <div className='flex justify-center p-8'>
+      <AnalogClock />
+    </div>
   )
 }
 
