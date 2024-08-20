@@ -65,7 +65,7 @@ const GoogleReviews = ({reviews, authors, reviewTime, pictures, index}:any) => {
                                 <div><h2 className={`text-lg font-semibold text-left line-clamp-1 dark:text-gray-300`}>{authors}</h2></div>
                             </div>
                             <div className="flex text-left">
-                                <p className="line-clamp-3 p-1 dark:text-gray-500">{reviews}</p>
+                                <p className="line-clamp-2 p-1 dark:text-gray-500">{reviews}</p>
                             </div>
                             <div className="flex w-full justify-start my-2">
                                 <p className="p-1">{convertToDate(reviewTime)}</p>

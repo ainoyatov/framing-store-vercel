@@ -45,8 +45,8 @@ export default async function RootLayout({
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
   const response = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeID}&fields=current_opening_hours&reviews_sort=newest&key=${apiKey}`)
   const data = await response.json()
-  const storeOpen = data.result.current_opening_hours.open_now
-  const storeHours = data.result.current_opening_hours.weekday_text
+  const storeOpen = await data.result.current_opening_hours.open_now
+  const storeHours = await data.result.current_opening_hours.weekday_text
 
   //Google Analystics 4 gaId
   const gaId_id = process.env.NEXT_PUBLIC_GAID

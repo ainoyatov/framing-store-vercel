@@ -45,12 +45,12 @@ export default async function Home(){
         <SecondParagraph />
       </section>
 
-      <section className='w-[400px] xs:w-auto 2xl:max-w-[1600px] overflow-x-auto'>
+      <section className='w-[400px] xs:w-auto 2xl:max-w-[1600px] overflow-x-auto '>
         <div className='hero__title flex w-full justify-center mt-24 mb-32'>Recent Reviews</div>
-        <div className='flex flex-row gap-4 h-[40vh] xs:h-[24vh] animate-carousel'>
+        <div className='flex flex-row gap-4 h-[40vh] xs:h-[24vh]'>
           {reviews.map((review:any, index:number) => (
             review.text.length > 0 ? (
-              <div key={index} className="relative aspect-square h-[20vh] max-h-[275px] w-2/3 max-w-[475px] flex-none md:w-1/3">
+              <div key={index} className="relative aspect-square h-[20vh] max-h-[275px] w-2/3 max-w-[475px] flex-none md:w-1/3 ">
                 <GoogleReviews 
                   reviews={review.text}
                   authors={review.author_name}
@@ -65,7 +65,7 @@ export default async function Home(){
         
       </section>
       
-      <section className='flex justify-center mt-24 w-auto   rounded-3xl'>
+      <section className='flex justify-center mt-24 w-auto rounded-3xl'>
         <div>
           <div>
             <ThirdParagraph />
