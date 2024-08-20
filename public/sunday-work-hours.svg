@@ -1,0 +1,17 @@
+<svg width="109" height="109" viewBox="0 0 109 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="55.2979" cy="53.2539" r="29.5" fill="white" stroke="#D6D5D5"/>
+<rect x="54.3479" y="25.3039" width="1.9" height="4.9" fill="#D6D5D5" stroke="black" stroke-width="0.1"/>
+<rect x="68.8162" y="28.3222" width="1.9" height="4.9" transform="rotate(30 68.8162 28.3222)" fill="#D6D5D5" stroke="black" stroke-width="0.1"/>
+<rect x="40.3662" y="29.2722" width="1.9" height="4.9" transform="rotate(-30 40.3662 29.2722)" fill="#D6D5D5" stroke="black" stroke-width="0.1"/>
+<rect x="79.8772" y="39.3222" width="1.9" height="4.9" transform="rotate(60 79.8772 39.3222)" fill="#D6D5D5" stroke="black" stroke-width="0.1"/>
+<rect x="31.3662" y="39.968" width="1.9" height="4.9" transform="rotate(-60 31.3662 39.968)" fill="#D6D5D5" stroke="black" stroke-width="0.1"/>
+<rect x="54.05" y="76.05" width="1.9" height="4.9" fill="#D6D5D5" stroke="black" stroke-width="0.1"/>
+<rect x="27.3479" y="54.2039" width="1.9" height="4.9" transform="rotate(-90 27.3479 54.2039)" fill="#D6D5D5" stroke="black" stroke-width="0.1"/>
+<rect x="78.05" y="53.95" width="1.9" height="4.9" transform="rotate(-90 78.05 53.95)" fill="#D6D5D5" stroke="black" stroke-width="0.1"/>
+<rect x="80.8272" y="64.7722" width="1.9" height="4.9" transform="rotate(120 80.8272 64.7722)" fill="#D6D5D5" stroke="black" stroke-width="0.1"/>
+<rect x="42.012" y="77.7833" width="1.9" height="4.9" transform="rotate(-150 42.012 77.7833)" fill="#D6D5D5" stroke="black" stroke-width="0.1"/>
+<rect x="70.462" y="76.8333" width="1.9" height="4.9" transform="rotate(150 70.462 76.8333)" fill="#D6D5D5" stroke="black" stroke-width="0.1"/>
+<rect x="31.3162" y="68.418" width="1.9" height="4.9" transform="rotate(-120 31.3162 68.418)" fill="#D6D5D5" stroke="black" stroke-width="0.1"/>
+<path d="M55 55C56.1046 55 57 54.1046 57 53C57 51.8954 56.1046 51 55 51C53.8954 51 53 51.8954 53 53C53 54.1046 53.8954 55 55 55Z" fill="white" stroke="#D6D5D5"/>
+<path d="M55 55C56.1046 55 57 54.1046 57 53C57 51.8954 56.1046 51 55 51C53.8954 51 53 51.8954 53 53C53 54.1046 53.8954 55 55 55Z" fill="white" stroke="black" stroke-width="0.2"/>
+</svg>
