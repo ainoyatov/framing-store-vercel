@@ -20,6 +20,7 @@ const page = () => {
             height={30}
           />
         </div>
+        <div className='flex justify-center max-sm:hidden'>10:00 AM - 5:00 PM</div>
       </div>
       
       
@@ -33,6 +34,7 @@ const page = () => {
             height={30}
           />
         </div>
+        <div className='flex justify-center max-sm:hidden'>11:00 AM - 3:00 PM</div>
       </div>
       <div className='flex flex-col'>
         <div className='flex justify-center text-3xl lg:text-4xl'>Sunday</div>
@@ -44,6 +46,7 @@ const page = () => {
             height={30}
           />
         </div>
+        <div className='flex justify-center max-sm:hidden'>Day off</div>
       </div>
     </div>
   );
