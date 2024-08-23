@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Store Hours'
 }
 
-const page = () => {
+const StoreHoursPage = () => {
   return (
     <div className='flex flex-col sm:flex-row py-16 px-8 justify-between'>
       <div className='flex flex-col'>
@@ -52,4 +52,4 @@ const page = () => {
   );
 }
 
-export default page
+export default StoreHoursPage
