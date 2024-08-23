@@ -36,14 +36,6 @@ const Footer = () => {
                         All rights reserved &copy;
                     </p>
 
-                    <div>
-                        {/* {storeOpen ? (
-                            <p className="text-xl text-gray-500">Store is <span className="text-green-500">OPEN</span></p>
-                        ) : (
-                            <p className="text-xl text-gray-500">Store is <span className="text-red-500">CLOSED</span></p>
-                        )} */}
-                    </div>
-
                 </div>
 
                 <div className="footer__links">

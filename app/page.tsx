@@ -9,16 +9,22 @@ import CustomButton from '@/components/CustomButton';
 import LeaveAReview from '@/components/google/leave-review';
 import Image from 'next/image';
 import { Metadata } from 'next';
+import RecentReviews from '@/components/google/recent-reviews';
 
 
 export default async function Home(){
   const placeID = process.env.PLACE_ID
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+
+  //Field = reviews
   const response = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeID}&fields=reviews&reviews_sort=newest&key=${apiKey}`)
   const data = await response.json()
   const reviews = data.result.reviews.map((review:any) => review)
 
-  
+  //Field = user_ratings_total
+  const rsp = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeID}&fields=user_ratings_total&key=${apiKey}`)
+  const dt = await rsp.json()
+  const totalUserReviews = dt.result.user_ratings_total
 
 
   return (
@@ -45,9 +51,11 @@ export default async function Home(){
         <SecondParagraph />
       </section>
 
-      {/* <section>
-
-      </section> */}
+      <section>
+        <RecentReviews 
+          total_reviews={totalUserReviews}
+        />
+      </section>
 
       {/* <section className='w-[400px] xs:w-auto 2xl:max-w-[1600px] overflow-x-auto '>
         <div className='hero__title flex w-full justify-center mt-24 mb-32'>Recent Reviews</div>
@@ -69,12 +77,8 @@ export default async function Home(){
         
       </section> */}
       
-      <section className='flex  mt-24 w-auto rounded-3xl'>
-        <div>
-          <div>
-            <ThirdParagraph />
-          </div>
-        </div>
+      <section className='flex mt-24 w-auto rounded-3xl'>
+        <ThirdParagraph />
       </section>
 
 
