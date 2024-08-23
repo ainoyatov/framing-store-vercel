@@ -6,7 +6,7 @@ import { footerLinks, socialLinks, tosLinks } from "@/constants";
 import { useRouter } from "next/navigation";
 
 
-const Footer = ({storeOpen, storeHours}:any) => {
+const Footer = () => {
 
     const router = useRouter();
     

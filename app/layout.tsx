@@ -3,10 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
 import HeaderMobile from '@/components/HeaderMobile'
-import HeaderDesktop from '@/components/HeaderDesktop'
 import { Suspense } from 'react'
-import { ensureStartsWith } from '@/lib/shopify/utils'
-import ShopifyNavbar from '@/components/shopify/layout/navbar'
 import NavigationBar from '@/components/NavigationBar'
 import { GoogleAnalytics } from '@next/third-parties/google'
 
@@ -41,13 +38,6 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
 
-  const placeID = process.env.PLACE_ID
-  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
-  const response = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeID}&fields=current_opening_hours&reviews_sort=newest&key=${apiKey}`)
-  const data = await response.json()
-  const storeOpen = await data.result.current_opening_hours.open_now
-  const storeHours = await data.result.current_opening_hours.weekday_text
-
   //Google Analystics 4 gaId
   const gaId_id = process.env.NEXT_PUBLIC_GAID
 
@@ -55,7 +45,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={inter.className}>
 
-        <div className='lg:pt-12 flex flex-row justify-center md:ml-0 '>
+        <div className='lg:pt-12 flex flex-row justify-center md:ml-0'>
           <NavigationBar />
         </div>
         
@@ -66,7 +56,7 @@ export default async function RootLayout({
         <Suspense>
           <main>{children}</main>
         </Suspense>
-        <Footer storeOpen={storeOpen} storeHours={storeHours}/>
+        <Footer/>
       </body>
 
       <GoogleAnalytics gaId='G-1K5QJXKPCD' />

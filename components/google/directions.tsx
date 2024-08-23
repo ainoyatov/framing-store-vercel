@@ -5,41 +5,33 @@ import CustomButton from '@/components/CustomButton'
 
 const Directions = () => {
 
-    const handleScroll = () => {
-        window.open('https://maps.app.goo.gl/zSCtCoUzRrvL4QA28?g_st=ic', '_blank')
-    }
-    
-    return (
-      <div className='mx-4 xs:px-4 md:px-14 grid xs:grid-cols-2'>
-        
-        <div className='flex flex-col justify-center xs:justify-start'>
-          <h3 className='address__title my-4'>Store address</h3>
-          <p className='address__subtitle'>8221 E. Evans Rd, Suite C </p> 
-          <p className='address__subtitle'>Scottsdale, AZ 85260</p>
+  const handleScroll = () => {
+      window.open('https://maps.app.goo.gl/zSCtCoUzRrvL4QA28?g_st=ic', '_blank')
+  }
   
-          <div>
-            <CustomButton 
-                title="Directions"
-                containerStyles="address__button"
-                handleClick={handleScroll}
-            />
-          </div>
-            <h3 className='address__title my-4'>Store hours</h3>
-            <p className='address__subtitle'>Monday - Friday: 10am - 5pm </p> 
-            <p className='address__subtitle'>Saturdays: 11am - 3pm </p>
-            <p className='address__subtitle'>Sundays: Closed </p>
-          <div>
-  
-          </div>
+  return (
+    <div className='flex flex-col md:flex-row py-8'>
+      
+      <div className='flex flex-col p-4 items-center w-full md:my-16'>
+        <div className='address__title mb-4 flex items-center'>Store address</div>
+        <div className='address__subtitle'>8221 E. Evans Rd, Suite C </div> 
+        <div className='address__subtitle'>Scottsdale, AZ 85260</div>
+        <div>
+          <CustomButton 
+              title="Directions"
+              containerStyles="address__button"
+              handleClick={handleScroll}
+          />
         </div>
-        
-        <div className=' shadow-xl my-4 h-screen flex flex-col justify-center xs:mx-4 xs:justify-start xs:h-auto'>
-          <Maps/>
-        </div>
-        
-  
       </div>
-    )
+      
+      <div className='p-4 h-screen w-full md:h-auto py-8 md:py-0 drop-shadow-xl'>
+        <Maps/>
+      </div>
+      
+
+    </div>
+  )
 }
 
-export default Directions
+export default Directions;
