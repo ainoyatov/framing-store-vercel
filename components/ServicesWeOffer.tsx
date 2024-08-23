@@ -43,13 +43,13 @@ const ServiceItem: React.FC<{ service: Service }> = ({ service }) => {
                     <div className='flex-1 gap-4 m-1'>
                         <div className='reviews__border p-1'>
                             <div className='flex justify-between items-start '>
-                                <h3 className='text-md font-semibold text-slate-700 mb-2 dark:text-gray-300'>{service.title}</h3>
+                                <h3 className='text-md font-semibold text-slate-700 mb-2 dark:text-gray-300 line-clamp-1'>{service.title}</h3>
                                 <div className={`${expanded && 'rotate-180'}`}>
                                     <Icon icon="lucide:chevron-down" width="24" height="24" />
                                 </div>
                             </div>
                             <div>
-                                <p className="text-slate-700 text-sm max-w-[250px] dark:text-gray-500">{service.description}</p> 
+                                <p className="text-slate-700 text-sm max-w-[250px] dark:text-gray-500 line-clamp-3">{service.description}</p> 
                             </div>
                         </div>
                     </div>
@@ -59,10 +59,13 @@ const ServiceItem: React.FC<{ service: Service }> = ({ service }) => {
                     <div className='flex-1 gap-4 m-1'>
                         <div className='reviews__border p-1'>
                             <div className='flex justify-between'>
-                                <h3 className='text-md font-semibold text-slate-700 dark:text-gray-300 line-clamp-1'>{service.title}</h3>
-                                <div className={`${expanded && 'rotate-180 flex items-center'}`}>
+                                <h3 className='text-md font-semibold text-slate-700 dark:text-gray-300'>{service.title}</h3>
+                                <div className={`${expanded && 'rotate-180 flex items-end'}`}>
                                     <Icon icon="lucide:chevron-down" width="24" height="24" />
                                 </div>
+                            </div>
+                            <div>
+                                <p className="text-slate-700 text-sm max-w-[250px] dark:text-gray-500">{service.description}</p> 
                             </div>
                         </div>
                     </div>
