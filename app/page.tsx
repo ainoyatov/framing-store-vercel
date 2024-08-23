@@ -45,6 +45,10 @@ export default async function Home(){
         <SecondParagraph />
       </section>
 
+      {/* <section>
+
+      </section> */}
+
       {/* <section className='w-[400px] xs:w-auto 2xl:max-w-[1600px] overflow-x-auto '>
         <div className='hero__title flex w-full justify-center mt-24 mb-32'>Recent Reviews</div>
         <div className='flex flex-row gap-4 h-[40vh] xs:h-[24vh]'>
@@ -65,7 +69,7 @@ export default async function Home(){
         
       </section> */}
       
-      <section className='flex justify-center mt-24 w-auto rounded-3xl'>
+      <section className='flex  mt-24 w-auto rounded-3xl'>
         <div>
           <div>
             <ThirdParagraph />
