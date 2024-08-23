@@ -26,7 +26,9 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-
+html {
+  overflow-x: hidden;
+}
 
 .hero__title {
   @apply  text-[36px] sm:text-[42px] lg:text-[48px] xl:text-[64px]  font-extrabold;
