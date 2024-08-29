@@ -8,9 +8,9 @@ const SecondParagraph = () => {
 
     const router = useRouter();
 
-    const handleScroll = () => {
-        router.push('/gallery');
-    }
+    // const handleScroll = () => {
+    //     router.push('/gallery');
+    // }
 
     return (
         <div className='my-12 sm:my-12 grid text-left lg:grid-cols-2'>
@@ -18,14 +18,16 @@ const SecondParagraph = () => {
                 <h1 className='hero__title'>Preserve and Display Your Memories</h1>
                 <p className='mb-6 hero__subtitle'>"Frame a valuable art collection, treasured family photographs, or sentimental objects"</p>
                 
-                <div>
+                <a
+                    href="tel:+14802687182"
+                    >
                     <CustomButton 
-                        title="Visit Gallery"
+                        title="Call Today"
                         containerStyles="button__color"
-                        handleClick={handleScroll}
+                        // handleClick={handleScroll}
                         
                     />
-                </div>
+                </a>
             </div>
             <div className='hero__image-container my-8 sm:mx-10'>
                 <Image 

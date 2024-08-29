@@ -2,9 +2,25 @@
 
 
 import NextImage from "next/image";
+import { useState } from "react";
 import {Icon} from '@iconify/react';
 
-const RecentReviews = ({total_reviews}:any) => {
+const RecentReviewTitle = ({total_reviews}:any) => {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleReviews = () => {
+        setIsOpen((isOpen) => !isOpen)
+    }
+
+    const convertToDate = (t:number) => {
+        const reviewDate = new Date(t*1000).toLocaleDateString('en-us', {
+            year: "numeric",
+            month: "short",
+            day: "numeric"
+        })
+        return reviewDate;
+    }
 
     return (
 
@@ -36,7 +52,9 @@ const RecentReviews = ({total_reviews}:any) => {
             </div>
 
         </div>
+
+        
     );
 }
 
-export default RecentReviews;
+export default RecentReviewTitle;

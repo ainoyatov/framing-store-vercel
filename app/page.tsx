@@ -9,7 +9,8 @@ import CustomButton from '@/components/CustomButton';
 import LeaveAReview from '@/components/google/leave-review';
 import Image from 'next/image';
 import { Metadata } from 'next';
-import RecentReviews from '@/components/google/recent-reviews';
+import RecentReviewTitle from '@/components/google/recent-reviews';
+import Icon from '@iconify/react'
 
 
 export default async function Home(){
@@ -41,7 +42,7 @@ export default async function Home(){
       </section>
 
       <section className='lg:mb-24'>
-        <div className='hero__title flex w-auto justify-center my-16'>Services Offered</div>
+        <div className='hero__title flex w-auto justify-center my-8'>Services Offered</div>
           <div className='flex justify-center '>
             <Services />
           </div>
@@ -50,37 +51,38 @@ export default async function Home(){
       <section className='lg:my-16'>
         <SecondParagraph />
       </section>
-
+      
+      
       <section>
-        <RecentReviews 
-          total_reviews={totalUserReviews}
-        />
+        <div className='mb-16'>
+          <RecentReviewTitle
+            total_reviews={totalUserReviews}
+          />
+        </div>
+
+        <div className='pb-4 py-6 overflow-x-scroll overscroll-none w-[300px] mxs:w-[400px] xs:w-[450px] sm:w-[620px] md:w-[725px] lg:w-[970px] xl:w-[1270px] 2xl:w-[1526px]'>   
+          <div className='flex flex-row gap-4'>
+            {reviews.map((review:any, index:number) => (
+                review.text.length > 0 ? (
+                  <div key={index} className="relative aspect-square h-[32vh] max-h-[275px] w-2/3 max-w-[475px] flex-none md:w-1/3 ">
+                    <GoogleReviews 
+                      reviews={review.text}
+                      authors={review.author_name}
+                      reviewTime={review.time}
+                      pictures={review.profile_photo_url}
+                      index={index}
+                    />
+                  </div>
+                ) : null
+              ))
+            }
+          </div>
+        </div>
       </section>
 
-      {/* <section className='w-[400px] xs:w-auto 2xl:max-w-[1600px] overflow-x-auto '>
-        <div className='hero__title flex w-full justify-center mt-24 mb-32'>Recent Reviews</div>
-        <div className='flex flex-row gap-4 h-[40vh] xs:h-[24vh]'>
-          {reviews.map((review:any, index:number) => (
-            review.text.length > 0 ? (
-              <div key={index} className="relative aspect-square h-[20vh] max-h-[275px] w-2/3 max-w-[475px] flex-none md:w-1/3 ">
-                <GoogleReviews 
-                  reviews={review.text}
-                  authors={review.author_name}
-                  reviewTime={review.time}
-                  pictures={review.profile_photo_url}
-                  index={index}
-                />
-              </div>
-            ) : null
-          ))}
-        </div>
-        
-      </section> */}
-      
       <section className='flex mt-24 w-auto rounded-3xl'>
         <ThirdParagraph />
       </section>
-
 
     </main>
     </Suspense>
