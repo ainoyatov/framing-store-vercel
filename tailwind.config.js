@@ -20,7 +20,7 @@ module.exports = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'head-banner': "url('/pexels-head-banner.jpg')",
+        'head-banner': "url('/pexels-bilakis.jpg')",
         
       },
 
