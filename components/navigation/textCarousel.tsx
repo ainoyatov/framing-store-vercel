@@ -59,7 +59,7 @@ const TextCarousel = () => {
           {textsLong[currentIndex]}
         </div>
 
-        <div onClick={handleRightClick} className='flex p-4'>
+        <div onClick={handleLeftClick} className='flex p-4'>
           <Icon icon="lucide:chevron-right" width="28" height="28" color='white'/>
         </div>
         
