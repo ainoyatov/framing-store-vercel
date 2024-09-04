@@ -23,7 +23,7 @@ const ShopPage = () => {
       </div>
 
       <div>
-        <ImageCarousel />
+
       </div>
     </div>
   )

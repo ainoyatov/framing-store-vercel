@@ -51,7 +51,7 @@ const TextCarousel = () => {
   return (
     <div className='bg-gray-700'>
       <div className='flex flex-row justify-between items-center lg:hidden'>
-        <div onClick={handleRightClick} className='flex p-4'>
+        <div onClick={handleLeftClick} className='flex p-4'>
           <Icon icon="lucide:chevron-left" width="28" height="28" color='white' />
         </div>
 
@@ -59,7 +59,7 @@ const TextCarousel = () => {
           {textsLong[currentIndex]}
         </div>
 
-        <div onClick={handleLeftClick} className='flex p-4'>
+        <div onClick={handleRightClick} className='flex p-4'>
           <Icon icon="lucide:chevron-right" width="28" height="28" color='white'/>
         </div>
         
