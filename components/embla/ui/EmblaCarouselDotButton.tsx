@@ -6,15 +6,17 @@ import React, {
     useEffect,
     useState
   } from 'react'
-  import { EmblaCarouselType } from 'embla-carousel'
-  
-  type UseDotButtonType = {
+
+import { EmblaCarouselType } from 'embla-carousel'
+
+
+type UseDotButtonType = {
     selectedIndex: number
     scrollSnaps: number[]
     onDotButtonClick: (index: number) => void
-  }
+}
   
-  export const useDotButton = (
+export const useDotButton = (
     emblaApi: EmblaCarouselType | undefined
   ): UseDotButtonType => {
     const [selectedIndex, setSelectedIndex] = useState(0)
@@ -49,18 +51,17 @@ import React, {
       scrollSnaps,
       onDotButtonClick
     }
-  }
+}
   
-  type PropType = ComponentPropsWithRef<'button'>
+type PropType = ComponentPropsWithRef<'button'>
   
-  export const DotButton: React.FC<PropType> = (props) => {
+export const DotButton: React.FC<PropType> = (props) => {
     const { children, ...restProps } = props
   
     return (
       <button type="button" {...restProps}>
         {children}
-        
       </button>
     )
-  }
+}
   

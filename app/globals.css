@@ -206,7 +206,7 @@ align-items: center;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
-  margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+  margin-right: 2;
 }
 
 .embla__dot {
