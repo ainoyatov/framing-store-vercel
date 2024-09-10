@@ -42,9 +42,9 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       </div>
 
       <div className="flex flex-row justify-between">
-        <div className="flex flex-row">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        <div className="flex flex-row py-4">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} className='mr-2' />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} className='ml-2'/>
         </div>
 
         <div className="flex flex-row gap-2 items-center">
@@ -52,7 +52,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={selectedIndex === index ? 'w-4 h-4 rounded-full border-2 border-black bg-white' : 'w-4 h-4 rounded-full bg-white border-2 border-gray-400'}
+              className={selectedIndex === index ? 'w-4 h-4 rounded-full border-2 border-cyan-900 opacity-50' : 'w-4 h-4 rounded-full  border-2 opacity-50 border-gray-400'}
             />
           ))}
         </div>
