@@ -1,12 +1,20 @@
 import EmblaCarousel from "@/components/embla/ui/EmblaCarousel";
 import TextCarousel from "@/components/navigation/textCarousel";
-
+import { framingCategories } from "@/constants";
+import Image from "next/image";
 
 const ShopPage = () => {
   
   const OPTIONS = {loop: true}
   const SLIDE_COUNT = 6;
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+
+  const categories = framingCategories.map((items:any) => items.links)
+  const categoryText = categories[0]
+
+  
+  
+  
 
   return (
     <div>
@@ -27,7 +35,7 @@ const ShopPage = () => {
       </div>
 
       <div>
-        <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
+        <EmblaCarousel slides={categoryText} options={OPTIONS}/>
       </div>
     </div>
   )

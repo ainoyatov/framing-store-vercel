@@ -63,3 +63,17 @@ export const servicesOffered = [
     {title:"Jersey & Memorabilia Framing", description:"Specializing in framing sports jerseys, collectibles, and other memorabilia with custom designs."},
 ];
 
+export const framingCategories = [
+    {
+        links: [
+            {category: "Posters", url: "/image-1"},
+            {category: "Canvases", url: "/image-2"},
+            {category: "Photography", url: "/image-3"},
+            {category: "Documents", url: "/image-4"},
+            {category: "Shadow Boxes", url: "/image-5"},
+            {category: "Custom Mirrors", url: "/image-6"},
+            {category: "Memorabillias", url: "/image-7"},
+            {category: "Jerseys", url: "/image-8"},
+        ]
+    }
+];
