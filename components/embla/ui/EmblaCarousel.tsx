@@ -46,8 +46,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                   <Image 
                     src={item.url}
                     alt='category images'
-                    width={175}
-                    height={175}
+                    width={150}
+                    height={150}
                   />
                 </div>
               </div>
