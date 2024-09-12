@@ -66,14 +66,14 @@ export const servicesOffered = [
 export const framingCategories = [
     {
         links: [
-            {category: "Posters", url: "/image-1"},
-            {category: "Canvases", url: "/image-2"},
-            {category: "Photography", url: "/image-3"},
-            {category: "Documents", url: "/image-4"},
-            {category: "Shadow Boxes", url: "/image-5"},
-            {category: "Custom Mirrors", url: "/image-6"},
-            {category: "Memorabillias", url: "/image-7"},
-            {category: "Jerseys", url: "/image-8"},
+            {category: "Posters", url: "/close-menu.svg"},
+            {category: "Canvases", url: "/category-canvas.png"},
+            {category: "Photography", url: "/close-menu.svg"},
+            {category: "Documents", url: "/close-menu.svg"},
+            {category: "Shadow Boxes", url: "/category-shadowbox.png"},
+            {category: "Custom Mirrors", url: "/category-custom-mirror.png"},
+            {category: "Memorabillias", url: "/category-memorabilia.jpeg"},
+            {category: "Jerseys", url: "/category-jersey-framing.jpg"},
         ]
     }
 ];

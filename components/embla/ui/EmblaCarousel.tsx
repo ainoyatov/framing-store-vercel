@@ -37,10 +37,18 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           {slides.map((item:any) => (
             <div className="embla__slide rounded-3xl" key={item.category}>
-              <div className="embla__slide__number">
+              <div className="embla__slide__number flex-col space-y-4">
                 {/* Center of the slides */}  
                 <div className='flex text-xl lg:text-3xl'>
                   {item.category}
+                </div>
+                <div>
+                  <Image 
+                    src={item.url}
+                    alt='category images'
+                    width={175}
+                    height={175}
+                  />
                 </div>
               </div>
             </div>
