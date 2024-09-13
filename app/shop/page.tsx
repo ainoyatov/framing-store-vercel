@@ -1,8 +1,6 @@
 import EmblaCarousel from "@/components/embla/ui/EmblaCarousel";
 import TextCarousel from "@/components/navigation/textCarousel";
 import { framingCategories } from "@/constants";
-import Image from "next/image";
-import wallpaper from '@/public/wallpaper-framing.jpeg'
 
 
 const ShopPage = () => {
@@ -20,7 +18,7 @@ const ShopPage = () => {
   
       <div className="flex w-full h-[1000px] p-4 px-8 pt-32 pb-8 bg-head-banner bg-center bg-cover justify-center items-center">
         <div className="flex flex-col items-center p-8 w-full xs:max-w-[400px] bg-white rounded-3xl drop-shadow-2xl">
-          <div className="text-3xl">70% OFF</div>
+          <div className="text-3xl">60% OFF</div>
           <div className="text-2xl">In-Stock Frames</div>
           <div className="m-2">Guaranteed 3-Day Turnaround !!</div>
           <a href="tel:+14802687182">
