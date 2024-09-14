@@ -9,7 +9,7 @@ const TextCarousel = () => {
 
     <div className='flex flex-col'>
       <div className='flex justify-center'>Fall Sale</div>
-      <div className='flex justify-center'>70% OFF</div>
+      <div className='flex justify-center'>60% OFF</div>
     </div>,
     
     <div className='flex flex-col'>
