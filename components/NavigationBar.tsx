@@ -38,7 +38,7 @@ export default function NavigationBar() {
             </div>
             
             <div className="lg:hidden z-10 fixed bottom-0 left-0 flex xl:px-16 h-auto w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black  ">
-                <a href="/">
+                <a href="/" className='py-4'>
                     <Image
                         src="/custom-logo.svg"
                         alt="Art Custom Frames logo"
