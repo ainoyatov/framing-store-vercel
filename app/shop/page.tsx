@@ -1,6 +1,7 @@
 import EmblaCarousel from "@/components/embla/ui/EmblaCarousel";
 import TextCarousel from "@/components/navigation/textCarousel";
 import { framingCategories } from "@/constants";
+import Image from "next/image";
 
 
 const ShopPage = () => {
@@ -34,6 +35,21 @@ const ShopPage = () => {
   
       <div>
         <EmblaCarousel slides={categoryText} options={OPTIONS}/>
+      </div>
+
+      <div className="flex flex-col w-full space-y-2 my-16">
+        <div className="flex justify-center text-3xl font-bold">Digital Photo Gift</div>
+        <div className="flex justify-center text-2xl font-semibold">Starting At <span className="text-red-500 mx-2">$49</span></div>
+        <div className="flex justify-center">With Free Shipping</div>
+
+        <div className="flex justify-evenly">
+          <Image 
+            src="/framed-empty-image.svg"
+            alt="framed empty image placeholder"
+            width={350}
+            height={10}
+          />
+        </div>
       </div>
   
     </div>

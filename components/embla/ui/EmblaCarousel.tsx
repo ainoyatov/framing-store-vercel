@@ -56,7 +56,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         </div>
       </div>
 
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row justify-between my-4">
         <div className="flex flex-row py-4">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} className='mr-2' />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} className='ml-2'/>
