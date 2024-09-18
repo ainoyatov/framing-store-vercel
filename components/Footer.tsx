@@ -22,7 +22,7 @@ const Footer = () => {
             <div className="flex max-md:flex-col flex-wrap justified-between gap-5 sm:px-16 px-6 py-10">
                 <div className="flex flex-col justified-start items-start gap-6 cursor-pointer">
                     <Image 
-                        src='/acm-logo.svg'
+                        src='/custom-logo.svg'
                         alt="logo"
                         width={150}
                         height={35}
