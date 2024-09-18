@@ -30,7 +30,7 @@ const TextCarousel = () => {
 
   // Desktop text loop
   const textsShort = [
-    'Fall Sale. 70% OFF.', 
+    'Fall Sale. 60% OFF.', 
     'Best Price. Top Crafstmanship.', 
     'Framed in house. Delivered in 3 days.'
   ];
