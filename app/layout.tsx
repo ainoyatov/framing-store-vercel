@@ -29,6 +29,20 @@ export const metadata: Metadata = {
   robots: {
     follow: true,
     index: true
+  },
+  icons: {
+    icon: [
+      {
+        media: '(prefers-color-scheme: light)',
+        url: '/icon-light.png',
+        href: '/icon-light.png',
+      },
+      {
+        media: '(prefers-color-scheme: dark)',
+        url: '/icon-dark.png',
+        href: '/icon-dark.png',
+      }
+    ]
   }
 };
 
