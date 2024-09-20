@@ -59,7 +59,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={inter.className}>
 
-        <div className='flex flex-row justify-center md:ml-0'>
+        <div className='flex flex-row justify-center md:ml-0 '>
           <NavigationBar />
         </div>
         
