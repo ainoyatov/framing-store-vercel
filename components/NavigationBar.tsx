@@ -13,7 +13,7 @@ export default function NavigationBar() {
 
         <div className='flex min-h-auto flex-row justify-between px-4 sm:px-12 sm:mt-8 w-[1900px]'>
             <a className='flex h-[75px] max-lg:hidden' href='/'>
-               <Image src="/custom-logo.svg" alt="main logo" width={250} height={1} className='dark:invert'/> 
+               <Image src="/main-logo-light.svg" alt="main logo" width={250} height={1} className=''/> 
             </a>
             <div className='flex flex-row'>
                 <div className='flex h-[75px] max-sm:hidden '>
@@ -40,9 +40,9 @@ export default function NavigationBar() {
             <div className="lg:hidden z-10 fixed bottom-0 left-0 flex xl:px-16 h-auto w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black  ">
                 <a href="/" className='py-4'>
                     <Image
-                        src="/custom-logo.svg"
+                        src="/main-logo-light.svg"
                         alt="Art Custom Frames logo"
-                        className="dark:invert"
+                        className=""
                         width={250}
                         height={250}
                         priority
