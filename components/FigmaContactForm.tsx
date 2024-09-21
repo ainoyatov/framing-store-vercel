@@ -1,12 +1,13 @@
 'use client'
 
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
 import { sendEmail } from '@/utils/send-email'
 import { useForm } from 'react-hook-form'
 import ContactInfo from './ContactInfo'
 import Image from 'next/image'
 import SocialMediaIcons from './SocialMediaIcons'
+import { useRouter } from 'next/navigation'
 
 export type FormDataPoints = {
     name: string;
@@ -19,6 +20,8 @@ export type FormDataPoints = {
 
 
 const FigmaContactForm: FC = () => {
+
+    const router = useRouter();
 
     const {register, handleSubmit, reset} = useForm<FormDataPoints>();
 
@@ -40,11 +43,11 @@ const FigmaContactForm: FC = () => {
             
             if(response) {
                 sendEmail(data);
-                
-                if(response) {
-                    reset();
-                }
-                
+                alert('Your message has been sent. Thank you for contacting us.')
+                router.push('/')
+                // reset();
+                // window.location.reload();
+
             } else {
                 alert('Please refresh the page and re-verify Captcha');
             }
