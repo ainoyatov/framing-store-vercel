@@ -39,8 +39,8 @@ const ShopPage = () => {
 
       <div className="flex flex-col w-full space-y-2 my-16">
         <div className="flex justify-center text-3xl font-bold">Digital Photo Gift</div>
-        <div className="flex justify-center text-2xl font-semibold">Starting At <span className="text-red-500 mx-2">$49</span></div>
-        <div className="flex justify-center">With Free Shipping</div>
+        <div className="flex justify-center text-2xl font-semibold">Starting At <span className="text-red-500 mx-2">$75</span></div>
+        
 
         <div className="flex justify-evenly">
           <Image 
