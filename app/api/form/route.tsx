@@ -1,4 +1,4 @@
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request:NextRequest) {
 
@@ -28,5 +28,5 @@ export async function POST(request:NextRequest) {
 
     }
 
-    return Response.json(res)
+    return NextResponse.json(res)
 }
