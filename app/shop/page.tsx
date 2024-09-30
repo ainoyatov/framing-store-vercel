@@ -2,7 +2,16 @@ import EmblaCarousel from "@/components/embla/ui/EmblaCarousel";
 import TextCarousel from "@/components/navigation/textCarousel";
 import { framingCategories } from "@/constants";
 import Image from "next/image";
+import { Metadata } from 'next'
 
+export const metadata: Metadata = {
+  title: 'Shop',
+  description: 'Framed Art, Canvases, Watercolors, Prints, Shadowboxes, Custom Glasses, Fall Sale ',
+  robots: {
+    follow: true,
+    index: true
+  }
+}
 
 const ShopPage = () => {
   
