@@ -17,7 +17,7 @@ export type FormDataPoints = {
 
 export default function ContactFormDesktop() {
 
-    const [state, setState] = useState('')
+    const [state, setState] = useState({})
     
 
     const FormAction = async (formData:any) => {
@@ -31,7 +31,6 @@ export default function ContactFormDesktop() {
         //set the state
         setState(data);
         
-        console.log(data)
         //send email
         sendEmail(data);
         
@@ -47,15 +46,16 @@ export default function ContactFormDesktop() {
 
 
     return (
+        <div className="p-2">
 
-        <form action={FormAction} className="border-orange-400 border-4 p-2">
+            <form action={FormAction} className="border-cyan-700 p-2 space-y-4">
 
-                <div className='mb-2 '>
+                <div className='mb-2'>
                     
                     <input 
                         type="text"
                         name="name"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-0.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-lg lg:text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-0.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
                         placeholder="Name"
                         required
                     />
@@ -67,7 +67,7 @@ export default function ContactFormDesktop() {
                         <input
                             type="text"
                             name="phone"
-                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-0.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 text-lg lg:text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-0.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
                             placeholder="Phone"
                             
                         />
@@ -77,7 +77,7 @@ export default function ContactFormDesktop() {
                         <input 
                             type="text"
                             name="email"
-                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-0.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 text-lg lg:text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-0.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
                             placeholder="Email"
                             required 
                         />
@@ -87,7 +87,7 @@ export default function ContactFormDesktop() {
                         <input 
                             type="text"
                             name="purpose"
-                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-0.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 text-lg lg:text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-0.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
                             placeholder="Purpose"
                             required 
                         />
@@ -99,18 +99,19 @@ export default function ContactFormDesktop() {
                     <textarea 
                         name="message"
                         placeholder="Message" 
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-0.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-lg lg:text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-0.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
                         required  
                     >
                     </textarea>
                 </div>
 
-                <button type="submit" className="bg-green-300 p-2 rounded-xl">
+                <button type="submit" className="bg-cyan-500 p-3 rounded-full text-white font-semibold">
                     Submit
                 </button>
                 
                 
             </form>
+        </div>
     )
     
 }

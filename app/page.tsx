@@ -53,7 +53,7 @@ export default async function Home(){
       </section>
       
       
-      <section>
+      <section className='m-16'>
         <div className='mb-16'>
           <RecentReviewTitle
             total_reviews={totalUserReviews}
@@ -80,7 +80,7 @@ export default async function Home(){
         </div>
       </section>
 
-      <section className='flex mt-24 w-auto rounded-3xl'>
+      <section className='mt-32'>
         <ThirdParagraph />
       </section>
 
