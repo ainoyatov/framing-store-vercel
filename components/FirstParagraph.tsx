@@ -21,7 +21,7 @@ const FirstParagraph = () => {
                 <div>
                     <CustomButton 
                         title="Schedule Visit"
-                        containerStyles="button__color"
+                        containerStyles="button__color drop-shadow-2xl"
                         handleClick={handleScroll}
                     />
                 </div>
