@@ -14,9 +14,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 const { SITE_NAME } = process.env;
 
-const baseUrl = "artframing.studio"
-  ? 'https://artframing.studio'
-  : 'http://localhost:3000';
+const baseUrl = "https://artframing.studio"
+  // ? 'https://artframing.studio'
+  // : 'http://localhost:3000';
 
 
 export const metadata: Metadata = {
