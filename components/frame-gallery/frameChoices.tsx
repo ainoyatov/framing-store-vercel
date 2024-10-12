@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import Image from 'next/image';
 
 interface Frame {
     title: string;
@@ -10,10 +11,10 @@ interface Frame {
 const FrameSelections: React.FC = () => {
 
     const frames: Frame[] = [
-        { title: "One", url: "/image1.jpg" },
-        { title: "Two", url: "/image2.jpg" },
-        { title: "Three", url: "/image3.jpg" },
-        { title: "Four", url: "/image4.jpg" },
+        { title: "Portrait", url: "/portrait.svg" },
+        { title: "Landscape", url: "/landscape.svg" },
+        { title: "Square", url: "/square.svg" },
+        { title: "Panorama", url: "/panorama.svg" },
     ];
 
     const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -22,21 +23,27 @@ const FrameSelections: React.FC = () => {
         setCurrentIndex(index);
     };
 
-    const smth = frames.map((item) => item.title);
+    const img = frames.map((item) => item.url);
 
     return (
         <div className="flex justify-center items-center">
-            <div className="h-60 w-60 bg-black text-white flex flex-col justify-center items-center">
-                <div className="mb-8 text-lg font-bold">{smth[currentIndex]}</div>
-                <div className="grid grid-cols-4 w-full h-12">
+            <div className="relative w-[500px] h-[500px]">
+                <Image 
+                    src={img[currentIndex]}
+                    alt="carousel images"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-md"
+                />
+                
+                <div className="absolute bottom-8 left-8 right-8 grid grid-cols-4 h-10">
                     {frames.map((item, idx) => (
                         <button
                             key={idx}
                             onClick={() => handleClick(idx)}
                             className={`flex justify-center items-center h-full w-full transition-transform duration-300
-                            ${currentIndex === idx ? "scale-105 shadow-md bg-cyan-600" : "scale-100"} 
-                            ${idx === 0 ? "rounded-l-md" : ""} ${idx === frames.length - 1 ? "rounded-r-md" : ""}
-                            bg-white text-black`}
+                            ${currentIndex === idx ? "scale-105 shadow-md bg-cyan-600 text-white" : "scale-100 bg-white text-black"} 
+                            ${idx === 0 ? "rounded-bl-md" : ""} ${idx === frames.length - 1 ? "rounded-br-md" : ""}`}
                         >
                             {item.title}
                         </button>
@@ -48,99 +55,3 @@ const FrameSelections: React.FC = () => {
 };
 
 export default FrameSelections;
-
-
-// import { useState } from "react";
-
-// interface Frame {
-//     title: string;
-//     url: string;
-// }
-
-// const FrameSelections: React.FC = () => {
-
-//     const frames: Frame[] = [
-//         { title: "One", url: "/image1.jpg" },
-//         { title: "Two", url: "/image2.jpg" },
-//         { title: "Three", url: "/image3.jpg" },
-//         { title: "Four", url: "/image4.jpg" },
-//     ];
-
-//     const [currentIndex, setCurrentIndex] = useState<number>(0);
-
-//     const handleClick = (index: number): void => {
-//         setCurrentIndex(index);
-//     };
-
-//     const smth = frames.map((item) => item.title);
-
-//     return (
-//         <div className="flex justify-center items-center h-screen">
-//             <div className="h-60 w-60 bg-black text-white flex flex-col justify-center items-center">
-//                 <div className="mb-8 text-lg font-bold">{smth[currentIndex]}</div>
-//                 <div className="grid grid-cols-4 w-full h-12">
-//                     {frames.map((item, idx) => (
-//                         <button
-//                             key={idx}
-//                             onClick={() => handleClick(idx)}
-//                             className={`flex justify-center items-center h-full w-full transition-colors duration-300
-//                             ${currentIndex === idx ? "bg-blue-500 text-white" : "bg-white text-black"}
-//                             ${idx === 0 ? "rounded-l-md" : ""} ${idx === frames.length - 1 ? "rounded-r-md" : ""}`}
-//                         >
-//                             {item.title}
-//                         </button>
-//                     ))}
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default FrameSelections;
-
-// import { useState } from "react";
-
-// interface Frame {
-//     title: string;
-//     url: string;
-// }
-
-// const FrameSelections: React.FC = () => {
-
-//     const frames: Frame[] = [
-//         { title: "One", url: "/image1.jpg" },
-//         { title: "Two", url: "/image2.jpg" },
-//         { title: "Three", url: "/image3.jpg" },
-//         { title: "Four", url: "/image4.jpg" },
-//     ];
-
-//     const [currentIndex, setCurrentIndex] = useState<number>(0);
-
-//     const handleClick = (index: number): void => {
-//         setCurrentIndex(index);
-//     };
-
-//     const smth = frames.map((item) => item.title);
-
-//     return (
-//         <div className="flex justify-center">
-//             <div className="h-60 w-60 bg-black text-white flex flex-col justify-center items-center">
-//                 <div className="mb-8">{smth[currentIndex]}</div>
-//                 <div className="flex flex-row gap-2 mt-8">
-//                     {frames.map((item, idx) => (
-//                         <div 
-//                             key={idx} 
-//                             className="h-12 w-12 bg-white text-black flex justify-center items-center cursor-pointer"
-//                             onClick={() => handleClick(idx)}
-//                         >
-//                             {item.title}
-//                         </div>
-//                     ))}
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default FrameSelections;
-
