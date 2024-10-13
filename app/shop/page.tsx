@@ -2,7 +2,8 @@ import EmblaCarousel from "@/components/embla/ui/EmblaCarousel";
 import TextCarousel from "@/components/navigation/textCarousel";
 import { framingCategories } from "@/constants";
 import Image from "next/image";
-import { Metadata } from 'next'
+import { Metadata } from 'next';
+import FrameSelections from "@/components/frame-gallery/frameChoices";
 
 export const metadata: Metadata = {
   title: 'Shop',
@@ -50,15 +51,18 @@ const ShopPage = () => {
         <div className="flex justify-center text-3xl font-bold">Digital Photo Gift</div>
         <div className="flex justify-center text-2xl font-semibold">Starting At <span className="text-red-500 mx-2">$75</span></div>
         
+        <div className="py-8">
+          <FrameSelections />
+        </div>
 
-        <div className="flex justify-evenly">
+        {/* <div className="flex justify-evenly">
           <Image 
             src="/framed-empty-image.svg"
             alt="framed empty image placeholder"
             width={350}
             height={10}
           />
-        </div>
+        </div> */}
       </div>
   
     </div>

@@ -16,8 +16,8 @@ export default async function FramesPage() {
 
   return (
     <div>
-      <FrameSelections />
-      {/* <SearchMouldingForm /> */}
+      {/* <FrameSelections /> */}
+      <SearchMouldingForm />
     </div>
 
   )
