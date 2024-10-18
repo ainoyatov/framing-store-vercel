@@ -15,9 +15,16 @@ export const metadata: Metadata = {
 export default async function FramesPage() {
 
   return (
-    <div>
+    <div className="flex justify-center">
+      {/* <iframe
+        src="https://shop.larsonjuhl.com/en-US/digitalcatalog"
+        width={1000}
+        height={1000}
+      >
+        
+      </iframe> */}
       {/* <FrameSelections /> */}
-      <SearchMouldingForm />
+      {/* <SearchMouldingForm /> */}
     </div>
 
   )
