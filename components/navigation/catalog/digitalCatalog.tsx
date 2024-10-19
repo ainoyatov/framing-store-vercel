@@ -16,51 +16,134 @@ interface CarouselProps {
 export default function DigitalCarousel({ images }: CarouselProps) {
   // State to track the current image index
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [searchQuery, setSearchQuery] = useState(''); // State to track the search query
 
   // Function to go to the next image
   const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % filteredImages.length);
   };
 
   // Function to go to the previous image
   const prevImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + filteredImages.length) % filteredImages.length);
   };
 
-  console.log(images)
+  // Filter images based on the search query
+  const filteredImages = images.filter((image) =>
+    image.filename.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div className="w-full flex flex-col items-center justify-center space-y-8 p-4">
+      {/* Search Input */}
+      <input
+        type="text"
+        placeholder="Search image..."
+        value={searchQuery}
+        onChange={(e) => {
+          setSearchQuery(e.target.value);
+          setCurrentIndex(0); // Reset carousel index when searching
+        }}
+        className="p-2 border border-gray-300 rounded-full w-1/2 text-center"
+      />
 
-        <div className='text-2xl md:mt-8'>
+      {/* Display message if no images match the search */}
+      {filteredImages.length === 0 ? (
+        <div className="text-red-500 text-lg md:text-2xl">No images match your search!</div>
+      ) : (
+        <>
+          <div className='text-2xl md:mt-8'>
             Frames & more
-        </div>  
-        <div className='drop-shadow-xl rounded-sm'>
+          </div>
+          <div className='drop-shadow-xl rounded-sm'>
             <Image
-                src={images[currentIndex].filepath}
-                alt={images[currentIndex].filename}
-                width={1800}
-                height={1}
-                // layout="fill"
-                // objectFit="contain"
-                className="transition-opacity duration-500 ease-in-out"
+              src={filteredImages[currentIndex].filepath}
+              alt={filteredImages[currentIndex].filename}
+              width={1800}
+              height={1}
+              className="transition-opacity duration-500 ease-in-out"
             />
-        </div>
-        
-        
-        <div className='flex flex-row w-1/2 justify-between '>
+          </div>
+
+          <div className='flex flex-row w-1/2 justify-between'>
             <button className='p-1 rounded-full border-2 border-cyan-900' onClick={prevImage}>
-                <Icon icon="lucide:chevron-left" width={36} height={36}/>
+              <Icon icon="lucide:chevron-left" width={36} height={36} />
             </button>
 
             <button className='p-1 rounded-full border-2 border-cyan-900' onClick={nextImage}>
-                <Icon icon="lucide:chevron-right" width={36} height={36}/>
+              <Icon icon="lucide:chevron-right" width={36} height={36} />
             </button>
-
-            </div>
-        </div>
+          </div>
+        </>
+      )}
+    </div>
   );
 }
+
+
+
+// "use client";
+
+// import { useState } from 'react';
+// import Image from 'next/image';
+// import { Icon } from '@iconify/react';
+
+// interface ImageData {
+//   filename: string;
+//   filepath: string;
+// }
+
+// interface CarouselProps {
+//   images: ImageData[];
+// }
+
+// export default function DigitalCarousel({ images }: CarouselProps) {
+//   // State to track the current image index
+//   const [currentIndex, setCurrentIndex] = useState(0);
+
+//   // Function to go to the next image
+//   const nextImage = () => {
+//     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+//   };
+
+//   // Function to go to the previous image
+//   const prevImage = () => {
+//     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+//   };
+
+
+//   return (
+//     <div className="w-full flex flex-col items-center justify-center space-y-8 p-4">
+
+//         <div className='text-2xl md:mt-8'>
+//             Frames & more
+//         </div>  
+//         <div className='drop-shadow-xl rounded-sm'>
+//             <Image
+//                 src={images[currentIndex].filepath}
+//                 alt={images[currentIndex].filename}
+//                 width={1800}
+//                 height={1}
+//                 // layout="fill"
+//                 // objectFit="contain"
+//                 className="transition-opacity duration-500 ease-in-out"
+//             />
+//         </div>
+        
+        
+//         <div className='flex flex-row w-1/2 justify-between '>
+//             <button className='p-1 rounded-full border-2 border-cyan-900' onClick={prevImage}>
+//                 <Icon icon="lucide:chevron-left" width={36} height={36}/>
+//             </button>
+
+//             <button className='p-1 rounded-full border-2 border-cyan-900' onClick={nextImage}>
+//                 <Icon icon="lucide:chevron-right" width={36} height={36}/>
+//             </button>
+
+//             </div>
+//         </div>
+//   );
+// }
 
 
 
