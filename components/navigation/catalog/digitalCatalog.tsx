@@ -35,17 +35,22 @@ export default function DigitalCarousel({ images }: CarouselProps) {
 
   return (
     <div className="w-full flex flex-col items-center justify-center space-y-8 p-4">
-      {/* Search Input */}
-      <input
-        type="text"
-        placeholder="Search image..."
-        value={searchQuery}
-        onChange={(e) => {
-          setSearchQuery(e.target.value);
-          setCurrentIndex(0); // Reset carousel index when searching
-        }}
-        className="p-2 border border-gray-300 rounded-full w-1/2 text-center"
-      />
+        {/* Search Input */}
+        <div className="relative w-1/2">
+            <span className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+                <Icon icon="wpf:search" width={20} height={20} />
+            </span>
+            <input
+                type="text"
+                placeholder="Search image..."
+                value={searchQuery}
+                onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setCurrentIndex(0); // Reset carousel index when searching
+                }}
+                className="w-full pl-10 p-2 border border-gray-300 rounded-full text-center"
+            />
+        </div>
 
       {/* Display message if no images match the search */}
       {filteredImages.length === 0 ? (
