@@ -1,64 +1,41 @@
 'use client';
 
-import React from 'react'
+import Image from "next/image";
 
-const intMouldings = () => {
-  return (
-    <div>Received your message</div>
-  )
+
+interface ItemCollectionProps {
+    id: number,
+    name: string,
+    logoImage: string,
 }
 
-export default intMouldings
+interface IntMouldingProps {
+    id: number,
+    itemnum: string,
+    description: string,
+    imageName: string,
+    itemCollection: ItemCollectionProps
+
+}
+
+const IntMoulding: React.FC<IntMouldingProps> = ({id, itemnum, description, imageName, itemCollection}) => {
 
 
+    return (
 
-// 'use client';
+        
+            <div className="flex flex-col items-center p-2">
+                <div>{itemnum}</div>
+                <div>{description}</div>
+                <Image 
+                    src={imageName === null ? `https://s3.amazonaws.com/im-dropbox-sync/${itemCollection.logoImage}` : `https://s3.amazonaws.com/im-dropbox-sync/${imageName}`}
+                    alt="images of mouldings"
+                    width={250}
+                    height={250}
+                />
+            </div>
+        
+    )
+}
 
-// import { Data } from "@react-google-maps/api";
-// import { useEffect, useState } from "react";
-
-// interface fData {
-//     inputText: string,
-//     pageNum: number,
-// }
-
-// export default async function IntMoulding () {
-
-//     return (
-//         <div>
-//             Time
-//         </div>
-//     );
-// }
-
-
-
-
-
-// const [stated, setStated] = useState()
-
-//     const SearchAction = async (num:any) => {
-//         const res = await fetch('/api/default', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify(num),
-//         })
-
-//         const dt = await res.json()
-//         setStated(dt);
-//         console.log('hello')
-//         console.log(dt.itemnum)
-//     }
-
-//     useEffect(() => {
-//         SearchAction(1);
-//     }, [])
-    
-//     useEffect(() => {
-//         const fetchData = async () => {
-//             const data = await SearchAction(1);
-//             console.log(data);
-//         }
-//     }, [])
+export default IntMoulding

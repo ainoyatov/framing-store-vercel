@@ -1,69 +1,46 @@
 import IntMoulding from "@/components/mouldings/intMouldings";
 import DefaultViews from "@/lib/mouldings/defaultView";
+import Image from "next/image";
+
+interface ItemCollectionProps {
+    id: number,
+    name: string,
+    logoImage: string,
+}
+
+interface IntMouldingProps {
+    id: number,
+    itemnum: string,
+    description: string,
+    imageName: string,
+    itemCollection: ItemCollectionProps
+
+}
+
 
 export default async function SearchFrames () {
 
     const data = await DefaultViews(1);
 
-    const dt = data.map((item:any) => item.id)
-    // console.log(dt);
-    // console.log(data);
 
     return (
-        <div>
-            Message is sent.
-            <IntMoulding />
-
-            {data.map((item:any) => (
+        <div className="grid grid-cols-2">
+            
+            {data.map((item:IntMouldingProps) => (
                 <div key={item.id}>
-                    {item.itemnum} {item.description} {item.colorId}
-                    **{item.custom2}
-                    --{item.countryOfOrigin ? 'yes' : 'no'}
-                    *****{item.itemCollection.id}
-                    ------Image Name: {item.itemCollection.logoImage}
-                    {/* --- {item.itemCollection.map((x:any) => x.id)} */}
+
+                    <IntMoulding
+                        id={item.id}
+                        itemnum={item.itemnum}
+                        description={item.description}
+                        imageName={item.imageName}
+                        itemCollection={item.itemCollection}
+                    
+                    />
+                    
                 </div>
             ))}
         </div>
     )
 }
 
-
-
-
-
-
-
-
-
-
-
-// import IntMoulding from "@/components/mouldings/intMouldings";
-
-// export default function SearchFrames () {
-
-//     const FindMouldings = async (num:any) => {
-//         const res = await fetch('localhost:3000/api/default', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify(num)
-//         })
-        
-//         const data = await res.json();
-
-//         return data;
-//         console.log(data);
-//     }
-
-//     const dt = FindMouldings(1);
-
-//     console.log(dt);
-
-//     return (
-//         <div>
-//             <IntMoulding />
-//         </div>
-//     );
-// }
