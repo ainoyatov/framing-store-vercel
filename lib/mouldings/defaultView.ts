@@ -1,4 +1,5 @@
 
+
 export default async function DefaultViews(num:any) {
     
     const url = 'https://newapi.internationalmoulding.com/api/inventoryitem/getpagedinventoryitems2';
