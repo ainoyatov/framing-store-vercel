@@ -1,9 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import DigitalCarousel from '@/components/navigation/catalog/digitalCatalog';
-import IntMoulding from "@/components/mouldings/intMouldings";
-import { Metadata } from "next";
-
 
 
 interface ImageData {
@@ -11,7 +8,7 @@ interface ImageData {
   filepath: string;
 }
 
-export default function Page() {
+export default function IntDigitalCatalog() {
   // Get the path to the image directory
   const imagesDirectory = path.join(process.cwd(), 'public/larson-juhl');
   

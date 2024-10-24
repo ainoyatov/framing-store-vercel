@@ -57,9 +57,9 @@ export default function DigitalCarousel({ images }: CarouselProps) {
         <div className="text-red-500 text-lg md:text-2xl">No images match your search!</div>
       ) : (
         <>
-          <div className='text-2xl md:mt-8'>
+          {/* <div className='text-2xl md:mt-8'>
             Frames & more
-          </div>
+          </div> */}
           <div className='drop-shadow-xl rounded-sm'>
             <Image
               src={filteredImages[currentIndex].filepath}
