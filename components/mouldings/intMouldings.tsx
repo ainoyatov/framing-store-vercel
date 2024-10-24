@@ -70,12 +70,12 @@ const IntMouldings = () => {
                                     href={imageUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex justify-center mb-4 bg-white rounded-3xl drop-shadow-lg font-bold p-2 max-w-[300px]"
+                                    className="flex justify-center mb-4 bg-white text-black rounded-3xl drop-shadow-lg font-bold p-2 max-w-[300px]"
                                 >
                                     {item.description || 'No Description Available'}
                                 </a>
                             ) : (
-                                <div className="flex justify-center mb-4 bg-white rounded-3xl drop-shadow-lg font-bold py-2 max-w-[300px]">
+                                <div className="flex justify-center mb-4 bg-white text-black rounded-3xl drop-shadow-lg font-bold py-2 max-w-[300px]">
                                     {item.description || 'No Description Available'}
                                 </div>
                             )}
@@ -120,7 +120,7 @@ const IntMouldings = () => {
                 />
             </div>
 
-            <div className="ml-4 p-2 flex justify-center bg-white rounded-3xl w-auto">
+            <div className="ml-4 p-2 flex justify-center bg-white text-black rounded-3xl w-auto">
                 Current Page: {page}
             </div>
         </div>
