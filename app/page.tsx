@@ -14,8 +14,8 @@ import Icon from '@iconify/react'
 
 
 export default async function Home(){
-  const placeID = process.env.PLACE_ID
-  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+  const placeID = "ChIJH8pM3LJ1K4cR3gIfMbtT0IE"
+  const apiKey = "AIzaSyDpRDjdSdIw7ZEFLCosSvY1c0f-zLwlTlU"
 
   //Field = reviews
   const response = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeID}&fields=reviews&reviews_sort=newest&key=${apiKey}`)

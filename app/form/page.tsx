@@ -1,13 +1,9 @@
-import IntMoulding from "@/components/mouldings/intMouldings";
+import React from 'react'
 
-export default async function SearchFrames () {
-
-    return (
-        <div>
-            <IntMoulding />
-        </div>
-    )
+const page = () => {
+  return (
+    <div>page</div>
+  )
 }
 
-
-
+export default page

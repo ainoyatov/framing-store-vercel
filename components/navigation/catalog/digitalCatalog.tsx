@@ -38,7 +38,7 @@ export default function DigitalCarousel({ images }: CarouselProps) {
         {/* Search Input */}
         <div className="relative w-1/2">
             <span className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                <Icon icon="wpf:search" width={20} height={20} />
+                <Icon icon="wpf:search" width={20} height={20} color='black' />
             </span>
             <input
                 type="text"
@@ -48,7 +48,7 @@ export default function DigitalCarousel({ images }: CarouselProps) {
                     setSearchQuery(e.target.value);
                     setCurrentIndex(0); // Reset carousel index when searching
                 }}
-                className="w-full pl-10 p-2 border border-gray-300 rounded-full text-center"
+                className="w-full pl-10 p-2 border border-gray-300 rounded-full text-center text-black"
             />
         </div>
 
