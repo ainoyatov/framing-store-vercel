@@ -3,6 +3,9 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import CustomButton from "../CustomButton";
+import { Suspense } from 'react';
+import LoadingDots from '@/components/shopify/utilities/loading-dots';
+import { Icon } from '@iconify/react';
 
 interface PageNumProps {
     pagenum: string;
@@ -40,17 +43,16 @@ const IntMouldings = () => {
     
 
     return (
+        
         <div className="p-2">
 
             <div className="flex flex-cols-3 items-center justify-center">
-
-                <CustomButton
-                    handleClick={handlePrev}
-                    containerStyles="button__color drop-shadow-2xl flex h-12"
-                    title="Prev"
-                />
                 
-
+                <button className='p-1 rounded-full border-2 border-cyan-900' onClick={handlePrev}>
+                    <Icon icon="lucide:chevron-left" width={36} height={36} />
+                </button>
+                
+                
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center p-4 gap-8">
                     {memory.map((item: any) => {
                         const imageUrl = item.imageName 
@@ -103,25 +105,23 @@ const IntMouldings = () => {
                         );
                     })}
                 </div>
+               
+                <button className='p-1 rounded-full border-2 border-cyan-900' onClick={handleNext}>
+                    <Icon icon="lucide:chevron-right" width={36} height={36} />
+                </button>
 
-                <CustomButton
-                    handleClick={handleNext}
-                    containerStyles="button__color drop-shadow-2xl h-12"
-                    title="Next"
-                />
             </div>
+            
+            <div className="flex justify-center py-8">
+                <div className='flex flex-row justify-between w-1/2'>
+                    <button className='p-1 rounded-full border-2 border-cyan-900' onClick={handlePrev}>
+                        <Icon icon="lucide:chevron-left" width={36} height={36} />
+                    </button>
 
-            <div className="flex flex-row justify-center gap-16">
-                <CustomButton
-                    handleClick={handlePrev}
-                    containerStyles="button__color drop-shadow-2xl"
-                    title="Prev"
-                />
-                <CustomButton
-                    handleClick={handleNext}
-                    containerStyles="button__color drop-shadow-2xl"
-                    title="Next"
-                />
+                    <button className='p-1 rounded-full border-2 border-cyan-900' onClick={handleNext}>
+                        <Icon icon="lucide:chevron-right" width={36} height={36} />
+                    </button>
+                </div>
             </div>
 
             <div className="flex justify-center">

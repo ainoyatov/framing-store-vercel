@@ -15,12 +15,15 @@ export const metadata: Metadata = {
 const FramesPage = () => {
 
   return (
-    <div>
-      <p className='text-3xl flex justify-center py-8'>Digital Catalog</p>
-      <IntDigitalCatalog />
-      <p className='text-3xl flex justify-center mt-16 mb-8'>Frames & more</p>
-      <IntMouldings />
-    </div>
+
+    
+      <div>
+        <p className='text-3xl flex justify-center py-8'>Digital Catalog</p>
+        <IntDigitalCatalog />
+        <p className='text-3xl flex justify-center mt-16 mb-8'>Frames & more</p>
+        <IntMouldings />
+      </div>
+    
   );
 }
 
