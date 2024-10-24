@@ -1,4 +1,4 @@
-
+import Link from 'next/link';
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,13 +10,23 @@ export const metadata: Metadata = {
   }
 }
 
-const page = () => {
-  return (
-    <div>page page</div>
-  )
-}
 
-export default page
+
+const FramesNavigation = () => {
+  return (
+    <div className="flex justify-center mt-10">
+      <Link href="/frames/digital-catalog" className="mx-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300">
+          Digital Catalog
+      </Link>
+      <Link href="/frames/search-frames" className="mx-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300">
+          Search Frames
+      </Link>
+      
+    </div>
+  );
+};
+
+export default FramesNavigation;
 
 
 // import fs from 'fs';
