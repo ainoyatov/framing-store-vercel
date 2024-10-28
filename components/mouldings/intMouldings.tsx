@@ -28,7 +28,6 @@ const IntMouldings = () => {
 
         const data = await response.json();
         setMemory(data);
-        console.log(data)
         setLoading(false); // Stop loading once data is fetched
     };
 
