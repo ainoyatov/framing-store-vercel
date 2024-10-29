@@ -150,8 +150,8 @@ export const SIDENAV_ITEMS = [
       icon: <Icon icon="lucide:shopping-cart" width="24" height="24" />,
     },
     {
-      title: 'Contact',
-      path: '/contact-us',
+      title: 'Frames',
+      path: '/frames',
       icon: <Icon icon="lucide:mail" width="24" height="24" />,
     },
     {
