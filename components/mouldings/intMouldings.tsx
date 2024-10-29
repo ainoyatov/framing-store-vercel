@@ -57,17 +57,20 @@ const IntMouldings = () => {
         <div className="p-2">
             {/* Search Input */}
             <div className="flex justify-center py-4">
-                <form onSubmit={handleSearchSubmit} className="flex items-center gap-2">
+                <form onSubmit={handleSearchSubmit} className="flex items-center gap-2 md:gap-4 relative">
+                    <span className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+                        <Icon icon="wpf:search" width={20} height={20} color='black' />
+                    </span>
                     <input
                         type="text"
                         value={searchTerm}
                         onChange={handleSearchChange}
-                        placeholder="Search for items"
-                        className="border rounded-full py-2 px-4 outline-none text-black"
+                        placeholder="Search frames..."
+                        className="text-center border rounded-full py-2 px-4 md:px-16 outline-none text-black"
                     />
-                    <button type="submit" className="px-4 py-2 bg-cyan-500 text-white rounded-full hover:bg-cyan-600">
+                    {/* <button type="submit" className="px-4 py-2 bg-cyan-500 text-white rounded-full hover:bg-cyan-600">
                         Search
-                    </button>
+                    </button> */}
                 </form>
             </div>
 
@@ -144,7 +147,7 @@ const IntMouldings = () => {
                 </div>
             </div>
 
-            <div className="flex justify-center">
+            <div className="flex justify-center py-16">
                 <div className="py-2 px-4 flex justify-center bg-white text-black rounded-3xl ">
                     Current Page: {page}
                 </div>

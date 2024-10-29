@@ -36,7 +36,7 @@ export default function DigitalCarousel({ images }: CarouselProps) {
   return (
     <div className="w-full flex flex-col items-center justify-center space-y-8 p-4">
         {/* Search Input */}
-        <div className="relative w-1/2">
+        <div className="relative w-1/3">
             <span className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
                 <Icon icon="wpf:search" width={20} height={20} color='black' />
             </span>

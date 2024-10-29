@@ -6,7 +6,7 @@ export default async function DefaultViews(num:any, searchTerm:any) {
   
     const payload = {
       PageNumber: num,
-      PageSize: 9,
+      PageSize: 12,
       OrderBy: "itemnum",
       Filter: [
         {

@@ -18,10 +18,10 @@ const FramesPage = () => {
 
     
       <div>
+        <p className='text-3xl flex justify-center mt-16 mb-8'>Search Frames</p>
+        <IntMouldings />
         <p className='text-3xl flex justify-center py-8'>Digital Catalog</p>
         <IntDigitalCatalog />
-        <p className='text-3xl flex justify-center mt-16 mb-8'>Frames & more</p>
-        <IntMouldings />
       </div>
     
   );
