@@ -4,9 +4,7 @@ import RecentReviews from '@/lib/google/recentReviews';
 
 export async function POST(request: NextRequest) {
 
-    const {x, y, z} = await request.json()
+    const GoogleReviews = await RecentReviews()
 
-    const pushReviews = await RecentReviews()
-
-    return NextResponse.json({})
+    return NextResponse.json({GoogleReviews})
 }

@@ -2,42 +2,137 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Icon } from '@iconify/react'
+import { Icon } from '@iconify/react';
+
+
+interface Review {
+    author_name: string;
+    author_url?: string;
+    language?: string;
+    original_language?: string;
+    profile_photo_url?: string;
+}
 
 const GoogleReviews = () => {
+    const [memory, setMemory] = useState<Review[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
 
-    const [memory, setMemory] = useState([])
-
-    // Function to retrieve five most recent Google reviews
-    const FiveReviews = async ({x,y,z}:any) => {
-
-        const response = await fetch('/api/reviews', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({x, y, z})
+    const convertToDate = (t: any) => {
+        const reviewDate = new Date(t * 1000).toLocaleDateString('en-us', {
+            year: "numeric",
+            month: "short",
+            day: "numeric"
         });
+        return reviewDate;
+    };
 
-        const data = await response.json();
+    const FiveReviews = async () => {
+        setIsLoading(true);
+        try {
+            const response = await fetch('/api/reviews', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({})
+            });
 
-        setMemory(data)
-        console.log(data)
+            if (!response.ok) throw new Error("Failed to fetch reviews");
 
-    }
+            const data = await response.json();
+            console.log("Fetched data structure:", data);
+
+            setMemory(data.GoogleReviews ?? []);
+        } catch (error) {
+            console.error("Error fetching reviews:", error);
+        } finally {
+            setIsLoading(false);
+        }
+    };
 
     useEffect(() => {
-        FiveReviews({});
-    }, [])
+        FiveReviews();
+    }, []);
 
     return (
-        <div>
-            Hello
+        <div className="flex items-center justify-center">
+            {isLoading ? (
+                <div className="flex flex-col items-center">
+                    <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-solid"></div>
+                    <p className="text-2xl font-semibold mt-4">Loading reviews...</p>
+                </div>
+            ) : (
+                <div>
+                    {memory.map((item) => (
+                        <div key={item.author_name} className="mb-4">
+                            <p>{item.author_name}</p>
+                            {item.profile_photo_url && (
+                                <Image src={item.profile_photo_url} alt={item.author_name} width={50} height={50} />
+                            )}
+                        </div>
+                    ))}
+                </div>
+            )}
         </div>
     );
 }
 
 export default GoogleReviews;
+
+
+
+
+
+
+
+// 'use client';
+
+// import Image from "next/image";
+// import { useEffect, useState } from "react";
+// import { Icon } from '@iconify/react'
+
+
+// const GoogleReviews = () => {
+
+//     const [memory, setMemory] = useState([])
+    
+
+//     // Function to retrieve five most recent Google reviews
+//     const FiveReviews = async () => {
+
+//         const response = await fetch('/api/reviews', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//             body: JSON.stringify({})
+//         });
+
+//         const data = await response.json();
+        
+//         // setMemory(data)
+//         setMemory(data);
+
+//     }
+
+//     useEffect(() => {
+//         FiveReviews();
+//     }, [])
+
+
+//     console.log(memory)
+    
+
+//     return (
+//         <div>
+//             {/* {memory.map((item:any) => (
+//                 <div key={item.author_name}>{item.author_name}</div>
+//             ))} */}
+//         </div>
+//     );
+// }
+
+// export default GoogleReviews;
 
 
 // 'use client';

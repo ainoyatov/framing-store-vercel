@@ -1,8 +1,9 @@
-import React from 'react'
+
+import GoogleReviews from '@/components/google/reviews';
 
 const page = () => {
   return (
-    <div>page</div>
+    <div><GoogleReviews /></div>
   )
 }
 
