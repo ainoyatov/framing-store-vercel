@@ -1,6 +1,34 @@
 'use client';
 
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { Icon } from '@iconify/react'
+
 const GoogleReviews = () => {
+
+    const [memory, setMemory] = useState([])
+
+    // Function to retrieve five most recent Google reviews
+    const FiveReviews = async ({x,y,z}:any) => {
+
+        const response = await fetch('/api/reviews', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({x, y, z})
+        });
+
+        const data = await response.json();
+
+        setMemory(data)
+        console.log(data)
+
+    }
+
+    useEffect(() => {
+        FiveReviews({});
+    }, [])
 
     return (
         <div>
