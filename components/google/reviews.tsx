@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Icon } from '@iconify/react';
-
+import { EmblaOptionsType } from 'embla-carousel';
+import { DotButton, useDotButton } from '@/components/embla/ui/EmblaCarouselDotButton';
+import { PrevButton, NextButton, usePrevNextButtons } from '@/components/embla/ui/EmblaCarouselArrowButtons';
+import useEmblaCarousel from 'embla-carousel-react';
 
 interface Review {
     author_name: string;
@@ -11,21 +13,30 @@ interface Review {
     language?: string;
     original_language?: string;
     profile_photo_url?: string;
+    text?: string;
 }
 
 const GoogleReviews = () => {
     const [memory, setMemory] = useState<Review[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    const convertToDate = (t: any) => {
-        const reviewDate = new Date(t * 1000).toLocaleDateString('en-us', {
+    const options: EmblaOptionsType = { loop: true };
+
+    // Embla Carousel setup
+    const [emblaRef, emblaApi] = useEmblaCarousel(options);
+    const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
+    const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
+
+    // Converts Unix timestamp to readable date
+    const convertToDate = (t: number) => {
+        return new Date(t * 1000).toLocaleDateString('en-us', {
             year: "numeric",
             month: "short",
             day: "numeric"
         });
-        return reviewDate;
     };
 
+    // Fetches the most recent 5 reviews
     const FiveReviews = async () => {
         setIsLoading(true);
         try {
@@ -40,8 +51,6 @@ const GoogleReviews = () => {
             if (!response.ok) throw new Error("Failed to fetch reviews");
 
             const data = await response.json();
-            console.log("Fetched data structure:", data);
-
             setMemory(data.GoogleReviews ?? []);
         } catch (error) {
             console.error("Error fetching reviews:", error);
@@ -55,7 +64,7 @@ const GoogleReviews = () => {
     }, []);
 
     return (
-        <div className="flex items-center justify-center">
+        <section className="embla py-16 px-4">
             {isLoading ? (
                 <div className="flex flex-col items-center">
                     <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-solid"></div>
@@ -63,23 +72,233 @@ const GoogleReviews = () => {
                 </div>
             ) : (
                 <div>
-                    {memory.map((item) => (
-                        <div key={item.author_name} className="mb-4">
-                            <p>{item.author_name}</p>
-                            {item.profile_photo_url && (
-                                <Image src={item.profile_photo_url} alt={item.author_name} width={50} height={50} />
-                            )}
+                    <div className="embla__viewport" ref={emblaRef}>
+                        <div className="embla__container">
+                            {memory.map((item, idx) => (
+                                <div className="embla__slide rounded-3xl p-2" key={idx}>
+                                    <div className="embla__slide__number flex-col space-y-4">
+                                        <div className="flex flex-col">
+                                            <div className="flex flex-row gap-2">
+                                                <Image 
+                                                    src={item.profile_photo_url || '/default-avatar.png'} // Fallback image
+                                                    alt={item.author_name}
+                                                    width={36}
+                                                    height={36}
+                                                    className="rounded-full"
+                                                />
+                                                <div className='text-xl lg:text-3xl'>
+                                                    {item.author_name}
+                                                </div>
+                                            </div>
+                                            <div className="text-sm p-2">
+                                                {item.text || "No review text available."}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    ))}
+                    </div>
+
+                    <div className="flex flex-row justify-between my-4">
+                        <div className="flex flex-row py-4">
+                            <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} className="mr-2" />
+                            <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} className="ml-2" />
+                        </div>
+                        <div className="flex flex-row gap-2 items-center">
+                            {scrollSnaps.map((_, index) => (
+                                <DotButton
+                                    key={index}
+                                    onClick={() => onDotButtonClick(index)}
+                                    className={selectedIndex === index 
+                                        ? 'w-4 h-4 rounded-full border-2 border-cyan-900 opacity-50' 
+                                        : 'w-4 h-4 rounded-full border-2 opacity-50 border-gray-400'}
+                                />
+                            ))}
+                        </div>
+                    </div>
                 </div>
             )}
-        </div>
+        </section>
     );
 }
 
 export default GoogleReviews;
 
 
+// 'use client';
+
+// import Image from "next/image";
+// import { useEffect, useState } from "react";
+// import { EmblaOptionsType } from 'embla-carousel'
+// import { DotButton, useDotButton } from '@/components/embla/ui/EmblaCarouselDotButton'
+// import {
+//   PrevButton,
+//   NextButton,
+//   usePrevNextButtons
+// } from '@/components/embla/ui/EmblaCarouselArrowButtons'
+// import useEmblaCarousel from 'embla-carousel-react'
+
+
+// interface Review {
+//     author_name: string;
+//     author_url?: string;
+//     language?: string;
+//     original_language?: string;
+//     profile_photo_url?: string;
+// }
+
+
+
+// const GoogleReviews = () => {
+
+//     const [memory, setMemory] = useState<Review[]>([]);
+//     const [isLoading, setIsLoading] = useState(true);
+
+//     const options = {loop: true}
+
+//     // Carousel
+//     const [emblaRef, emblaApi] = useEmblaCarousel(options)
+
+//     const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
+
+//     const {
+//       prevBtnDisabled,
+//       nextBtnDisabled,
+//       onPrevButtonClick,
+//       onNextButtonClick
+//     } = usePrevNextButtons(emblaApi)
+
+//     // Convert review time
+//     const convertToDate = (t: any) => {
+//         const reviewDate = new Date(t * 1000).toLocaleDateString('en-us', {
+//             year: "numeric",
+//             month: "short",
+//             day: "numeric"
+//         });
+//         return reviewDate;
+//     };
+
+//     // Pull the most recent 5 reviews
+//     const FiveReviews = async () => {
+//         setIsLoading(true);
+//         try {
+//             const response = await fetch('/api/reviews', {
+//                 method: 'POST',
+//                 headers: {
+//                     'Content-Type': 'application/json',
+//                 },
+//                 body: JSON.stringify({})
+//             });
+
+//             if (!response.ok) throw new Error("Failed to fetch reviews");
+
+//             const data = await response.json();
+//             console.log("Fetched data structure:", data);
+
+//             setMemory(data.GoogleReviews ?? []);
+//         } catch (error) {
+//             console.error("Error fetching reviews:", error);
+//         } finally {
+//             setIsLoading(false);
+//         }
+//     };
+
+//     useEffect(() => {
+//         FiveReviews();
+//     }, []);
+
+//     return (
+
+//         <section className="embla py-16 px-4">
+//             {isLoading ? (
+//                 <div className="flex flex-col items-center">
+//                     <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-solid"></div>
+//                     <p className="text-2xl font-semibold mt-4">Loading reviews...</p>
+//                 </div>
+//             ):(
+//                 <div>
+//                     <div className="embla__viewport" ref={emblaRef}>
+//                         <div className="embla__container">
+//                             {memory.map((item:any, idx:number) => (
+//                                 <div className="embla__slide rounded-3xl p-2" key={idx}>
+//                                     <div className="embla__slide__number flex-col space-y-4">
+//                                         {/* Center of the slides */}  
+//                                         <div className="flex flex-col">
+//                                             <div className="flex flex-row gap-2">
+//                                                 <div>
+//                                                     <Image 
+//                                                         src={item.profile_photo_url}
+//                                                         alt='category images'
+//                                                         width={36}
+//                                                         height={36}
+//                                                     />
+//                                                 </div>
+//                                                 <div className='flex text-xl lg:text-3xl'>
+//                                                     {item.author_name}
+//                                                 </div>
+//                                             </div>
+
+//                                             <div className="flex text-sm p-2">
+//                                                 {item.text}
+//                                             </div>
+//                                         </div>
+//                                     </div>
+//                                 </div>
+//                             ))}
+//                         </div>
+//                     </div>
+
+//                     <div className="flex flex-row justify-between my-4">
+//                         <div className="flex flex-row py-4">
+//                             <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} className='mr-2' />
+//                             <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} className='ml-2'/>
+//                         </div>
+//                         <div className="flex flex-row gap-2 items-center">
+//                             {scrollSnaps.map((_, index) => (
+//                                 <DotButton
+//                                     key={index}
+//                                     onClick={() => onDotButtonClick(index)}
+//                                     className={selectedIndex === index ? 'w-4 h-4 rounded-full border-2 border-cyan-900 opacity-50' : 'w-4 h-4 rounded-full  border-2 opacity-50 border-gray-400'}
+//                                 />
+//                             ))}
+//                         </div>
+//                     </div>
+//                 </div>
+//             )}
+            
+
+                
+
+
+//         </section>
+//     );
+// }
+
+// export default GoogleReviews;
+
+
+
+
+{/* <div className="flex items-center justify-center">
+    {isLoading ? (
+        <div className="flex flex-col items-center">
+            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-solid"></div>
+            <p className="text-2xl font-semibold mt-4">Loading reviews...</p>
+        </div>
+    ) : (
+        <div>
+            {memory.map((item, idx) => (
+                <div key={idx} className="mb-4">
+                    <p>{item.author_name}</p>
+                    {item.profile_photo_url && (
+                        <Image src={item.profile_photo_url} alt={item.author_name} width={50} height={50} />
+                    )}
+                </div>
+            ))}
+        </div>
+    )}
+</div> */}
 
 
 
