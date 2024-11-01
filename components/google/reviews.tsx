@@ -6,6 +6,7 @@ import { EmblaOptionsType } from 'embla-carousel';
 import { DotButton, useDotButton } from '@/components/embla/ui/EmblaCarouselDotButton';
 import { PrevButton, NextButton, usePrevNextButtons } from '@/components/embla/ui/EmblaCarouselArrowButtons';
 import useEmblaCarousel from 'embla-carousel-react';
+import {Icon} from '@iconify/react';
 
 interface Review {
     author_name: string;
@@ -16,8 +17,21 @@ interface Review {
     text?: string;
 }
 
+type ReviewProps = {
+    author_name: string;
+    author_url?: string;
+    language?: string;
+    original_language?: string;
+    profile_photo_url?: string;
+    rating: number;
+    relative_time_description?: string;
+    text?: string;
+    time: number;
+    translated?: boolean;
+  };
+
 const GoogleReviews = () => {
-    const [memory, setMemory] = useState<Review[]>([]);
+    const [memory, setMemory] = useState<ReviewProps[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
     const options: EmblaOptionsType = { loop: true };
@@ -76,23 +90,39 @@ const GoogleReviews = () => {
                         <div className="embla__container">
                             {memory.map((item, idx) => (
                                 <div className="embla__slide rounded-3xl p-2" key={idx}>
-                                    <div className="embla__slide__number flex-col space-y-4">
-                                        <div className="flex flex-col">
-                                            <div className="flex flex-row gap-2">
+                                    <div className="flex-col space-y-2 py-8 rounded-[1.8rem]  font-semibold flex  h-[var(--slide-height)] select-none;">
+                                        
+                                        <div className="flex flex-row gap-2 items-center justify-center">
+                                            <div className="">
                                                 <Image 
-                                                    src={item.profile_photo_url || '/default-avatar.png'} // Fallback image
+                                                    src={item.profile_photo_url || '/google-icon.svg'} // Fallback image
                                                     alt={item.author_name}
-                                                    width={36}
-                                                    height={36}
+                                                    width={24}
+                                                    height={24}
                                                     className="rounded-full"
                                                 />
-                                                <div className='text-xl lg:text-3xl'>
-                                                    {item.author_name}
-                                                </div>
                                             </div>
-                                            <div className="text-sm p-2">
-                                                {item.text || "No review text available."}
+
+                                            <div className="text-lg">
+                                                {item.author_name}
                                             </div>
+                                        </div>
+
+                                        <div className="flex flex-row w-full justify-center">
+                                            <Icon icon="noto:star" width="24" height="24"/>
+                                            <Icon icon="noto:star" width="24" height="24"/>
+                                            <Icon icon="noto:star" width="24" height="24"/>
+                                            <Icon icon="noto:star" width="24" height="24"/>
+                                            <Icon icon="noto:star" width="24" height="24"/>
+                                        </div>
+                                        
+                                        
+                                        <div className="pt-4 text-[14px] line-clamp-3 px-1 md:px-4 text-center">
+                                            {item.text}
+                                        </div>
+
+                                        <div className="pt-8 text-center">
+                                            {convertToDate(item.time)}
                                         </div>
                                     </div>
                                 </div>

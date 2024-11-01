@@ -128,7 +128,7 @@ html {
 }
 
 .embla__slide__number {
-  @apply shadow-[inset_0_0_0_0.2rem_var(--detail-medium-contrast)] rounded-[1.8rem] text-[4rem] font-semibold flex items-center justify-center h-[var(--slide-height)] select-none;
+  @apply  rounded-[1.8rem] text-[4rem] font-semibold flex items-center justify-center h-[var(--slide-height)] select-none;
 
 }
 .embla {
