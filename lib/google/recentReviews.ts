@@ -6,7 +6,7 @@ export default async function RecentReviews () {
 
     const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeID}&fields=reviews&reviews_sort=newest&key=${apiKey}`
 
-    //Field = reviews
+    // Get the most recent 5 reviews
     const getReviews = async () => {
         const response = await fetch(url, {
             method: 'POST',

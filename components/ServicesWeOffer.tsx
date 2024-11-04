@@ -73,7 +73,7 @@ const ServiceItem: React.FC<{ service: Service }> = ({ service }) => {
             }
         </div>
     );
-  };
+};
 
 const Services: React.FC = () => {
 
