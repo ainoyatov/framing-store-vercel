@@ -17,9 +17,6 @@ type ReviewProps = {
     translated?: boolean;
 };
 
-
-
-
 const TextReviews: React.FC<{item: ReviewProps}> = ({item}) => {
 
     const [expanded, setExpanded] = useState(false);
@@ -84,10 +81,14 @@ const TextReviews: React.FC<{item: ReviewProps}> = ({item}) => {
                         <div  className={`pt-4 line-clamp-3 text-[14px] px-1 md:px-8 text-center`}>
                             {item.text}
                         </div>
+
+                        {item.text && item.text.length > 100 && (
+                            <div onClick={toggleExpand} className="pt-2 flex w-full justify-center">
+                                <Icon icon="lucide:chevron-down" width="24" height="24" />
+                            </div>
+                        )}
                     
-                        <div onClick={toggleExpand} className="pt-2 flex w-full justify-center">
-                            <Icon icon="lucide:chevron-down" width="24" height="24" />
-                        </div>
+                        
                     </div>
                 )}
 

@@ -2,25 +2,38 @@
 
 
 import NextImage from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {Icon} from '@iconify/react';
 
-const RecentReviewTitle = ({total_reviews}:any) => {
+const RecentReviewTitle = () => {
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [memory, setMemory] = useState([]);
 
-    const toggleReviews = () => {
-        setIsOpen((isOpen) => !isOpen)
+    const ReviewCount = async () => {
+
+        try {
+            const res = await fetch('/api/reviewTotal', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({})
+            })
+    
+            if (!res.ok) throw new Error("Failed to fetch the reviews total count");
+    
+            const data = await res.json();
+    
+            setMemory(data.reviewTotalCount ?? []);
+    
+        } catch (error) {
+            console.log("Error fetching reviews total count:", error);
+        }
     }
 
-    const convertToDate = (t:number) => {
-        const reviewDate = new Date(t*1000).toLocaleDateString('en-us', {
-            year: "numeric",
-            month: "short",
-            day: "numeric"
-        })
-        return reviewDate;
-    }
+    useEffect(() => {
+        ReviewCount();
+    }, []);
 
     return (
 
@@ -39,7 +52,7 @@ const RecentReviewTitle = ({total_reviews}:any) => {
             </div>
             
             <div className="flex w-full justify-center font-light text-[10px] pb-2">
-                Based on <span className="font-bold px-1">{total_reviews} Reviews</span>
+                Based on <span className="font-bold px-1">{memory} Reviews</span>
             </div>
             
             <div className="flex w-full justify-center pb-2">
