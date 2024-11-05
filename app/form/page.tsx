@@ -1,12 +1,9 @@
 
-import RecentReviewTitle from '@/components/google/recent-reviews';
-import GoogleReviews from '@/components/google/reviews';
 
 const page = () => {
   return (
-    <div>
-      <RecentReviewTitle />
-      <GoogleReviews />
+    <div className="flex w-full justify-center text-3xl py-8">
+      Easter Egg!!
     </div>
   )
 }

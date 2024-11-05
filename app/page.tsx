@@ -41,36 +41,10 @@ export default async function Home(){
       </section>
       
 
-      {/* <section>
+      <section>
+        <RecentReviewTitle />
         <GoogleReviews />
-      </section> */}
-      
-      {/* <section className='m-16'>
-        <div className='mb-16'>
-          <RecentReviewTitle
-            total_reviews={totalUserReviews}
-          />
-        </div>
-
-        <div className='pb-4 py-6 overflow-x-scroll overscroll-none w-[300px] mxs:w-[400px] xs:w-[450px] sm:w-[620px] md:w-[725px] lg:w-[970px] xl:w-[1270px] 2xl:w-[1526px]'>   
-          <div className='flex flex-row gap-4'>
-            {reviews.map((review:any, index:number) => (
-                review.text.length > 0 ? (
-                  <div key={index} className="relative aspect-square h-[32vh] max-h-[275px] w-2/3 max-w-[475px] flex-none md:w-1/3 ">
-                    <GoogleReviews 
-                      reviews={review.text}
-                      authors={review.author_name}
-                      reviewTime={review.time}
-                      pictures={review.profile_photo_url}
-                      index={index}
-                    />
-                  </div>
-                ) : null
-              ))
-            }
-          </div>
-        </div>
-      </section> */}
+      </section>
 
       <section className='mt-32'>
         <ThirdParagraph />
