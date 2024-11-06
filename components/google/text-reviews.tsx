@@ -38,7 +38,7 @@ const TextReviews: React.FC<{item: ReviewProps}> = ({item}) => {
 
     return (
 
-        <div  className="embla__slide rounded-3xl p-2">
+        <div  className="embla__slide rounded-3xl">
             <div className={`flex-col space-y-2 py-8 rounded-[1.8rem] font-semibold flex select-none h-auto `}>
                                                         
                 <div className="flex flex-row gap-2 items-center justify-center">
@@ -91,8 +91,6 @@ const TextReviews: React.FC<{item: ReviewProps}> = ({item}) => {
                         
                     </div>
                 )}
-
-                
 
                 <div className="pt-8 text-center">
                     {convertToDate(item.time)}

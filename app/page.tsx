@@ -5,12 +5,8 @@ import GoogleReviews from '@/components/google/reviews'
 import  Services from '@/components/ServicesWeOffer';
 import { Suspense } from 'react';
 import LoadingDots from '@/components/shopify/utilities/loading-dots';
-import CustomButton from '@/components/CustomButton';
-import LeaveAReview from '@/components/google/leave-review';
-import Image from 'next/image';
 import { Metadata } from 'next';
 import RecentReviewTitle from '@/components/google/recent-reviews';
-import Icon from '@iconify/react'
 
 
 
@@ -41,7 +37,7 @@ export default async function Home(){
       </section>
       
 
-      <section>
+      <section className='lg:my-16'>
         <RecentReviewTitle />
         <GoogleReviews />
       </section>
