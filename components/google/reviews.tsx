@@ -94,7 +94,7 @@ const GoogleReviews = () => {
                                         key={index}
                                         onClick={() => onDotButtonClick(index)}
                                         className={selectedIndex === index 
-                                            ? 'w-4 h-4 rounded-full border-2 border-cyan-900 opacity-50' 
+                                            ? 'w-4 h-4 rounded-full border-2 border-cyan-900 opacity-50 dark:border-cyan-500' 
                                             : 'w-4 h-4 rounded-full border-2 opacity-50 border-gray-400'}
                                     />
                                 ))}
