@@ -20,15 +20,19 @@ const page = async () => {
   // Access the products array
   const products = response.data.products.edges.map((edge:any) => edge.node);
 
+  products.forEach((product:any) => {
+    console.log('Product Name:', product.title)
+  })
+
 
   return (
     <div className="p-4">
-      {products.map((product:any) => (
+      {/* {products.map((product:any) => (
         <div key={product.id}>
           <h2>{product.title}</h2>
           <p>{product.description}</p>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 }
