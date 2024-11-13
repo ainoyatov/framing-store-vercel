@@ -27,12 +27,12 @@ const page = async () => {
 
   return (
     <div className="p-4">
-      {/* {products.map((product:any) => (
+      {products.map((product:any) => (
         <div key={product.id}>
           <h2>{product.title}</h2>
           <p>{product.description}</p>
         </div>
-      ))} */}
+      ))}
     </div>
   );
 }

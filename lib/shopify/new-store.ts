@@ -6,9 +6,7 @@ const domain = process.env.SHOPIFY_STORE_DOMAIN
     ? ensureStartsWith(process.env.SHOPIFY_STORE_DOMAIN, 'https://')
     : '';
 
-// const endpoint = `${domain}${SHOPIFY_GRAPHQL_API_ENDPOINT}`
-
-const endpoint = `https://artcustomframing.myshopify.com/api/2024-10/graphql.json`
+const endpoint = `${domain}${SHOPIFY_GRAPHQL_API_ENDPOINT}`
 
 const key = process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN!;
 
@@ -21,12 +19,12 @@ export default async function ShopifyFetch ({query}:any) {
             'X-Shopify-Storefront-Access-Token': key,
         },
         body: JSON.stringify({
-            query
+            ...(query && {query})
         })
     })
 
     const data = await result.json();
-    // console.log(data)
+    console.log(data)
 
     return data;
     
