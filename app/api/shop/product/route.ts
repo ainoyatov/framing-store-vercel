@@ -1,5 +1,5 @@
 import { type NextRequest, NextResponse } from "next/server";
-import { getProducts } from "@/lib/shopify/shop/utils";
+import { getProductsList } from "@/lib/shopify/shop/utils";
 import ShopifyFetch from "@/lib/shopify/new-store";
 import { ShopifyProduct } from "@/lib/shopify/types";
 
@@ -13,7 +13,7 @@ interface ShopifyResponse {
 
 export async function POST(request: NextRequest) {
   const shopifyProducts: ShopifyResponse = await ShopifyFetch({
-    query: getProducts
+    query: getProductsList
   });
 
   // Access the products array with the correct type

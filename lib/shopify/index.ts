@@ -38,7 +38,7 @@ import {
   ShopifyUpdateCartOperation
 } from './types';
 
-
+import { getProductsList } from './shop/utils';
 
 
 const domain = process.env.SHOPIFY_STORE_DOMAIN
@@ -439,3 +439,5 @@ export async function revalidate(req: NextRequest): Promise<NextResponse> {
 
   return NextResponse.json({ status: 200, revalidated: true, now: Date.now() });
 }
+
+

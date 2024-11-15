@@ -1,7 +1,9 @@
 import Link from 'next/link'
-import { Product } from '@/lib/shopify/types'
+import { Product, ShopifyProduct } from '@/lib/shopify/types'
 import { getCollectionProducts } from '@/lib/shopify'
 import { GridTileImage } from './tile'
+import ShopifyFetch from '@/lib/shopify/new-store';
+import { getProductsList } from '@/lib/shopify/shop/utils';
 
 
 function ThreeItemGridItem({
@@ -9,7 +11,7 @@ function ThreeItemGridItem({
     size,
     priority
   }: {
-    item: Product;
+    item: ShopifyProduct;
     size: 'full' | 'half';
     priority?: boolean;
   }) {
@@ -42,13 +44,19 @@ function ThreeItemGridItem({
   
 export async function ThreeItemGrid() {
     // Collections that start with `hidden-*` are hidden from the search page.
-    const homepageItems = await getCollectionProducts({
-      collection: 'Summer'
-    });
+    // const homepageItems = await getCollectionProducts({
+    //   collection: 'Summer'
+    // });
+
+    const temp = await ShopifyFetch({query: getProductsList})
+
+    const homepageItems = temp.data.products.edges.map((edge) => edge.node)
   
     if (!homepageItems[0] || !homepageItems[1] || !homepageItems[2]) return null;
   
     const [firstProduct, secondProduct, thirdProduct] = homepageItems;
+
+    
   
     return (
       <section className="mx-auto grid max-w-screen-2xl gap-4 px-4 pb-4 md:grid-cols-6 md:grid-rows-2 lg:px-8">

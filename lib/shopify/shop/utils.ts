@@ -1,5 +1,5 @@
 
-export const getProducts = `
+export const getProductsList = `
   {
     products(first: 5) {
       edges {
