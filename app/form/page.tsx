@@ -1,10 +1,9 @@
-import FetchProducts from "@/components/shop/FetchProducts"
-
+import { CarouselProducts } from "@/components/shopify/utilities/carousel"
 
 const page = () => {
   return (
     <div>
-      <FetchProducts />
+      <CarouselProducts />
     </div>
   )
 }

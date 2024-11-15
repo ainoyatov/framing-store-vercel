@@ -5,12 +5,14 @@ export const getProducts = `
       edges {
         node {
           id
+          handle
+          availableForSale
           title
           description
-          featuredImage {
-            url
-            width
-            height
+          options {
+            id
+            name
+            values
           }
           priceRange {
             maxVariantPrice {
@@ -22,6 +24,20 @@ export const getProducts = `
               currencyCode
             }
           }
+          featuredImage {
+            url
+            altText
+            width
+            height
+          }
+          seo {
+            title
+            description
+          }
+        
+          updatedAt
+          tags
+
         }
       }
     }

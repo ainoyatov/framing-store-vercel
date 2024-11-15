@@ -1,32 +1,12 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { getProducts } from "@/lib/shopify/shop/utils";
 import ShopifyFetch from "@/lib/shopify/new-store";
-
-interface ProductProps {
-  id: string;
-  title: string;
-  description: string;
-  featuredImage: {
-    url: string;
-    width: number;
-    height: number;
-  };
-  priceRange: {
-    maxVariantPrice: {
-      amount: string;
-      currencyCode: string;
-    };
-    minVariantPrice: {
-      amount: string;
-      currencyCode: string;
-    };
-  };
-}
+import { ShopifyProduct } from "@/lib/shopify/types";
 
 interface ShopifyResponse {
   data: {
     products: {
-      edges: Array<{ node: ProductProps }>;
+      edges: Array<{ node: ShopifyProduct }>;
     };
   };
 }

@@ -1,30 +1,11 @@
 import { ensureStartsWith } from "./utils";
+import { ShopifyProduct } from "./types";
 
-interface ProductProps {
-    id: string;
-    title: string;
-    description: string;
-    featuredImage: {
-      url: string;
-      width: number;
-      height: number;
-    };
-    priceRange: {
-      maxVariantPrice: {
-        amount: string;
-        currencyCode: string;
-      };
-      minVariantPrice: {
-        amount: string;
-        currencyCode: string;
-      };
-    };
-}
-  
+ 
 interface ShopifyResponse {
     data: {
         products: {
-        edges: Array<{ node: ProductProps }>;
+        edges: Array<{ node: ShopifyProduct }>;
         };
     };
 }
