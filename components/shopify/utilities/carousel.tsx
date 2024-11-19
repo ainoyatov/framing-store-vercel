@@ -10,7 +10,6 @@ export async function CarouselProducts() {
   const temp = await ShopifyFetch({query: getProductsList})
   const products = temp.data.products.edges.map((edge) => edge.node)
   
-
   if (!products?.length) return null;
 
   // Purposefully duplicating products to make the carousel loop and not run out of products on wide screens.
