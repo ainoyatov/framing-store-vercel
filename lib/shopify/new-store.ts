@@ -39,5 +39,7 @@ export default async function ShopifyFetch({ query }: ShopifyFetchParams): Promi
   }
 
   const data: ShopifyResponse = await result.json();
+
   return data;
+  
 }
