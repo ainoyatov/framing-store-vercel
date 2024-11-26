@@ -22,6 +22,7 @@ const domain = process.env.SHOPIFY_STORE_DOMAIN
   : '';
 
 const endpoint = `${domain}${SHOPIFY_GRAPHQL_API_ENDPOINT}`;
+
 const key = process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN!;
 
 export default async function ShopifyFetch({ query }: ShopifyFetchParams): Promise<ShopifyResponse> {
@@ -41,5 +42,5 @@ export default async function ShopifyFetch({ query }: ShopifyFetchParams): Promi
   const data: ShopifyResponse = await result.json();
 
   return data;
-  
+
 }
