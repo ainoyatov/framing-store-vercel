@@ -12,6 +12,7 @@
   position: relative;
  
 }
+
 .clock::after {
   content: '';
   height: 30px;
