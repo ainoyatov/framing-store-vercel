@@ -20,7 +20,6 @@ export default async function TotalReviewCount () {
     }
 
     const data = await reviewTotal()
-    console.log(data)
     
     const reviewTotalnum = data.result.user_ratings_total
     

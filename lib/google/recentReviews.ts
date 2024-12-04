@@ -20,7 +20,6 @@ export default async function RecentReviews () {
     }
 
     const data = await getReviews();
-    console.log(data)
     
     const reviews = data.result.reviews.map((review:any) => review)
 
