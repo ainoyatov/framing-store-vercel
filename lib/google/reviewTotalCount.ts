@@ -1,8 +1,8 @@
 
 export default async function TotalReviewCount () {
 
-    const placeID = process.env.PLACE_ID
-    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+    const placeID = process.env.PLACE_ID!
+    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!
 
     const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeID}&fields=user_ratings_total&key=${apiKey}`
 
@@ -20,6 +20,7 @@ export default async function TotalReviewCount () {
     }
 
     const data = await reviewTotal()
+    console.log(data)
     
     const reviewTotalnum = data.result.user_ratings_total
     

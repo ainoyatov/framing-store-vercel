@@ -1,8 +1,8 @@
 
 export default async function RecentReviews () {
 
-    const placeID = process.env.PLACE_ID
-    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+    const placeID = process.env.PLACE_ID!
+    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!
 
     const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeID}&fields=reviews&reviews_sort=newest&key=${apiKey}`
 
@@ -20,6 +20,7 @@ export default async function RecentReviews () {
     }
 
     const data = await getReviews();
+    console.log(data)
     
     const reviews = data.result.reviews.map((review:any) => review)
 
