@@ -28,6 +28,7 @@ const IntMouldings = () => {
 
         const data = await response.json();
         setMemory(data);
+        console.log(data)
         setLoading(false); // Stop loading once data is fetched
     };
 
@@ -85,7 +86,7 @@ const IntMouldings = () => {
                         <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-cyan-500"></div>
                     </div>
                 ) : (
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center p-4 gap-8">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center p-4 gap-8">
                         {memory.map((item: any) => {
                             const imageUrl = item.imageName 
                                 ? `https://s3.amazonaws.com/im-dropbox-sync/${item.imageName}` 
@@ -101,18 +102,37 @@ const IntMouldings = () => {
                                     >
                                         {item.description || 'No Description Available'}
                                     </div>
+                                    
+                                    <div className="flex justify-center mb-4 bg-white text-black rounded-3xl drop-shadow-lg font-bold p-2 max-w-[300px]">
+                                        {item.altItemnum}
+                                    </div>
 
                                     {/* Image */}
                                     {imageUrl ? (
-                                        <a href={imageUrl} target="_blank" rel="noopener noreferrer">
-                                            <Image
-                                                src={imageUrl}
-                                                alt={item.description || 'Moulding image'}
-                                                width={300}
-                                                height={300}
-                                                className="rounded-3xl drop-shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
-                                            />
-                                        </a>
+                                        <div>
+                                            <a href={imageUrl} target="_blank" rel="noopener noreferrer">
+                                                <Image
+                                                    src={imageUrl}
+                                                    alt={item.description || 'Moulding image'}
+                                                    width={300}
+                                                    height={300}
+                                                    className="rounded-3xl drop-shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                                                />
+                                            </a>
+                                            <div className="grid md:grid-cols-2 md:justify-items-center mt-4">
+                                                <div className="flex flex-col">
+                                                    <div>Color: {item.color.name}</div>
+                                                    <div>Type: {item.itemCollection.name}</div>
+                                                </div>
+
+                                                <div className="flex flex-col">
+                                                    <div>Width: {item.newWidth}"</div>
+                                                    <div>Height: {item.newHeight}"</div>
+                                                    <div>Rabbet: {item.newRabbet}"</div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
                                     ) : (
                                         <div>
                                             <Image
