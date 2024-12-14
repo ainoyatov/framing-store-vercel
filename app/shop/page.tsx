@@ -4,6 +4,8 @@ import { framingCategories } from "@/constants";
 import Image from "next/image";
 import { Metadata } from 'next';
 import FrameSelections from "@/components/frame-gallery/frameChoices";
+import { CarouselProducts } from "@/components/shopify/utilities/carousel"
+import { ThreeItemGrid } from "@/components/shopify/grid/three-items"
 
 export const metadata: Metadata = {
   title: 'Shop',
@@ -47,23 +49,19 @@ const ShopPage = () => {
         <EmblaCarousel slides={categoryText} options={OPTIONS}/>
       </div>
 
-      <div className="flex flex-col w-full space-y-2 my-16">
+      <div>
+        <div className="flex w-full  text-3xl lg:text-[50px] justify-center my-16">Fine Art Prints & Originals</div>
+        <ThreeItemGrid />
+        <CarouselProducts />
+      </div>
+
+      {/* <div className="flex flex-col w-full space-y-2 my-16">
         <div className="flex justify-center text-3xl font-bold">Digital Photo Gift</div>
         <div className="flex justify-center text-2xl font-semibold">Starting At <span className="text-red-500 mx-2">$75</span></div>
-        
         <div className="py-8">
           <FrameSelections />
         </div>
-
-        {/* <div className="flex justify-evenly">
-          <Image 
-            src="/framed-empty-image.svg"
-            alt="framed empty image placeholder"
-            width={350}
-            height={10}
-          />
-        </div> */}
-      </div>
+      </div> */}
   
     </div>
   )

@@ -7,6 +7,7 @@ import { Suspense } from 'react';
 import LoadingDots from '@/components/shopify/utilities/loading-dots';
 import { Metadata } from 'next';
 import RecentReviewTitle from '@/components/google/recent-reviews';
+import { CarouselProducts } from "@/components/shopify/utilities/carousel"
 
 
 
@@ -36,6 +37,10 @@ export default async function Home(){
         <SecondParagraph />
       </section>
       
+      <section className='w-full lg:my-16'>
+        <div className='hero__title flex w-auto justify-center my-8'>Fine Art Prints & Originals</div>
+        <CarouselProducts />
+      </section>
 
       <section className='lg:my-16'>
         <RecentReviewTitle />
