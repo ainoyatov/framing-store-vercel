@@ -103,7 +103,7 @@ const IntMouldings = () => {
                                     </div>
                                     
                                     <div className="flex justify-center mb-4 bg-white text-black rounded-3xl drop-shadow-lg font-bold p-2 max-w-[300px]">
-                                        {item.altItemnum}
+                                        {item.itemnum}
                                     </div>
 
                                     {/* Image */}

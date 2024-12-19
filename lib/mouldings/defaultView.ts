@@ -30,7 +30,8 @@ export default async function DefaultViews(num:any, searchTerm:any) {
           FieldName: "itemnum",
           Value: searchTerm,
           Op: "CONTAINS"
-        },{
+        },
+        {
           FieldName: "description",
           Value: searchTerm,
           Op: "CONTAINS"
