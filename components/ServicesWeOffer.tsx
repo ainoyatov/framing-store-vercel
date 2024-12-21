@@ -127,8 +127,6 @@ const Services: React.FC = () => {
                             }
                         </div>
                         
-                        
-                        
                     )
                     : (
                         <div>
