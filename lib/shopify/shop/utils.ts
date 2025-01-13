@@ -1,7 +1,7 @@
 
 export const getProductsList = `
   {
-    products(first: 25) {
+    products(first: 250) {
       edges {
         node {
           id
