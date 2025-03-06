@@ -1,9 +1,9 @@
-import fetchImages from "@/lib/pexels/fetchImages";
-import type { ImagesResults } from "@/models/Images";
+import fetchImages from "./pexels/fetchImages";
+import type { ImagesResults } from "@/archive/gallery/models/Images";
 import ImgContainer from "./ImgContainer";
-import addBlurredDataUrls from "@/lib/pexels/getBase64";
+import addBlurredDataUrls from "./pexels/getBase64";
 import GalleryNavbar from "./GalleryNavbar";
-import getPrevNextPages from "@/lib/pexels/getPrevNextPages";
+import getPrevNextPages from "./pexels/getPrevNextPages";
 import GalleryFooter from "./GalleryFooter";
 import GallerySearch from "./GallerySearch";
 

@@ -1,4 +1,4 @@
-import GalleryImages from "@/components/GalleryImages";
+import GalleryImages from "../../GalleryImages";
 
 type Props = {
     params: {

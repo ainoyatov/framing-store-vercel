@@ -2,7 +2,7 @@
 
 import { useState, FormEvent, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import LoadingDots from "./shopify/utilities/loading-dots";
+// import LoadingDots from "./shopify/utilities/loading-dots";
 
 export default function GallerySearch() {
     
@@ -27,7 +27,7 @@ export default function GallerySearch() {
             
                 ? (
                     <div className="flex justify-center text-2xl">
-                        <LoadingDots className="bg-cyan-500" />
+                        {/* <LoadingDots className="bg-cyan-500" /> */}
                     </div>
                 )
             
