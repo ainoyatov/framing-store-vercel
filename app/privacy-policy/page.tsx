@@ -1,6 +1,7 @@
 import React from 'react'
 import { Metadata } from "next";
 import Privacypolicy from '@/components/PrivacyPolicy';
+import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
@@ -13,9 +14,19 @@ export const metadata: Metadata = {
 
 const PrivacyPolicy = () => {
   return (
-    <div>
-      <Privacypolicy />
-    </div>
+    <>
+      <Head>
+        <title>Privacy Policy</title>
+          <link
+            rel="canonical"
+            href="https://artandcustomframes.com/privacy-policy"
+            key="canonical"
+          />
+      </Head>
+      <div>
+        <Privacypolicy />
+      </div>
+    </>
   )
 }
 
