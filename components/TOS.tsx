@@ -1,3 +1,14 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'Terms of Service',
+    description: 'Company terms of service, company policy, store policy, store terms of service',
+    robots: {
+      follow: true,
+      index: true
+    }
+}
+
 
 export default function TOS() {
 
@@ -133,9 +144,3 @@ export default function TOS() {
         </div>
     )
 }
-
-
-
-
-
-

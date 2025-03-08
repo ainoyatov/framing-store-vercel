@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 const { SITE_NAME } = process.env;
 
-const baseUrl = "https://artframing.studio"
+const baseUrl = "https://artandcustomframes.com"
   // ? 'https://artframing.studio'
   // : 'http://localhost:3000';
 

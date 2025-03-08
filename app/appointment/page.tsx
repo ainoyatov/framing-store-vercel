@@ -3,7 +3,6 @@ import React from 'react'
 import { Metadata } from 'next'
 import { Suspense } from 'react'
 import LoadingDots from '@/components/shopify/utilities/loading-dots'
-import Head from 'next/head'
 
 export const metadata: Metadata = {
   title: 'Appointment',
@@ -17,25 +16,15 @@ export const metadata: Metadata = {
 
 const Appointment = () => {
   return (
-    <>
-      <Head>
-        <title>Appointment</title>
-        <link
-          rel="canonical"
-          href="https://artandcustomframes.com/appointment"
-          key="canonical"
-        />
-      </Head>
-      <Suspense fallback={
-        <div className="flex justify-center text-2xl">
-          <LoadingDots className="bg-cyan-500"/>
-        </div>
-      }>
-      <div>
-        <CalendlyBooking />
+    <Suspense fallback={
+      <div className="flex justify-center text-2xl">
+        <LoadingDots className="bg-cyan-500"/>
       </div>
-      </Suspense>
-    </>
+    }>
+    <div>
+      <CalendlyBooking />
+    </div>
+    </Suspense>
   )
 }
 

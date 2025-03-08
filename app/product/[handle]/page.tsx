@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { Suspense } from "react";
-
 import {ShopifyGallery} from '@/components/shopify/product/gallery'
 import { ImageProps } from "@/lib/shopify/types";
 import { getProduct, getProductRecommendations } from "@/lib/shopify";
@@ -9,8 +8,6 @@ import { ProductDescription } from "@/components/shopify/product/product-descrip
 import { HIDDEN_PRODUCT_TAG } from "@/lib/constants";
 import { GridTileImage } from "@/components/shopify/grid/tile";
 import Link from "next/link";
-import ShopifyNavbar from "@/components/shopify/layout/navbar";
-import Image from "next/image";
 
 
 
