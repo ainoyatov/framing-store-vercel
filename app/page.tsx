@@ -9,7 +9,14 @@ import { Metadata } from 'next';
 import RecentReviewTitle from '@/components/google/recent-reviews';
 import { CarouselProducts } from "@/components/shopify/utilities/carousel"
 
-
+export const metadata: Metadata = {
+  title: 'Home',
+  description: "Picture frames in Scottsdale, custom frames near Scottsdale, canvas stretch in Scottsdale, shadow boxes in Scottsdale, wood frames, art frames, gallery frames, custom glasses, photo frames, art mounting, picture frame design, poster frames, frame shop near me, canvas framing, memorabilia framing, frame restoration, vintage picture frames, modern picture frames, affordable custom framing, professional framing services, bulk frame orders, picture framing consultation",
+  robots: {
+    follow: true,
+    index: true
+  }
+}
 
 export default async function Home(){
 
