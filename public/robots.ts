@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://artandcustomframes.com/sitemap.ts',
+    sitemap: 'https://artandcustomframes.com/sitemap.txt',
   }
 }
