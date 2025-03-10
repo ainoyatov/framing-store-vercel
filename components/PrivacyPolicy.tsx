@@ -19,7 +19,7 @@ export default function Privacypolicy() {
 
             <div className="m-8">
                 <div className="mb-4">
-                    Welcome to <b>Art & Custom Frames </b> ("we," "us," "our"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website [artframing.studio], use our services, or purchase our products. Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access the site.
+                    Welcome to <b>Art & Custom Frames </b> ("we," "us," "our"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website [artandcustomframes.com], use our services, or purchase our products. Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access the site.
                 </div>
 
                 <div className="mt-8 mb-4">
