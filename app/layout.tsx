@@ -49,9 +49,7 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
 
-  //Google Analystics 4 gaId
-  const gaId_id = process.env.NEXT_PUBLIC_GAID
-
+  
   return (
     <html lang="en">
       <body className={inter.className}>
