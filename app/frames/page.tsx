@@ -9,7 +9,10 @@ export const metadata: Metadata = {
   robots: {
     follow: true,
     index: true
-  }
+  },
+  alternates: {
+    canonical: 'https://artandcustomframes.com/frames'
+  },
 }
 
 const FramesPage = () => {

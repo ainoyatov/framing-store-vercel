@@ -5,7 +5,14 @@ import NextImage from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Store Hours',
-  description: 'Frame shop store hours, open on weekdays, open Saturdays, closed Sundays'
+  description: 'Frame shop store hours, open on weekdays, open Saturdays, closed Sundays',
+  robots: {
+    follow: true,
+    index: true
+  },
+  alternates: {
+    canonical: 'https://artandcustomframes.com/store-hours'
+  },
 }
 
 const StoreHoursPage = () => {
