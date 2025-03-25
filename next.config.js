@@ -88,6 +88,11 @@ module.exports = {
           destination: 'https://www.artandcustomframes.com/:path*',
           permanent: true,
         },
+        {
+            source: '/home',
+            destination: '/',
+            permanent: true,
+        }
       ];
     },
   };
