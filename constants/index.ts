@@ -1,26 +1,22 @@
 export const NavLinks = [
-    { href: "/", label:"Home"},
-    // { href: "/gallery", label:"Gallery"},
     { href: "/shop", label:"Shop"},
     { href: "/frames", label:"Frames"},
     { href: "/appointment", label:"Appointment"},
+    {href:"/directions", label:"Directions"},
 ]
 
 export const footerLinks = [
     {
         title: "About",
         links: [
-            { title: "Home", url: "/"},
-            // { title: "Gallery", url: "/gallery" },
             { title: "Shop", url: "/shop" },
             { title: "Frames", url: "/frames" },
+            // { title: "Directions", url: "/directions"},
         ],
     },
     {
         title: "Company",
         links: [
-            {title: "Directions", url: "/directions"},
-            // {title: "Appointment", url: "/appointment" },
             {title: "Store Hours", url: "/store-hours"},            
             {title: "Contact us", url:"/contact-us"}
         ],
@@ -34,8 +30,9 @@ export const socialLinks = [
         title: "Socials",
         links: [
             {title: "Instagram", url: "https://www.instagram.com/artandcustomframes"},
-            {title: "Google", url: "https://maps.app.goo.gl/zSCtCoUzRrvL4QA28?g_st=ic"},
-            {title: "Facebook", url: "https://www.facebook.com/artandcustomframes"}
+            {title: "Facebook", url: "https://www.facebook.com/artandcustomframes"},
+            // {title: "Google", url: "https://maps.app.goo.gl/zSCtCoUzRrvL4QA28?g_st=ic"},
+            
         ]
     }
 ]
