@@ -9,9 +9,6 @@ export const metadata: Metadata = {
     follow: true,
     index: true
   },
-  alternates: {
-    canonical: 'https://artandcustomframes.com/privacy-policy'
-  },
 }
 
 const PrivacyPolicy = () => {

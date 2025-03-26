@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 const { SITE_NAME } = process.env;
 
-const baseUrl = "https://artandcustomframes.com"
+const baseUrl = "https://www.artandcustomframes.com"
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -26,9 +26,6 @@ export const metadata: Metadata = {
   robots: {
     follow: true,
     index: true
-  },
-  alternates: {
-    canonical: 'https://artandcustomframes.com'
   },
   icons: {
     icon: [

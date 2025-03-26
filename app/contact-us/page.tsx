@@ -12,9 +12,6 @@ export const metadata: Metadata = {
     follow: true,
     index: true
   },
-  alternates: {
-    canonical: 'https://artandcustomframes.com/contact-us'
-  },
 }
 
 const ContactPage = () => {
