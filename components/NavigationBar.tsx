@@ -2,12 +2,8 @@ import { NavLinks } from '@/constants'
 import Link from 'next/link'
 import Image from 'next/image'
 import ShopifyNavbar from './shopify/layout/navbar'
-import HeaderMobile from './HeaderMobile'
-// import Head from 'next/head'
-
 
 export default function NavigationBar() {
-
 
     return (
 
@@ -41,7 +37,7 @@ export default function NavigationBar() {
                 <a href="/" className='py-4'>
                     <Image
                         src="/main-logo-light.svg"
-                        alt="Art Custom Frames logo"
+                        alt="Art Custom Frames"
                         className=""
                         width={250}
                         height={250}
