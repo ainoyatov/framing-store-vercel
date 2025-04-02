@@ -1,9 +1,8 @@
 'use client'
 
-import Image from "next/image";
-import CustomButton from "./CustomButton";
 import { useRouter } from "next/navigation";
 import ContactFormDesktop from "./contact-forms/contact-form";
+import {GoogleReCaptchaProvider} from 'react-google-recaptcha-v3'
 
 const ThirdParagraph = () => {
 
@@ -19,7 +18,17 @@ const ThirdParagraph = () => {
             </div>
 
             <div className="flex justify-center items-center  max-w-lg drop-shadow-xl">
-                <ContactFormDesktop />
+                <GoogleReCaptchaProvider 
+                    reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA!}
+                    scriptProps={{
+                        async: true,
+                        defer: true,
+                        appendTo: 'head',
+                        nonce: undefined,
+                    }}
+                >
+                    <ContactFormDesktop />
+                </GoogleReCaptchaProvider>
             </div>
            
         </div>
