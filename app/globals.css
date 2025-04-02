@@ -159,3 +159,8 @@ html {
   height: 35%;
 }
 
+/* .inputStyle {
+  @apply bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-400 text-sm rounded-lg block w-full p-3 focus:ring-cyan-500 focus:border-cyan-500 transition-all
+} */
+
+
