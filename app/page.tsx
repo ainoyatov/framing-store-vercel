@@ -49,12 +49,12 @@ export default async function Home(){
         <CarouselProducts />
       </section>
 
-      <section className='lg:my-16'>
+      <section className='mt-16'>
         <RecentReviewTitle />
         <GoogleReviews />
       </section>
 
-      <section className='mt-32'>
+      <section className='mt-8'>
         <ThirdParagraph />
       </section>
 
