@@ -1,6 +1,6 @@
 import React from 'react'
 import { Metadata } from "next";
-import TOS from '@/components/TOS';
+import TermsOfService from '@/components/policy/TermsOfService';
 
 export const metadata: Metadata = {
   title: 'TOS',
@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   },
 }
 
-const TermsOfService = () => {
+const TermsOfServicePage = () => {
   return (
     <div>
-      <TOS />
+      <TermsOfService />
     </div>
   )
 }
 
-export default TermsOfService
+export default TermsOfServicePage

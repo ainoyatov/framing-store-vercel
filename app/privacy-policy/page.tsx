@@ -1,6 +1,6 @@
 import React from 'react'
 import { Metadata } from "next";
-import Privacypolicy from '@/components/PrivacyPolicy';
+import PrivacyPolicy from '@/components/policy/PrivacyPolicy';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   },
 }
 
-const PrivacyPolicy = () => {
+const PrivacyPolicyPage = () => {
   return (
     <div>
-      <Privacypolicy />
+      <PrivacyPolicy />
     </div>
   )
 }
 
-export default PrivacyPolicy
+export default PrivacyPolicyPage
