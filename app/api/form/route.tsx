@@ -1,32 +1,32 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(request:NextRequest) {
+export async function POST(request: NextRequest) {
+  // Parse JSON body instead of formData
+  const data = await request.json();
 
-    //Form Data
-    const data = await request.formData()
-    const name = data.get('name') as string | null;
-    const email = data.get('email') as string | null;
-    const phone = data.get('phone') as string | null;
-    const purpose = data.get('purpose') as string | null;
-    const message = data.get('message') as string | null;
+  const name = data.name || '';
+  const email = data.email || '';
+  const phone = data.phone || '';
+  const purpose = data.purpose || '';
+  const message = data.message || '';
 
-    //Form status
-    const status = 'ok'
-    const sent = true
-    const msg = 'Your message has been sent.'
+  // Form status
+  const status = 'ok';
+  const sent = true;
+  const msg = 'Your message has been sent.';
 
-    const res = {
+  const res = {
+    name,
+    email,
+    phone,
+    purpose,
+    message,
+    status,
+    sent,
+    msg,
+  };
 
-        name:name,
-        email:email,
-        phone:phone,
-        purpose:purpose,
-        message:message,
-        status:status,
-        sent:sent,
-        msg:msg,
+  console.log(res);
 
-    }
-
-    return NextResponse.json(res)
+  return NextResponse.json(res);
 }
