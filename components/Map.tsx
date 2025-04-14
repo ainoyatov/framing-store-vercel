@@ -12,7 +12,7 @@ const Maps = () => {
 
   function Map() {
 
-  const center = useMemo(() => ({lat: 33.61636, lng: -111.90330}), []);
+  const center = useMemo(() => ({lat: 33.6162542, lng: -111.9063426}), []);
 
     return(
       <GoogleMap

@@ -6,7 +6,7 @@ import CustomButton from '@/components/CustomButton'
 const Directions = () => {
 
   const handleScroll = () => {
-      window.open('https://maps.app.goo.gl/zSCtCoUzRrvL4QA28?g_st=ic', '_blank')
+      window.open('https://maps.app.goo.gl/TzLRD7pQWW7RpYVT7', '_blank')
   }
   
   return (
