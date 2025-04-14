@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Directions',
-  description: 'Picture framing store in Scottsdale, Custom framing near Scottsdale, Art framing in Scottsdale',
+  description: 'Visit our frame shop in Scottsdale. Find simple directions, parking info, and store hours to make your visit easy and stress-free.',
   robots: {
     follow: true,
     index: true
