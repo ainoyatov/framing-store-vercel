@@ -11,7 +11,7 @@ export const footerLinks = [
         links: [
             { title: "Shop", url: "/shop" },
             { title: "Frames", url: "/frames" },
-            // { title: "Directions", url: "/directions"},
+            { title: "Blog", url: "/blog"},
         ],
     },
     {

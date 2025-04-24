@@ -140,11 +140,6 @@ export const SIDENAV_ITEMS = [
       icon: <Icon icon="ion:home-outline" width="24" height="24" />,
     },
     {
-      title: 'Gallery',
-      path: '/gallery',
-      icon: <Icon icon="map:art-gallery" width="24" height="24" />,
-    },
-    {
       title: 'Shop',
       path: '/shop',
       icon: <Icon icon="lucide:shopping-cart" width="24" height="24" />,
@@ -158,6 +153,11 @@ export const SIDENAV_ITEMS = [
       title: 'Appointment',
       path: '/appointment',
       icon: <Icon icon="lucide:calendar-clock" width="24" height="24" />,
+    },
+    {
+      title: 'Blog',
+      path: '/blog',
+      icon: <Icon icon="map:art-gallery" width="24" height="24" />,
     },
     {
       title: 'Services',
