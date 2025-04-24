@@ -155,9 +155,14 @@ export const SIDENAV_ITEMS = [
       icon: <Icon icon="lucide:calendar-clock" width="24" height="24" />,
     },
     {
+      title: 'Contact',
+      path: '/contact-us',
+      icon: <Icon icon="tdesign:call-1" width="24" height="24" />,
+    },
+    {
       title: 'Blog',
       path: '/blog',
-      icon: <Icon icon="map:art-gallery" width="24" height="24" />,
+      icon: <Icon icon="la:blog" width="24" height="24" />,
     },
     {
       title: 'Services',
