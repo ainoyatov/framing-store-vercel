@@ -38,7 +38,12 @@ module.exports = {
                 source: '/home',
                 destination: '/',
                 permanent: true,
-            }
+            },
+            {
+                source: '/gallery',
+                destination: '/',
+                permanent: true,
+            },
         ]
     }
 }
