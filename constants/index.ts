@@ -9,7 +9,7 @@ export const footerLinks = [
     {
         title: "About",
         links: [
-            { title: "Shop", url: "/shop" },
+            { title: "Blog", url: "/blog" },
             { title: "Frames", url: "/frames" },
             { title: "Services", url: "/services"},
             
@@ -20,7 +20,7 @@ export const footerLinks = [
         links: [
             {title: "Store Hours", url: "/store-hours"},            
             {title: "Contact us", url:"/contact-us"},
-            { title: "Blog", url: "/blog"},
+            { title: "Directions", url: "/directions"},
         ],
     },
 
@@ -33,7 +33,7 @@ export const socialLinks = [
         links: [
             {title: "Instagram", url: "https://www.instagram.com/artandcustomframes"},
             {title: "Facebook", url: "https://www.facebook.com/artandcustomframes"},
-            // {title: "Google", url: "https://maps.app.goo.gl/zSCtCoUzRrvL4QA28?g_st=ic"},
+            {title: "Google", url: "https://maps.app.goo.gl/TzLRD7pQWW7RpYVT7"},
             
         ]
     }

@@ -140,6 +140,11 @@ export const SIDENAV_ITEMS = [
       icon: <Icon icon="ion:home-outline" width="24" height="24" />,
     },
     {
+      title: 'Services',
+      path: '/services',
+      icon: <Icon icon="eos-icons:service-outlined" width="24" height="24" />
+    },
+    {
       title: 'Shop',
       path: '/shop',
       icon: <Icon icon="lucide:shopping-cart" width="24" height="24" />,
@@ -155,6 +160,11 @@ export const SIDENAV_ITEMS = [
       icon: <Icon icon="lucide:calendar-clock" width="24" height="24" />,
     },
     {
+      title: 'Directions',
+      path: '/directions',
+      icon: <Icon icon="simple-line-icons:directions" width="24" height="24" />,
+    },
+    {
       title: 'Contact',
       path: '/contact-us',
       icon: <Icon icon="tdesign:call-1" width="24" height="24" />,
@@ -164,11 +174,7 @@ export const SIDENAV_ITEMS = [
       path: '/blog',
       icon: <Icon icon="la:blog" width="24" height="24" />,
     },
-    {
-      title: 'Services',
-      path: '/services',
-      icon: <Icon icon="eos-icons:service-outlined" width="24" height="24" />
-    },
+    
     // {
     //   title: 'Services',
     //   path: '/services',
