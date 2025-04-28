@@ -11,7 +11,7 @@ const ThirdParagraph = () => {
     return (
         <div className='grid text-left lg:grid-cols-2 gap-16 justify-items-center w-full '>
             
-            <div className='flex flex-col max-w-4xl '>
+            <div className='flex flex-col max-w-4xl items-center text-center'>
                 <h1 className='hero__title '>Get in Touch</h1>
                 <p className='mb-6 hero__subtitle'>"Your inquiries and feedback are invaluable to us. We look forward to connecting with you."</p>
 

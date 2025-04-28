@@ -4,6 +4,7 @@ import Maps from '@/components/Map'
 import { Metadata } from 'next'
 import { Suspense } from 'react'
 import LoadingDots from '@/components/shopify/utilities/loading-dots'
+import ThirdParagraph from '@/components/ThirdParagraph'
 
 export const metadata: Metadata = {
   title: 'Contact Us',
@@ -23,8 +24,9 @@ const ContactPage = () => {
     }>
     <div>
       <section>
-        <div className='mb-16'>
-          <FigmaContactForm />
+        <div className='mb-8 p-2 sm:mb-0 sm:pt-16 sm:px-8'>
+          <ThirdParagraph />
+          {/* <FigmaContactForm /> */}
         </div>
       </section>
       <section>
