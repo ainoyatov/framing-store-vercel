@@ -165,6 +165,11 @@ export const SIDENAV_ITEMS = [
       icon: <Icon icon="simple-line-icons:directions" width="24" height="24" />,
     },
     {
+      title: 'Hours',
+      path: '/store-hours',
+      icon: <Icon icon="mdi:shop-hours-outline" width="24" height="24" />,
+    },
+    {
       title: 'Contact',
       path: '/contact-us',
       icon: <Icon icon="tdesign:call-1" width="24" height="24" />,
