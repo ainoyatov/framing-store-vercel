@@ -167,19 +167,24 @@ export const SIDENAV_ITEMS = [
     {
       title: 'Services',
       path: '/services',
-      icon: <Icon icon="eos-icons:service-outlined" width="24" height="24" />,
-      submenu: true,
-      subMenuItems: [
-        {title:"Custom Picture Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
-        {title:"Canvas Stretching & Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
-        {title:"Shadow Box Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
-        {title:"Frame Restoration & Repair", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
-        {title:"Commercial & Corporate Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
-        {title:"Mirror Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
-        {title:"Jersey & Memorabilia Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
-        {title:"Art Installation Services", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>}
-      ]
+      icon: <Icon icon="eos-icons:service-outlined" width="24" height="24" />
     },
+    // {
+    //   title: 'Services',
+    //   path: '/services',
+    //   icon: <Icon icon="eos-icons:service-outlined" width="24" height="24" />,
+    //   submenu: true,
+    //   subMenuItems: [
+    //     {title:"Custom Picture Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
+    //     {title:"Canvas Stretching & Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
+    //     {title:"Shadow Box Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
+    //     {title:"Frame Restoration & Repair", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
+    //     {title:"Commercial & Corporate Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
+    //     {title:"Mirror Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
+    //     {title:"Jersey & Memorabilia Framing", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>},
+    //     {title:"Art Installation Services", path:'', icon: <Icon icon="tabler:point" width="24" height="24"/>}
+    //   ]
+    // },
     
     {
       title: 'Legal',

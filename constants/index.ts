@@ -11,14 +11,16 @@ export const footerLinks = [
         links: [
             { title: "Shop", url: "/shop" },
             { title: "Frames", url: "/frames" },
-            { title: "Blog", url: "/blog"},
+            { title: "Services", url: "/services"},
+            
         ],
     },
     {
         title: "Company",
         links: [
             {title: "Store Hours", url: "/store-hours"},            
-            {title: "Contact us", url:"/contact-us"}
+            {title: "Contact us", url:"/contact-us"},
+            { title: "Blog", url: "/blog"},
         ],
     },
 
