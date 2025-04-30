@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     siteName: 'Art & Custom Frames',
     images: [
       {
-        url: '/opengraph-image',
+        url: '/imageForOpenGraph.png',
         width: 1200,
         height: 630,
-        alt: 'Art & Custom Frames',
+        alt: 'Framing Shop Hero Image',
       },
     ],
     locale: 'en_US',
