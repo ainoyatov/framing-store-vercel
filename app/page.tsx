@@ -11,11 +11,28 @@ import { CarouselProducts } from "@/components/shopify/utilities/carousel"
 
 export const metadata: Metadata = {
   title: 'Picture Framing Shop',
-  description: "Custom framing in Scottsdale, custom framing in Phoenix, picture framing in Scottsdale, frame shop near me, custom frames in Scottsdale, custom frames in Phoenix, canvas stretch in Scottsdale, shadow boxes in Scottsdale, art framing in Scottsdale, art framing in Phoenix, wood frames in Phoenix, gallery frames, custom glasses, photo frames, art mounting, picture frame design, poster frames, canvas framing, memorabilia framing, frame restoration, vintage picture frames, modern picture frames, affordable custom framing, professional framing services, bulk frame orders, picture framing consultation",
+  description:
+    'Custom framing in Scottsdale, canvas framing, memorabilia framing, frame restoration, vintage picture frames, art framing, gallery frames, poster frames, custom glasses, photo frames, art mounting, picture frame design, modern picture frames, affordable custom framing, professional framing services, picture framing in Scottsdale, frame shop near me, custom frames in Scottsdale, custom frames in Phoenix, bulk frame orders, picture framing consultation, canvas stretch in Scottsdale, shadow boxes in Scottsdale, art framing in Scottsdale',
   robots: {
     follow: true,
-    index: true
-  }
+    index: true,
+  },
+  openGraph: {
+    title: 'Art & Custom Frames | Picture Framing in Scottsdale',
+    description: 'Custom framing, canvas stretching, and professional art display services in Scottsdale, AZ.',
+    url: 'https://www.artandcustomframes.com',
+    siteName: 'Art & Custom Frames',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Art & Custom Frames',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 }
 
 export default async function Home(){
