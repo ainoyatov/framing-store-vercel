@@ -6,7 +6,7 @@ import LoadingDots from '@/components/shopify/utilities/loading-dots'
 
 export const metadata: Metadata = {
   title: 'Appointment',
-  description: 'Simple step to get a price quote, Schedule a quick appointment, Easy framing near Scottsdale, Book your time with an expert',
+  description: 'Book a framing appointment in Scottsdale, get a fast quote, schedule custom framing, easy booking near Phoenix, expert framing consultation, in-store or at-home visits, art pickup and delivery',
   robots: {
     follow: true,
     index: true

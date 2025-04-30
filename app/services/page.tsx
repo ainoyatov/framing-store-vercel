@@ -1,5 +1,14 @@
-
+import { Metadata } from 'next';
 import { services } from '@/components/services/ServicesData';
+
+export const metadata: Metadata = {
+  title: 'Services',
+  description: 'Same-day framing in Scottsdale, fast framing in Phoenix, discount framing, art pickup, delivery, framing repair, canvas stretching, custom frames, local frame shop, expert framing, art installation',
+  robots: {
+    follow: true,
+    index: true
+  },
+}
 
 const ServicesPage = () => {
   return (

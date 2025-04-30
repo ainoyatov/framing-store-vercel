@@ -5,7 +5,7 @@ import IntDigitalCatalog from "@/components/mouldings/intDigitalCatalog";
 
 export const metadata: Metadata = {
   title: 'Frames',
-  description: 'Wood frames in Scottsdale, Custom wood frames, Search thousands of unique frames, Canvas wood stretcher bar, stretcher bar, modern frames, classic frames, designer frames, custom designer frames in Scottsdale',
+  description: 'Custom frames in Scottsdale, designer frames, wood frames, canvas stretcher bars, modern frames, classic frames, gallery frames, premium custom framing, Scottsdale frame shop',
   robots: {
     follow: true,
     index: true
