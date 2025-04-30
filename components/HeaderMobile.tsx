@@ -145,11 +145,6 @@ export const SIDENAV_ITEMS = [
       icon: <Icon icon="eos-icons:service-outlined" width="24" height="24" />
     },
     {
-      title: 'Shop',
-      path: '/shop',
-      icon: <Icon icon="lucide:shopping-cart" width="24" height="24" />,
-    },
-    {
       title: 'Frames',
       path: '/frames',
       icon: <Icon icon="lucide:mail" width="24" height="24" />,
@@ -163,6 +158,11 @@ export const SIDENAV_ITEMS = [
       title: 'Directions',
       path: '/directions',
       icon: <Icon icon="simple-line-icons:directions" width="24" height="24" />,
+    },
+    {
+      title: 'Shop',
+      path: '/shop',
+      icon: <Icon icon="lucide:shopping-cart" width="24" height="24" />,
     },
     {
       title: 'Hours',

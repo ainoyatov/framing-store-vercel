@@ -1,5 +1,5 @@
 export const NavLinks = [
-    { href: "/shop", label:"Shop"},
+    { href: "/services", label:"Services"},
     { href: "/frames", label:"Frames"},
     { href: "/appointment", label:"Appointment"},
     {href:"/directions", label:"Directions"},
@@ -20,7 +20,7 @@ export const footerLinks = [
         links: [
             {title: "Store Hours", url: "/store-hours"},            
             {title: "Contact us", url:"/contact-us"},
-            { title: "Directions", url: "/directions"},
+            { title: "Shop", url: "/shop"},
         ],
     },
 
