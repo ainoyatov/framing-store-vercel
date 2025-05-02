@@ -1,15 +1,6 @@
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-    title: 'Terms of Service',
-    description: 'Company terms of service, company policy, store policy, store terms of service',
-    robots: {
-        follow: true,
-        index: true
-    }
-};
 
 export default function TermsOfService() {
+    
     return (
         <div className="max-w-4xl mx-auto p-6 md:p-12 dark:text-gray-400">
             <div className="text-center">

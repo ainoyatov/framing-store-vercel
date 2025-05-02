@@ -1,15 +1,6 @@
-import { Metadata } from "next";
 
-export const metadata: Metadata = {
-    title: 'Return Policy',
-    description: 'Store return policy',
-    robots: {
-        follow: true,
-        index: true
-    },
-};
-
-const ReturnPage = () => {
+export default function ReturnPage () {
+    
     return (
         <div className="max-w-4xl mx-auto p-6 md:p-12 dark:text-gray-400">
             <div className="text-center">
@@ -111,5 +102,3 @@ const ReturnPage = () => {
         </div>
     );
 };
-
-export default ReturnPage;

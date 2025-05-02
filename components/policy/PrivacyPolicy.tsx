@@ -1,15 +1,6 @@
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-    title: 'Privacy Policy',
-    description: 'Company privacy policy, company policy, store policy, store privacy policy',
-    robots: {
-      follow: true,
-      index: true
-    }
-};
 
 export default function PrivacyPolicy() {
+    
     return (
         <div className="max-w-4xl mx-auto p-6 md:p-12 dark:text-gray-400">
             <div className="text-center">
