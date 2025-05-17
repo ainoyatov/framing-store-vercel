@@ -8,8 +8,8 @@ const FirstParagraph = () => {
 
     const router = useRouter();
 
-    const handleScroll = () => {
-        router.push('/appointment');
+    const handleCall = () => {
+        window.location.href = 'tel:4802687182'
     }
 
     return (
@@ -20,9 +20,9 @@ const FirstParagraph = () => {
                 
                 <div>
                     <CustomButton 
-                        title="Schedule Visit"
+                        title="Call Now"
                         containerStyles="button__color drop-shadow-2xl"
-                        handleClick={handleScroll}
+                        handleClick={handleCall}
                     />
                 </div>
             </div>
