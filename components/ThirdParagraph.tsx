@@ -14,7 +14,11 @@ const ThirdParagraph = () => {
     <div className="grid text-left lg:grid-cols-2 gap-8 justify-items-center px-4">
       
       <div className="flex flex-col max-w-2xl justify-center text-center">
-        <h1 className="hero__title">Get in Touch</h1>
+        <div className="mt-8 max-md:mt-10 flex justify-center text-center">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-[#026974] to-[#00a8e8] bg-clip-text text-transparent">
+            Get in Touch
+          </h1>
+        </div>
         <p className="mb-4 hero__subtitle">
           "Your inquiries and feedback are invaluable to us. We look forward to connecting with you."
         </p>

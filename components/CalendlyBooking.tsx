@@ -7,8 +7,10 @@ const CalendlyBooking = () => {
   return(
     <div>
       <div>
-        <div className="text-yellow-500 text-4xl font-bold text-center flex justify-center mt-8 max-md:mt-10">
-          Schedule Time
+        <div className="mt-8 max-md:mt-10 flex justify-center text-center">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-[#026974] to-[#00a8e8] bg-clip-text text-transparent">
+            Schedule Time
+          </h1>
         </div>
         <div className="text-neutral-500  text-lg  text-center font-medium flex justify-center p-4 mb-8">
           In store visit? At home installation? Book your appointment now!

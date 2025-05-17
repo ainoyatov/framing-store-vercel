@@ -16,9 +16,17 @@ const FramesPage = () => {
 
   return (
     <div>
-      <p className='text-3xl flex justify-center mt-16 mb-8'>Search Frames</p>
+      <div className="m-8 max-md:mt-10 flex justify-center text-center">
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-[#026974] to-[#00a8e8] bg-clip-text text-transparent">
+          Search Frames
+        </h1>
+      </div>
       <IntMouldings />
-      <p className='text-3xl flex justify-center py-8'>Digital Catalog</p>
+      <div className="m-8 max-md:mt-10 flex justify-center text-center">
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-[#026974] to-[#00a8e8] bg-clip-text text-transparent">
+          Digital Catalog
+        </h1>
+      </div>
       <IntDigitalCatalog />
     </div>
     

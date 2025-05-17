@@ -12,11 +12,13 @@ export const metadata: Metadata = {
 
 const ServicesPage = () => {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12">
-      <h1 className="text-4xl font-bold mb-10 text-center text-yellow-500 dark:text-yellow-400">
-        Our Services
-      </h1>
-      <div className="space-y-12">
+    <div className="max-w-4xl mx-auto">
+      <div className="m-8 max-md:mt-10 flex justify-center text-center">
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-[#026974] to-[#00a8e8] bg-clip-text text-transparent">
+          Our Services
+        </h1>
+      </div>
+      <div className="space-y-12 px-4">
         {services.map((service, index) => (
           <div key={index}>
             <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
