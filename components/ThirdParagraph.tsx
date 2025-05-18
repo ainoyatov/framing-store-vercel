@@ -3,6 +3,7 @@
 import ContactFormDesktop from "./contact-forms/contact-form";
 import {GoogleReCaptchaProvider} from 'react-google-recaptcha-v3'
 import CustomButton from "./CustomButton";
+import {Phone} from 'lucide-react';
 
 const ThirdParagraph = () => {
 
@@ -25,7 +26,8 @@ const ThirdParagraph = () => {
         
         <div className="flex justify-center">
           <CustomButton
-            title="Call Now"
+            title="480-268-7182"
+            icon={<Phone size={18} />}
             containerStyles="button__color drop-shadow-lg"
             handleClick={handleCall}
           />
