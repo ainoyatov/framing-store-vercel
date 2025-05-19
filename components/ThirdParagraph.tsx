@@ -23,7 +23,6 @@ const ThirdParagraph = () => {
         <p className="mb-4 hero__subtitle">
           "Your inquiries and feedback are invaluable to us. We look forward to connecting with you."
         </p>
-        
         <div className="flex justify-center">
           <CustomButton
             title="480-268-7182"
