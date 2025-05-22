@@ -12,18 +12,17 @@ const Maps = () => {
 
   function Map() {
 
-  const center = useMemo(() => ({lat: 33.6162542, lng: -111.9063426}), []);
+    const center = useMemo(() => ({ lat: 33.6163903, lng: -111.9036125 }), []);
 
-    return(
+    return (
       <GoogleMap
-        zoom={12}
+        zoom={16}
         center={center}
         mapContainerClassName="map__container"
       >
         <Marker position={center} />
       </GoogleMap>
-    )
-    
+    );
   }
   
   if (!isLoaded) {
