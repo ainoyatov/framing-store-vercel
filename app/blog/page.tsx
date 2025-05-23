@@ -32,7 +32,7 @@ export default async function BlogPage() {
     return (
         <div className="max-w-7xl mx-auto px-4 py-12">
             <div className="w-fit mx-auto px-4">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-[#026974] to-[#00a8e8] bg-clip-text text-transparent">
+                <h1 className="py-8 text-4xl font-bold bg-gradient-to-r from-[#026974] to-[#00a8e8] bg-clip-text text-transparent">
                      Blog Posts
                 </h1>
             </div>
