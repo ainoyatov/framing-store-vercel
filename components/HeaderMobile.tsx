@@ -145,9 +145,9 @@ export const SIDENAV_ITEMS = [
       icon: <Icon icon="eos-icons:service-outlined" width="24" height="24" />
     },
     {
-      title: 'Frames',
-      path: '/frames',
-      icon: <Icon icon="lucide:mail" width="24" height="24" />,
+      title: 'Blog',
+      path: '/blog',
+      icon: <Icon icon="la:blog" width="24" height="24" />,
     },
     {
       title: 'Appointment',
@@ -165,6 +165,11 @@ export const SIDENAV_ITEMS = [
       icon: <Icon icon="lucide:shopping-cart" width="24" height="24" />,
     },
     {
+      title: 'Frames',
+      path: '/frames',
+      icon: <Icon icon="lucide:mail" width="24" height="24" />,
+    },
+    {
       title: 'Hours',
       path: '/store-hours',
       icon: <Icon icon="mdi:shop-hours-outline" width="24" height="24" />,
@@ -174,11 +179,7 @@ export const SIDENAV_ITEMS = [
       path: '/contact-us',
       icon: <Icon icon="tdesign:call-1" width="24" height="24" />,
     },
-    {
-      title: 'Blog',
-      path: '/blog',
-      icon: <Icon icon="la:blog" width="24" height="24" />,
-    },
+    
     
     // {
     //   title: 'Services',
