@@ -1,6 +1,6 @@
 export const NavLinks = [
     { href: "/services", label:"Services"},
-    { href: "/frames", label:"Frames"},
+    { href: "/blog", label:"Blog"},
     { href: "/appointment", label:"Appointment"},
     {href:"/directions", label:"Directions"},
 ]
@@ -9,7 +9,7 @@ export const footerLinks = [
     {
         title: "About",
         links: [
-            { title: "Blog", url: "/blog" },
+            { title: "Appointment", url: "/appointment" },
             { title: "Frames", url: "/frames" },
             { title: "Services", url: "/services"},
             
