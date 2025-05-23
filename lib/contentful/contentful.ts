@@ -12,7 +12,7 @@ export async function fetchEntries() {
   
 export async function fetchPostBySlug(slug: string) {
     const entries = await client.getEntries({
-    content_type: 'realtyBlog',
+    content_type: 'pageBlogPost',
     'fields.slug': slug,
     include: 2, // 👈 This includes referenced entries (e.g., SEO and Author)
     limit: 1,
