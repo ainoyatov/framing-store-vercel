@@ -4,8 +4,64 @@ import { Document } from "@contentful/rich-text-types";
 import Image from "next/image";
 import Link from "next/link";
 import type { Entry, Asset } from "contentful";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 export const revalidate = 30;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const post = await fetchPostBySlug(params.slug);
+
+  if (!post) notFound();
+
+  const entry = post as Entry<any>;
+  const fields = entry.fields;
+
+  const title = typeof fields?.title === "string" ? fields.title : "Blog Post";
+  const subtitle = typeof fields?.subtitle === "string"
+    ? fields.subtitle
+    : "Learn more about custom framing and preservation.";
+
+  const imageAsset = fields?.featuredImage as Asset | undefined;
+  const imageFile = imageAsset?.fields?.file;
+  const imageUrl = imageFile?.url
+    ? `https:${imageFile.url}`
+    : "https://www.artandcustomframes.com/blog-default-image-placeholder.png";
+
+  return {
+    title: `${title} | Art & Custom Frames`,
+    description: subtitle,
+    alternates: {
+      canonical: `https://www.artandcustomframes.com/blog/${params.slug}`,
+    },
+    openGraph: {
+      title: `${title} | Art & Custom Frames`,
+      description: subtitle,
+      url: `https://www.artandcustomframes.com/blog/${params.slug}`,
+      siteName: "Art & Custom Frames",
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${title} – Blog Cover`,
+        },
+      ],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | Art & Custom Frames`,
+      description: subtitle,
+      images: [imageUrl],
+    },
+  };
+}
+
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   
