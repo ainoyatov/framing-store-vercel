@@ -2,7 +2,7 @@
 
 import { FC, useEffect, useState } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
-import { sendEmail } from '@/utils/send-email'
+import { sendEmail } from '@/archive/send-email'
 import { useForm } from 'react-hook-form'
 import ContactInfo from './ContactInfo'
 import Image from 'next/image'

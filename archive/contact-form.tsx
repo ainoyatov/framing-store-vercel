@@ -2,7 +2,7 @@
 
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 import { useState } from 'react'
-import { sendEmail } from '../../utils/send-email'
+import { sendEmail } from './send-email'
 
 export type FormDataPoints = {
   name?: string

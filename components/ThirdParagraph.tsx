@@ -1,6 +1,5 @@
 'use client'
 
-import ContactFormDesktop from "./contact-forms/contact-form";
 import ResendForm from "./contact-forms/ResendContactForm"
 import {GoogleReCaptchaProvider} from 'react-google-recaptcha-v3'
 import CustomButton from "./CustomButton";
@@ -44,7 +43,6 @@ const ThirdParagraph = () => {
             nonce: undefined,
           }}
         >
-          {/* <ContactFormDesktop /> */}
           <ResendForm />
         </GoogleReCaptchaProvider>
       </div>

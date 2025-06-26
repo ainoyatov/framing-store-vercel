@@ -1,8 +1,6 @@
 'use client'
 
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
-import { useState } from 'react'
-import { sendEmail } from '../../utils/send-email'
 
 export type FormDataPoints = {
   name?: string
@@ -14,7 +12,6 @@ export type FormDataPoints = {
 }
 
 export default function ContactFormDesktop() {
-  const [state, setState] = useState({})
   const { executeRecaptcha } = useGoogleReCaptcha()
 
   const FormAction = async (formData: FormData) => {
