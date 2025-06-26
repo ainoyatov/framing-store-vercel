@@ -5,12 +5,12 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   const body = await req.json();
-  const { name, email, phone, message } = body;
+  const { name, email, phone, purpose, message } = body;
 
   try {
     const data = await resend.emails.send({
       from: 'Contact Form <info@gravityelements.com>',
-      to: ['akmal.inoyatov@gmail.com'], // Replace with your actual email
+      to: ['akmal.inoyatov@gmail.com', 'info@artandcustomframes.com'], // Replace with your actual email
       subject: 'New Client Art & Custom Frames',
       html: `
         <div style="font-family: sans-serif; line-height: 1.5;">
@@ -18,6 +18,7 @@ export async function POST(req: Request) {
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Phone:</strong> ${phone}</p>
+          <p><strong>Purpose:</strong> ${purpose}</p>
           <p><strong>Message:</strong><br/>${message}</p>
         </div>
       `,

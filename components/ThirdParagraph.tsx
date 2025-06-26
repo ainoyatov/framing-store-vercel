@@ -1,6 +1,7 @@
 'use client'
 
 import ContactFormDesktop from "./contact-forms/contact-form";
+import ResendForm from "./contact-forms/ResendContactForm"
 import {GoogleReCaptchaProvider} from 'react-google-recaptcha-v3'
 import CustomButton from "./CustomButton";
 import {Phone} from 'lucide-react';
@@ -43,7 +44,8 @@ const ThirdParagraph = () => {
             nonce: undefined,
           }}
         >
-          <ContactFormDesktop />
+          {/* <ContactFormDesktop /> */}
+          <ResendForm />
         </GoogleReCaptchaProvider>
       </div>
 
