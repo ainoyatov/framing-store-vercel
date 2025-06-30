@@ -24,8 +24,6 @@
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@react-google-maps/api": "^2.19.2",
-    "@supabase/auth-helpers-react": "^0.4.2",
-    "@supabase/supabase-js": "^2.33.1",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@types/node": "20.4.7",
@@ -64,7 +62,6 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@supabase/auth-helpers-nextjs": "^0.7.4",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/google.maps": "^3.54.0",
     "@types/react-google-recaptcha": "^2.1.7",
