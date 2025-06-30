@@ -29,7 +29,7 @@ const Directions = () => {
         </div>
       </div>
       
-      <div className='p-4 h-screen w-full md:h-auto py-8 md:py-0 drop-shadow-xl'>
+      <div className='h-screen w-full md:h-auto p-4 md:p-8 drop-shadow-xl'>
         <Maps/>
       </div>
       
