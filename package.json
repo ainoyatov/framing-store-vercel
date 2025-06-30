@@ -43,7 +43,7 @@
     "geist": "^1.2.0",
     "googleapis": "^130.0.0",
     "lucide-react": "^0.438.0",
-    "next": "^14.2.26",
+    "next": "^14.2.30",
     "path": "^0.12.7",
     "plaiceholder": "^3.0.0",
     "postcss": "^8.5.2",
