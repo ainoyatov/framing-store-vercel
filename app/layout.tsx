@@ -49,7 +49,12 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
 
-  
+  const now = new Date()
+  const bannerStart = new Date('2025-07-01T00:00:00')
+  const bannerEnd = new Date('2025-07-11T00:00:00')
+
+  const showBanner = now >= bannerStart && now < bannerEnd
+
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -61,6 +66,12 @@ export default async function RootLayout({
         <div className=''>
           <HeaderMobile />
         </div>
+        
+        {showBanner && (
+          <div className='bg-yellow-200 text-yellow-900 text-center p-3 text-sm'>
+            We're out of town for the holiday. Store is closed and will reopen on <strong>July 11th</strong>. Thank you.
+          </div>
+        )}
           
         <Suspense>
           <main>{children}</main>
