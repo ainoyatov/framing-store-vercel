@@ -50,7 +50,7 @@ export default async function RootLayout({
 }) {
 
   const now = new Date()
-  const bannerStart = new Date('2025-07-04T00:00:00')
+  const bannerStart = new Date('2025-07-04T12:00:00')
   const bannerEnd = new Date('2025-07-11T00:00:00')
 
   const showBanner = now >= bannerStart && now < bannerEnd
@@ -76,7 +76,9 @@ export default async function RootLayout({
         <Suspense>
           <main>{children}</main>
         </Suspense>
+
         <Footer/>
+
       </body>
 
       <GoogleAnalytics gaId='G-1K5QJXKPCD' />
